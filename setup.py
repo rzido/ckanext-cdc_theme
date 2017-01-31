@@ -4,7 +4,7 @@ import sys, os
 version = '0.1'
 
 setup(
-    name='ckanext-odp_theme',
+    name='ckanext-cdc_theme',
     version=version,
     description="",
     long_description='''
@@ -16,7 +16,7 @@ setup(
     url='',
     license='',
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-    namespace_packages=['ckanext', 'ckanext.odp_theme'],
+    namespace_packages=['ckanext', 'ckanext.cdc_theme'],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
@@ -25,6 +25,6 @@ setup(
     entry_points='''
         [ckan.plugins]
         # Add plugins here, e.g.
-        odp_theme=ckanext.odp_theme.plugin:ODPThemePlugin
+        cdc_theme=ckanext.cdc_theme.plugin:CDCThemePlugin
     ''',
 )
