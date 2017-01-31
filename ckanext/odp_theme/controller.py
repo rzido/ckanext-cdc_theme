@@ -10,7 +10,7 @@ from feedback_model import UnpublishedFeedback
 
 
 class UnpublishedReportController(p.toolkit.BaseController):
-    controller = 'ckanext.odp_theme.controller:UnpublishedReportController'
+    controller = 'ckanext.cdc_theme.controller:UnpublishedReportController'
 
     def _is_unpublished(self, pkg):
         extras = dict(map(lambda extra: (extra['key'], extra['value']),
@@ -42,7 +42,7 @@ class UnpublishedReportController(p.toolkit.BaseController):
 
 
 class UnpublishedFeedbackController(p.toolkit.BaseController):
-    controller = 'ckanext.odp_theme.controller:UnpublishedFeedbackController'
+    controller = 'ckanext.cdc_theme.controller:UnpublishedFeedbackController'
 
     def view_feedback(self, id):
         """Renders a page containing the feedback form and a list of feedback.
