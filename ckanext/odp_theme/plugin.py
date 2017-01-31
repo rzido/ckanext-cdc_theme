@@ -83,7 +83,7 @@ activity_streams['new group'] = (
 )
 
 
-class ODPSearchPlugin(plugins.SingletonPlugin):
+class CDCSearchPlugin(plugins.SingletonPlugin):
     """
     This plugin sets the translation field for facets so that the items of
     the facet appear as "Published" and "Unpublished" instead of "true" and
@@ -127,7 +127,7 @@ class ODPSearchPlugin(plugins.SingletonPlugin):
         return pkg_dict
 
 
-class ODPThemePlugin(ODPSearchPlugin):
+class CDCThemePlugin(CDCSearchPlugin):
     """OpenDataPhilly theme plugin.
 
     """
@@ -174,10 +174,10 @@ class ODPThemePlugin(ODPSearchPlugin):
     def get_helpers(self):
         """Register odp_theme_* helper functions"""
 
-        return {'odp_theme_most_recent_datasets': most_recent_datasets,
-                'odp_theme_dataset_count': dataset_count,
-                'odp_theme_groups': groups,
-                'odp_theme_apps': apps,
+        return {'cdc_theme_most_recent_datasets': most_recent_datasets,
+                'cdc_theme_dataset_count': dataset_count,
+                'cdc_theme_groups': groups,
+                'cdc_theme_apps': apps,
                 'unpublished_count': UnpublishedFeedback.count_for_package,
                 'user_feedback': user_feedback,
                 'feedback_for_pkg': feedback_for_pkg}
@@ -186,8 +186,8 @@ class ODPThemePlugin(ODPSearchPlugin):
         return map
 
     def after_map(self, map):
-        unpublished_feedback_controller = 'ckanext.odp_theme.controller:UnpublishedFeedbackController'
-        unpublished_report_controller = 'ckanext.odp_theme.controller:UnpublishedReportController'
+        unpublished_feedback_controller = 'ckanext.cdc_theme.controller:UnpublishedFeedbackController'
+        unpublished_report_controller = 'ckanext.cdc_theme.controller:UnpublishedReportController'
 
         map.connect('view_feedback', '/dataset/{id}/feedback', action='view_feedback',
                     controller=unpublished_feedback_controller)
