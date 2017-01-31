@@ -1,2 +1,2 @@
 ckanext
-ckanext.odp_theme
+ckanext.cdc_theme
