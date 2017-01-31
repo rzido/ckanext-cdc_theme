@@ -1,11 +1,11 @@
-ckanext-odp_theme
+ckanext-cdc_theme
 =================
 
-OpenDataPhilly.org CKAN theme
+OpenData Coruña CKAN theme
 
 Manually generating main.css
 ----------------------------
 
-Run `sass ckanext/odp_theme/public/css/sass/main.scss ckanext/odp_theme/public/css/main.css`
+Run `sass ckanext/cdc_theme/public/css/sass/main.scss ckanext/cdc_theme/public/css/main.css`
 
 This will be done automatically when deploying via ansible.
