@@ -1,7 +1,7 @@
 ckanext-cdc_theme
 =================
 
-OpenData Coruña CKAN theme
+OpenData Coruña CKAN theme. This theme is heavily based on OpenDataPhilly Theme (ckanext-odp_theme)
 
 Manually generating main.css
 ----------------------------
