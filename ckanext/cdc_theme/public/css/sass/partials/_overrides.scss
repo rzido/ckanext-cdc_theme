@@ -7,10 +7,12 @@
   background: white;
 }
 
-
 .masthead .nav > li > a,
 .masthead .nav > .active > a {
   color: black;
   text-shadow: none;
 }
 
+.masthead .navigation .nav-pills li.active a {
+  background-color: white;
+}
