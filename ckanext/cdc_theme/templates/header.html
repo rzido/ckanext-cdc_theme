@@ -40,7 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       {% block header_logo %}
         {% if g.site_logo %}
-         <div class="span5"> <a class="logo" href="{{ h.url('home') }}"><img src="/img/cdc-logo.png" srcset="/img/odp-logo@2x.png 2x" alt="{{ g.site_title }} Logo" title="{{ g.site_title }} Logo" /></a></div>
+         <div class="span3"> <a class="logo" href="{{ h.url('home') }}"><img src="/img/cdc-logo.png" srcset="/img/odp-logo@2x.png 2x" alt="{{ g.site_title }} Logo" title="{{ g.site_title }} Logo" /></a></div>
         {% else %}
           <h1>
             <a href="{{ h.url('home') }}">{{ g.site_title }}</a>
@@ -48,12 +48,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
         {% endif %}
       {% endblock %}
-      <div class="span5"><h2><a href="{{ h.url('home') }}">{{ g.site_title }}</a></h2></div>
+        <div class="span3"><h2><a href="{{ h.url('home') }}">{{ g.site_title }}</a></h2></div>
        </hgroup>
   
   
       
     <hgroup>  
+      <div class="span5">
       {% block header_account_container_content %}
         {% if c.userobj %}
           <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
@@ -110,6 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </nav>
         {% endif %}
       {% endblock %}
+      </div>
           </hgroup>
          </div>
       </header>
