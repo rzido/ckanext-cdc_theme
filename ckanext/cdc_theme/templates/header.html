@@ -40,8 +40,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       {% block header_logo %}
         {% if g.site_logo %}
-          <a class="logo" href="{{ h.url('home') }}"><img src="/img/cdc-logo.png" srcset="/img/odp-logo@2x.png 2x" alt="{{ g.site_title }} Logo" title="{{ g.site_title }} Logo" /></a>
-          <h2><a href="{{ h.url('home') }}">{{ g.site_title }}</a></h2>
+          <a class="logo" href="{{ h.url('home') }}"><img src="/img/cdc-logo.png" srcset="/img/odp-logo@2x.png 2x" alt="{{ g.site_title }} Logo" title="{{ g.site_title }} Logo" />{{ g.site_title }}</a>
+         
         {% else %}
           <h1>
             <a href="{{ h.url('home') }}">{{ g.site_title }}</a>
