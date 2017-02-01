@@ -16,7 +16,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% block header_account %}
   <!-- CORUÑA -->
   <header class="ogov-masthead">
-    <div class="container">A
+    <div class="container">
+       {% block footer_lang %}
+          {% snippet "snippets/language_selector.html" %}
+       {% endblock %}
     </div>  
   </header>  
   <!-- CORUÑA -->
