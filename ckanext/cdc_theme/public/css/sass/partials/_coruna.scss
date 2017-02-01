@@ -13,6 +13,7 @@
     src: local("Dosis Regular"), local("Dosis-Regular"), url("http://fonts.gstatic.com/s/dosis/v4/xIAtSaglM8LZOYdGmG1JqQ.woff") format("woff");
 }
 
+/*
 h1 {
                 font-family: Dosis;
                 font-size: 24px;
@@ -95,10 +96,11 @@ pre {
 .label[data-format="json"], .label[data-format*="json"] {
     background-color: #0391b0;
 }
-
+*/
 .hero { 
   /*background-image: url(./base/images/fondo.png);*/
 }
+
 
 /* Remove the feature image */
 /* div.hero section.featured.media-overlay {
