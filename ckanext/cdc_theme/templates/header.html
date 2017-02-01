@@ -39,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {% endblock %}
 
     </hgroup>
-      
+    <hgroup>  
       {% block header_account_container_content %}
         {% if c.userobj %}
           <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
@@ -96,8 +96,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </nav>
         {% endif %}
       {% endblock %}
-    </div>
-  </header>
+          </hgroup>
+         </div>
+      </header>
+ 
+ 
 {% endblock %}
 <header class="masthead">
   {% block header_debug %}
