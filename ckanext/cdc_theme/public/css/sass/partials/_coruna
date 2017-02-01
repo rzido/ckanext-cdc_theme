@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "Dosis";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Dosis Regular"), local("Dosis-Regular"), url("http://fonts.gstatic.com/s/dosis/v4/xIAtSaglM8LZOYdGmG1JqQ.woff") format("woff");
+}
+1
+2
+3
+4
+5
+6
+                
+@font-face {
+    font-family: "Dosis";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Dosis Regular"), local("Dosis-Regular"), url("http://fonts.gstatic.com/s/dosis/v4/xIAtSaglM8LZOYdGmG1JqQ.woff") format("woff");
+}
+
+h1 {
+                font-family: Dosis;
+                font-size: 24px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                line-height: 26.4px;
+}
+h3 {
+                font-family: Dosis;
+                font-size: 14px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 500;
+                line-height: 15.4px;
+}
+p {
+                font-family: Dosis;
+                font-size: 14px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                line-height: 20px;
+}
+
+body {
+                font-family: Dosis;
+                font-size: 16px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                line-height: 20px;
+}
+blockquote {
+                font-family: Dosis;
+                font-size: 21px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                line-height: 30px;
+}
+pre {
+                font-family: Dosis;
+                font-size: 13px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                line-height: 18.5667px;
+}
+
+.resources h3 {
+    font-family: Dosis;
+                font-size: 20px;
+                font-style: bold;
+                font-variant: normal;
+                font-weight: 500;
+        color: #187794;
+        line-height: 26.5px;
+}
+
+.additional-info  h3{
+    font-family: Dosis;
+                font-size: 20px;
+                font-style: bold;
+                font-variant: normal;
+                font-weight: 500;
+        color: #187794;
+        line-height: 26.5px;
+}
+
+.dataset-heading a {
+    color: #005d7a;
+    font-weight: bold;
+}
+
+.label[data-format="csv"], .label[data-format*="csv"] {
+    background-color: #379805;
+}
+
+.label[data-format="json"], .label[data-format*="json"] {
+    background-color: #0391b0;
+}
+
+.hero { 
+  /*background-image: url(./base/images/fondo.png);*/
+}
+
+/* Remove the feature image */
+div.hero section.featured.media-overlay {
+display: none;
+}
+/* Style up front page */
+div.hero header {
+background-image: url(http://www.coruna.gal/IMG/P_Contenido_1442842574342_1024_800_U_6abc188239196931ebba2cf6e99471.jpg);
+height: 220px;
+width: 400px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+/*
+font-size: 1.3em;
+font-weight: bold;
+color: white; */
+}
