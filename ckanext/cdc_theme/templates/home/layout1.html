@@ -51,7 +51,7 @@ dropdown in the settings page and rename this file layout4.html.
         <div class="module-content box getstarted">
           <p>
             Get started by searching from
-            <b>{{ h.odp_theme_dataset_count() }}</b>
+            <b>{{ h.cdc_theme_dataset_count() }}</b>
             datasets that cover all dimensions of Philadelphia,
             from city council districts to park locations.
           </p>
@@ -67,7 +67,7 @@ dropdown in the settings page and rename this file layout4.html.
         <div class="module-content box">
           <h1 class="browse-heading">Browse by Topic</h1>
           <div>
-              {% for topic in h.odp_theme_groups() %}
+              {% for topic in h.cdc_theme_groups() %}
                 <a href="/group/{{ topic.name }}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
