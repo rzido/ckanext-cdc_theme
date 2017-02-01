@@ -13,6 +13,11 @@
     src: local("Dosis Regular"), local("Dosis-Regular"), url("http://fonts.gstatic.com/s/dosis/v4/xIAtSaglM8LZOYdGmG1JqQ.woff") format("woff");
 }
 
+[role=main] .primary{
+    width:717px;
+    float:right
+}
+
 /*
 h1 {
                 font-family: Dosis;
