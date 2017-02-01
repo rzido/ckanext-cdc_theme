@@ -33,8 +33,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <header class="account-masthead">
     <div class="container">
-      
-      {# The .header-image class hides the main text and uses image replacement for the title #}
+    
+     <!-- se mueve el logo a esta sección -->
+    {# The .header-image class hides the main text and uses image replacement for the title #}
     <hgroup class="{{ g.header_class }}">
 
       {% block header_logo %}
@@ -47,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
         {% endif %}
       {% endblock %}
-
+      <h1>{{ g.site_title }} Datos Abertos da Coruña</h1> 
     </hgroup>
     <hgroup>  
       {% block header_account_container_content %}
