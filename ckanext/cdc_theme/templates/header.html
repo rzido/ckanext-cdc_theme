@@ -41,22 +41,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="container">
     
   
-     <!-- se mueve el logo a esta sección -->
     {# The .header-image class hides the main text and uses image replacement for the title #}
-    <hgroup class="{{ g.header_class }}">
+    <hgroup class="{{ g.header_class }} pull-left">
 
       {% block header_logo %}
         {% if g.site_logo %}
-         <div class="span3"> <a class="logo" href="{{ h.url('home') }}"><img src="/img/cdc-logo.png" srcset="/img/odp-logo@2x.png 2x" alt="{{ g.site_title }} Logo" title="{{ g.site_title }} Logo" /></a></div>
+          <a class="logo" href="{{ h.url_for('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
         {% else %}
           <h1>
-            <a href="{{ h.url('home') }}">{{ g.site_title }}</a>
+            <a href="{{ h.url_for('home') }}">{{ g.site_title }}</a>
           </h1>
-        {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
+          {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
         {% endif %}
       {% endblock %}
-        <div class="span3"><h2><a href="{{ h.url('home') }}">{{ g.site_title }}</a></h2></div>
-       </hgroup>
+
+    </hgroup>
   
   
       
@@ -141,21 +140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="fa-bar"></span>
       <span class="fa-bar"></span>
     </button>
-    {# The .header-image class hides the main text and uses image replacement for the title #}
-    <hgroup class="{{ g.header_class }} pull-left">
-
-      {% block header_logo %}
-        {% if g.site_logo %}
-          <a class="logo" href="{{ h.url_for('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
-        {% else %}
-          <h1>
-            <a href="{{ h.url_for('home') }}">{{ g.site_title }}</a>
-          </h1>
-          {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
-        {% endif %}
-      {% endblock %}
-
-    </hgroup>
+   
     
     <div class="nav-collapse collapse">
 
