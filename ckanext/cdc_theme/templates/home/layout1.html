@@ -113,7 +113,16 @@ dropdown in the settings page and rename this file layout4.html.
       <div class="span12 col1">
         <div class="module-content box">
           <h1 class="featured-heading">Apps/Visualizaciones destacadas</h1>
-           
+          
+          {% set organizations = h.get_featured_organizations() %}
+
+            {% for organization in organizations %}
+            <div class="box">
+              {% snippet 'snippets/organization_item.html', organization=organization, truncate=50, truncate_title=35 %}
+          </div>
+          {% endfor %}
+          
+          
         </div>
       </div>
     </div>
