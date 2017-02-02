@@ -75,8 +75,10 @@ a.tag:hover {
 }
 
 .site-title {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 300;
   color: #0083D7;
   text-transform: uppercase;
+  display: inline;
+  padding-left: 5px;
 }
