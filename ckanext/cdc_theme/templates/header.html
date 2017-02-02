@@ -136,6 +136,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      block header logo deleted
    -->
 
+     <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+      <span class="fa-bar"></span>
+      <span class="fa-bar"></span>
+      <span class="fa-bar"></span>
+    </button>
+    {# The .header-image class hides the main text and uses image replacement for the title #}
+    <hgroup class="{{ g.header_class }} pull-left">
+
+      {% block header_logo %}
+        {% if g.site_logo %}
+          <a class="logo" href="{{ h.url_for('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+        {% else %}
+          <h1>
+            <a href="{{ h.url_for('home') }}">{{ g.site_title }}</a>
+          </h1>
+          {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
+        {% endif %}
+      {% endblock %}
+
+    </hgroup>
+    
     <div class="nav-collapse collapse">
 
       {% block header_site_navigation %}
