@@ -116,11 +116,10 @@ dropdown in the settings page and rename this file layout4.html.
           
           {% set organizations = h.organizations_available() %}
 
-           {% for organization in organizations %}
             <div class="box">
                {% snippet "organization/snippets/organization_list.html", organizations=organizations %}
           </div>
-          {% endfor %}
+
           
           
         </div>
