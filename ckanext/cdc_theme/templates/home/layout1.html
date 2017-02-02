@@ -107,7 +107,8 @@ dropdown in the settings page and rename this file layout4.html.
     </div>
   </div>
 </div>
-<div role="main" class="main-featured">
+
+<div role="main" class="main-browse">
   <div class="container">
     <div class="row row2">
       <div class="span12 col1">
@@ -116,10 +117,26 @@ dropdown in the settings page and rename this file layout4.html.
           
           {% set organizations = h.organizations_available() %}
 
-            <div class="box">
+           <!-- <div class="box"> -->
                {% snippet "organization/snippets/organization_list.html", organizations=organizations %}
-          </div>
+          <!-- </div> -->
 
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div role="main" class="main-featured">
+  <div class="container">
+    <div class="row row2">
+      <div class="span12 col1">
+        <div class="module-content box">
+          <h1 class="featured-heading">Apps/Visualizaciones destacadas</h1>
+     
           
           
         </div>
