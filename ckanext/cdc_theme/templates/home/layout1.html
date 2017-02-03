@@ -116,9 +116,9 @@ dropdown in the settings page and rename this file layout4.html.
            <h1 class="browse-heading">Explorar por organización</h1>
           
           
-          {% block organization_list %}
+    
 <ul class="media-grid" data-module="media-grid">
-  {% block organization_list_inner %}
+  {% set organizations = ckan.logic.action.get.organization_list() %}
   {% for organization in organizations %}
     {% snippet "organization/snippets/organization_item.html", organization=organization, position=loop.index, show_capacity=show_capacity %}
   {% endfor %}
