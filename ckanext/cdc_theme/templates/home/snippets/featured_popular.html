@@ -2,6 +2,20 @@
 set output =  h.cdc_theme_popular_datasets(5)
 %}
 
+{%
+set popular_datasets =  h.cdc_theme_popular_datasets(5)
+%}
+ <div class="module-content box">
+      <header>
+          <h2 class="secondary-heading">Conjuntos de datos populares</h2>
+      </header>
+      <section>
+        {% snippet 'snippets/package_list.html', packages=popular_datasets %}
+      </section>
+</div>
+
+
+
         <div class="box">
           <section class="group-list module module-narrow module-shallow">
             <header class="module-heading media">
