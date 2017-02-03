@@ -118,13 +118,8 @@ dropdown in the settings page and rename this file layout4.html.
           
     
 <ul class="media-grid" data-module="media-grid">
-  {% for topic in h.cdc_theme_organizations() %}
-                <a href="/group/{{ topic.name }}" class="browse-topic">
-                    <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
-                  <div class="browse-topic-title">
-                    {{ topic.display_name }}
-                  </div>
-                </a>
+  {% for title in h.cdc_theme_organizations() %}
+                
 {% endfor %}
 
 </ul>
