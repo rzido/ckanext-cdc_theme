@@ -52,6 +52,12 @@ def groups():
     return tk.get_action('group_list')({}, {'all_fields': True})
 
 
+def organizations():
+    """Return a list of organizations"""
+
+    return tk.get_action('organization_list')({}, {'all_fields': True})
+
+
 def user_feedback(pkgid, userid):
     """Return user feedback for a dataset"""
 
@@ -177,6 +183,7 @@ class CDCThemePlugin(CDCSearchPlugin):
         return {'cdc_theme_most_recent_datasets': most_recent_datasets,
                 'cdc_theme_dataset_count': dataset_count,
                 'cdc_theme_groups': groups,
+                'cdc_theme_organizations': organizations,
                 'cdc_theme_apps': apps,
                 'unpublished_count': UnpublishedFeedback.count_for_package,
                 'user_feedback': user_feedback,
