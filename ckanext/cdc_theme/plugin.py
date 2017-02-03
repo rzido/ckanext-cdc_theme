@@ -134,7 +134,7 @@ class CDCSearchPlugin(plugins.SingletonPlugin):
 
 
 class CDCThemePlugin(CDCSearchPlugin):
-    """OpenDataPhilly theme plugin.
+    """Coruña Open Data theme plugin based on OpenDataPhilly theme plugin.
 
     """
 
@@ -174,11 +174,11 @@ class CDCThemePlugin(CDCSearchPlugin):
         # and javascript.
         # see http://docs.ckan.org/en/latest/theming/fanstatic.html
         tk.add_public_directory(config, 'public')
-        tk.add_resource('fanstatic', 'odp_theme')
+        tk.add_resource('fanstatic', 'cdc_theme')
         init_db()
 
     def get_helpers(self):
-        """Register odp_theme_* helper functions"""
+        """Register cdc_theme_* helper functions"""
 
         return {'cdc_theme_most_recent_datasets': most_recent_datasets,
                 'cdc_theme_dataset_count': dataset_count,
