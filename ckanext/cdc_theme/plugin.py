@@ -30,6 +30,17 @@ def most_recent_datasets(num=3):
     return datasets[:num]
 
 
+def get_summary_list(num_packages):
+
+    list_without_summary = tk.get_action('package_search')(data_dict={'rows':num_packages,'sort':'metadata_modified desc'})['results']
+    list_with_summary = []
+    for package in list_without_summary:
+        list_with_summary.append(tk.get_action('package_show')(
+                                 data_dict={'id':package['name'],'include_tracking':True})
+                                 )
+    return list_with_summary
+
+
 def apps(featured_only=True):
     """Return apps for all datasets."""
 
@@ -181,6 +192,7 @@ class CDCThemePlugin(CDCSearchPlugin):
         """Register cdc_theme_* helper functions"""
 
         return {'cdc_theme_most_recent_datasets': most_recent_datasets,
+                'cdc_theme_popular_datasets': get_summary_list,
                 'cdc_theme_dataset_count': dataset_count,
                 'cdc_theme_groups': groups,
                 'cdc_theme_organizations': organizations,
