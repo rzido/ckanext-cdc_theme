@@ -115,12 +115,16 @@ dropdown in the settings page and rename this file layout4.html.
         <div class="module-content box">
            <h1 class="browse-heading">Explorar por organización</h1>
           
-          {% set organizations = h.organizations_available() %}
-
-           <!-- <div class="box"> -->
-               {% snippet "organization/snippets/organization_list.html", organizations=organizations %}
-          <!-- </div> -->
-
+          
+          {% block organization_list %}
+<ul class="media-grid" data-module="media-grid">
+  {% block organization_list_inner %}
+  {% for organization in organizations %}
+    {% snippet "organization/snippets/organization_item.html", organization=organization, position=loop.index, show_capacity=show_capacity %}
+  {% endfor %}
+   {% endblock %}
+</ul>
+{% endblock %}
           
           
         </div>
