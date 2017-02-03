@@ -112,10 +112,10 @@ dropdown in the settings page and rename this file layout4.html.
   <div class="container">
     <div class="row row2">
       <div class="span12 col1">
-
            <h1 class="browse-heading">Explorar por organización</h1>
     
-<ul class="media-grid" data-module="media-grid">
+<!-- <ul class="media-grid" data-module="media-grid"> -->
+        <ul>
   {% for topic in h.cdc_theme_organizations() %}
                <a href="/organization/{{ topic.name }}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url }}">
