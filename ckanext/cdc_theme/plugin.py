@@ -134,7 +134,7 @@ class CDCSearchPlugin(plugins.SingletonPlugin):
 
 
 class CDCThemePlugin(CDCSearchPlugin):
-    """Coruña Open Data theme plugin based on OpenDataPhilly theme plugin.
+    """Coruna Open Data theme plugin based on OpenDataPhilly theme plugin.
 
     """
 
