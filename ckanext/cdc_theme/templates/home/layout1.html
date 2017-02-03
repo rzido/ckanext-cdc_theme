@@ -118,7 +118,7 @@ dropdown in the settings page and rename this file layout4.html.
           
     
 <ul class="media-grid" data-module="media-grid">
-  {% set organizations = ckan.logic.action.get.organization_list() %}
+  {% set organizations = h.cdc_theme_organizations() %}
   {% for organization in organizations %}
     {% snippet "organization/snippets/organization_item.html", organization=organization, position=loop.index, show_capacity=show_capacity %}
   {% endfor %}
