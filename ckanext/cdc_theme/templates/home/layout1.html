@@ -75,7 +75,7 @@ dropdown in the settings page and rename this file layout4.html.
     <div class="row row2">
       <div class="span12 col1">
         {% set tags = h.get_facet_items_dict('tags', limit=20) %}
-        <div class="module-content box tags">
+        <div class="module-content tags">
           <h3>{{ _('Popular tags') }}</h3>
           {% for tag in tags %}
           <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
