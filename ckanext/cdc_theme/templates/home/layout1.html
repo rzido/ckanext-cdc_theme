@@ -48,8 +48,7 @@ dropdown in the settings page and rename this file layout4.html.
         {% snippet 'home/snippets/search.html' %}               
       </div>
       <div class="span6 col2">
-       <!-- <div class="module-content box getstarted"> -->
-          <div class="getstarted">
+         <div class="module-content box getstarted">
           {% set stats = h.get_site_statistics() %}
           <p>
             Empieza explorando los 
@@ -90,8 +89,9 @@ dropdown in the settings page and rename this file layout4.html.
   <div class="container">
     <div class="row row2">
       <div class="span12 col1">     
-          <h1 class="browse-heading">Explorar por temática</h1>
-          <div>
+        <div class="module-content box">
+          <h1 class="browse-heading ">Explorar por temática</h1>
+          
               {% for topic in h.cdc_theme_groups() %}
                 <a href="/group/{{ topic.name }}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
@@ -110,6 +110,7 @@ dropdown in the settings page and rename this file layout4.html.
   <div class="container">
     <div class="row row2">
       <div class="span12 col1">
+        <div class="module-content box">
            <h1 class="browse-heading">Explorar por organización</h1>
     
 <!-- <ul class="media-grid" data-module="media-grid"> -->
@@ -125,7 +126,7 @@ dropdown in the settings page and rename this file layout4.html.
 
 </ul>
 
-          
+        </div>
           
         </div>
       </div>
@@ -138,12 +139,12 @@ dropdown in the settings page and rename this file layout4.html.
   <div class="container">
     <div class="row row2">
       <div class="span12 col1">
-        <!-- <div class="module-content box"> -->
+       <div class="module-content box">
           <h1 class="featured-heading">Apps/visualizaciones destacadas</h1>
      
           <img src="/img/impostos.png" alt="{{ g.site_title }} Logo" height="31" width="250" title="{{ g.site_title }} Logo" />
           
-        <!-- </div> -->
+        </div> 
       </div>
     </div>
   </div>
