@@ -53,7 +53,7 @@ def apps(featured_only=True):
 # dataset_list: Devuelve la lista de datasets 
 # dataset_list: Returns datasets name list
 def dataset_list():
-	return toolkit.get_action('package_list')(data_dict={})
+	return tk.get_action('package_list')(data_dict={})
 
 def dataset_count():
     """Return a count of all datasets"""
