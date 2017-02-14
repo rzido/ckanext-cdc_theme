@@ -58,8 +58,8 @@ dropdown in the settings page and rename this file layout4.html.
             </a> 
             y sus 
              <a href="{{ h.url_for(controller='package', action='search') }}">
-            <b>{{ h.resource_count() }}</b> 
-            {{ _('resource') if h.resource_count == 1 else _('resources') }}
+            <b>{{ h.cdc_theme_resource_count() }}</b> 
+            {{ _('resource') if h.cdc_theme_resource_count == 1 else _('resources') }}
             </a>
             de 
             <a href="{{ h.url_for(controller='organization', action='index') }}">
