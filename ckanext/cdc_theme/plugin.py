@@ -68,7 +68,8 @@ def resource_count():
 	for dsname in ds:
 		data_dict = {'id':dsname}
 		dsitem = tk.get_action('package_show')(data_dict=data_dict)
-		count = count + dsitem['num_resources']
+		# count = count + dsitem['num_resources']
+		count = count + dsitem.num_resources
 	return count
 
 
