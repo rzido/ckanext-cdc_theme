@@ -50,11 +50,26 @@ def apps(featured_only=True):
     return apps
 
 
+# dataset_list: Devuelve la lista de datasets 
+# dataset_list: Returns datasets name list
+def dataset_list():
+	return toolkit.get_action('package_list')(data_dict={})
+
 def dataset_count():
     """Return a count of all datasets"""
 
     result = tk.get_action('package_search')({}, {'rows': 1})
     return result['count']
+
+
+def resource_count():
+	ds = dataset_list()
+	count = 0
+	for dsname in ds:
+		data_dict = {'id':dsname}
+		dsitem = toolkit.get_action('package_show')(data_dict=data_dict)
+		count = count + dsitem['num_resources']
+	return count
 
 
 def groups():
@@ -194,6 +209,8 @@ class CDCThemePlugin(CDCSearchPlugin):
         return {'cdc_theme_most_recent_datasets': most_recent_datasets,
                 'cdc_theme_popular_datasets': get_summary_list,
                 'cdc_theme_dataset_count': dataset_count,
+                'cdc_theme_dataset_list': dataset_list,
+                'cdc_theme_resource_count': resource_count;
                 'cdc_theme_groups': groups,
                 'cdc_theme_organizations': organizations,
                 'cdc_theme_apps': apps,
