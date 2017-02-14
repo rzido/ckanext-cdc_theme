@@ -55,6 +55,11 @@ dropdown in the settings page and rename this file layout4.html.
             <a href="{{ h.url_for(controller='package', action='search') }}">
             <b>{{ h.SI_number_span(stats.dataset_count) }}</b> 
             {{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}
+            </a> 
+            y sus 
+             <a href="{{ h.url_for(controller='resource', action='search') }}">
+            <b>{{ h.SI_number_span(stats.resource_count) }}</b> 
+            {{ _('resource') if stats.resource_count == 1 else _('resources') }}
             </a>
             de 
             <a href="{{ h.url_for(controller='organization', action='index') }}">
@@ -67,7 +72,6 @@ dropdown in the settings page and rename this file layout4.html.
              {{ _('group') if stats.group_count == 1 else _('groups') }}
             </a> 
             desde distritos de la ciudad a información de autobuses
-              
           </p>
         </div>
       </div>
