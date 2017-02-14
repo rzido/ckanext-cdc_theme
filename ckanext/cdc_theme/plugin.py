@@ -210,7 +210,7 @@ class CDCThemePlugin(CDCSearchPlugin):
                 'cdc_theme_popular_datasets': get_summary_list,
                 'cdc_theme_dataset_count': dataset_count,
                 'cdc_theme_dataset_list': dataset_list,
-                'cdc_theme_resource_count': resource_count;
+                'cdc_theme_resource_count': resource_count,
                 'cdc_theme_groups': groups,
                 'cdc_theme_organizations': organizations,
                 'cdc_theme_apps': apps,
