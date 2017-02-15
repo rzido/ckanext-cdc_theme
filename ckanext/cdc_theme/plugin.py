@@ -72,6 +72,8 @@ def resource_count():
 		 
 	return count
 
+def showcase_count():
+	return tk.get_action('package_search')({}, {"rows": 1, 'fq': 'dataset_type:showcase'})['count']
 
 def groups():
     """Return a list of groups"""
@@ -212,6 +214,7 @@ class CDCThemePlugin(CDCSearchPlugin):
                 'cdc_theme_dataset_count': dataset_count,
                 'cdc_theme_dataset_list': dataset_list,
                 'cdc_theme_resource_count': resource_count,
+		'cdc_theme_showcase_count': showcase_count,
                 'cdc_theme_groups': groups,
                 'cdc_theme_organizations': organizations,
                 'cdc_theme_apps': apps,
