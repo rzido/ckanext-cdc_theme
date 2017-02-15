@@ -41,6 +41,17 @@ def get_summary_list(num_packages):
     return list_with_summary
 
 
+def showcases(num_packages):
+
+    list_without_summary = tk.get_action('package_search')(data_dict={'rows':num_packages,'fq': 'dataset_type:showcase'})['results']
+    list_with_summary = []
+    for package in list_without_summary:
+        list_with_summary.append(tk.get_action('package_show')(
+                                 data_dict={'id':package['name'],'include_tracking':True})
+                                 )
+    return list_with_summary
+
+
 def apps(featured_only=True):
     """Return apps for all datasets."""
 
