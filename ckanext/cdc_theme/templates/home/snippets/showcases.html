@@ -8,8 +8,8 @@ set showcases =  h.cdc_theme_showcases(6)
       </header>
       <section>
          
-          {% for package in showcases %}                          
-                   {% snippet 'showcase/snippets/showcase_item.html', package=package, item_class=item_class, truncate=truncate, truncate_title=truncate_title, show_remove=show_remove %}
+         {% for package in showcases %}                          
+            <img src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">            
          {% endfor %}                  
          
       </section>
