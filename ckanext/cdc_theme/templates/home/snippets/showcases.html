@@ -9,7 +9,8 @@ set showcases =  h.cdc_theme_showcases(6)
       <section>
          
          {% for package in showcases %}                          
-            <img src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">            
+       
+            <img class="browse-topic-image" src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">            
          {% endfor %}                  
          
       </section>
