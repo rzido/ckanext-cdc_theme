@@ -60,14 +60,7 @@ Example:
         </ul>
     {% endblock %}
   
-  
-         <span class="date last-modified">
-            <a href="/dataset#sort=last_modified" class="label label-date" fiso-sort="last_modified" ckan-modified="{{package.metadata_modified}}"
-            data-toggle="tooltip" data-placement="top" title="" data-original-title="Última actualización" >
-            {{ h.snippet('snippets/date.html', date_str=package.metadata_modified) }}
-            </a>
-          </span>
-
+      
     
      <div class="tags" style="display:none">
           {% for tag in package.tags %}
