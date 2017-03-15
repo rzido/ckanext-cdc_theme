@@ -18,6 +18,15 @@ Example:
 {% set title = package.title or package.name %}
 {% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
 
+
+{# NUEVO   #}
+{% set tag_items = package.tags %}
+{% set format_items = h.dict_list_reduce(package.resources, 'format') %}
+{% set group_items = package.groups %}
+
+{# NUEVO   #}
+
+
 <li class="{{ item_class or "dataset-item" }}">
   {% block package_item_content %}
     <div class="dataset-content">
@@ -46,6 +55,13 @@ Example:
   
   {#  ***************** NUEVO - PRUEBA ************ #}
 
+    <div class="group-icon-list">
+            {% for item in group_items %}
+            <a href="/dataset#groups_cats=.{{item.name|lower}}." fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
+              <span aria-hidden="true" class="icon-{{item.name|lower}}"></span>
+            </a>
+            {% endfor %}
+</div>
   
      {% block package_dates %}
         <ul class="dataset-dates">
