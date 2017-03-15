@@ -59,7 +59,7 @@ Example:
             CATEGORÍAS
             {% for item in group_items %}
             <a href="/dataset#groups_cats=.{{item.name|lower}}." fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
-              <span aria-hidden="true" class="icon-{{item.name|lower}}">C</span>
+              <span aria-hidden="true" class="icon-{{item.name|lower}}"> <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}"></span>
             </a>
             {% endfor %}
 </div>
