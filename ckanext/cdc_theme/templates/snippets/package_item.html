@@ -34,21 +34,20 @@ Example:
         {% elif package.get('state', '').startswith('deleted') %}
           <span class="label label-important">{{ _('Deleted') }}</span>
         {% endif %}
-        {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
+        * {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
       </h3>
       {% if banner %}
         <span class="banner">{{ _('Popular') }}</span>
       {% endif %}
       {% if notes %}
-        <div>{{ notes|urlize }}</div>
+        <div>** {{ notes|urlize }}</div>
       {% endif %}
     </div>
     {% if package.resources and not hide_resources and h.dict_list_reduce(package.resources, 'format') %}
       <ul class="dataset-resources unstyled">
         {% for resource in h.dict_list_reduce(package.resources, 'format') %}
           <li>
-            <a>**************</a>
-            <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label" data-format="{{ resource.lower() }}">{{ resource }}</a>
+            *** <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label" data-format="{{ resource.lower() }}">{{ resource }}</a>
           </li>
         {% endfor %}
       </ul>
