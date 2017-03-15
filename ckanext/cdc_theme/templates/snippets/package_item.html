@@ -43,6 +43,24 @@ Example:
         <div>{{ notes|urlize }}</div>
       {% endif %}
     </div>
+  
+  {#  ***************** NUEVO - PRUEBA ************ #}
+
+  
+     {% block package_dates %}
+        <ul class="dataset-dates">
+          {% if package.record_publish_date %}
+            <li>Creado el {{ h.render_datetime(package.record_publish_date, '%d-%m-%Y') }}</li>
+          {% endif %}
+          {% if package.record_last_modified %}
+            <li>Modificado el {{ h.render_datetime(package.record_last_modified, '%d-%m-%Y') }}</li>
+          {% else %}
+          	<li>Modificado el {{ h.render_datetime(package.metadata_modified, '%d-%m-%Y') or h.render_datetime(package.revision_timestamp, '%d-%m-%Y') or _('unknown') }}</li>
+          {% endif %}
+        </ul>
+    {% endblock %}
+  
+  
     {% if package.resources and not hide_resources and h.dict_list_reduce(package.resources, 'format') %}
       <ul class="dataset-resources unstyled">
         {% for resource in h.dict_list_reduce(package.resources, 'format') %}
@@ -54,20 +72,5 @@ Example:
     {% endif %}
   {% endblock %}
   
-{#  ***************** NUEVO - PRUEBA ************ #}
 
-  
-     {% block package_dates %}
-        <ul class="dataset-dates">
-          {% if package.record_publish_date %}
-            <li>Publicado el {{ h.render_datetime(package.record_publish_date, '%d-%m-%Y') }}</li>
-          {% endif %}
-          {% if package.record_last_modified %}
-            <li>Ultima modificación el : {{ h.render_datetime(package.record_last_modified, '%d-%m-%Y') }}</li>
-          {% else %}
-          	<li>Ultima modificación el : {{ h.render_datetime(package.metadata_modified, '%d-%m-%Y') or h.render_datetime(package.revision_timestamp, '%d-%m-%Y') or _('unknown') }}</li>
-          {% endif %}
-        </ul>
-    {% endblock %}
-  
 </li>
