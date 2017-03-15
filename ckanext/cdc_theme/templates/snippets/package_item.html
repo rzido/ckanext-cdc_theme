@@ -65,7 +65,7 @@ Example:
           {% if package.record_last_modified %}
             <li>Ultima modificación el : {{ h.render_datetime(package.record_last_modified, '%d-%m-%Y') }}</li>
           {% else %}
-          	<li>Ultima modificación el : {{ h.render_datetime(package.metadata_modified, '%%d-%m-%Y') or h.render_datetime(package.revision_timestamp, '%d-%m-%Y') or _('unknown') }}</li>
+          	<li>Ultima modificación el : {{ h.render_datetime(package.metadata_modified, '%d-%m-%Y') or h.render_datetime(package.revision_timestamp, '%d-%m-%Y') or _('unknown') }}</li>
           {% endif %}
         </ul>
     {% endblock %}
