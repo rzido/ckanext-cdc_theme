@@ -59,6 +59,14 @@ Example:
           {% endif %}
         </ul>
     {% endblock %}
+    
+     <div class="tags" style="display:none">
+          {% for tag in package.tags %}
+          <span>{{ tag.name }}</span>
+          {% endfor %}
+</div>
+  
+  {#  ***************** NUEVO - PRUEBA ************ #}
   
   
     {% if package.resources and not hide_resources and h.dict_list_reduce(package.resources, 'format') %}
