@@ -111,8 +111,9 @@ a.tag:hover {
 .icon-topic-image {
   height: 26px;
   margin-bottom: 2px;
-   filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
+   filter: grayscale(100%) hue-rotate(30deg) drop-shadow(8px 8px 10px black);
+    -webkit-filter: grayscale(100%) hue-rotate(30deg) drop-shadow(8px 8px 10px black);
+  
 } 
 
 .dataset-list-left-icon {
