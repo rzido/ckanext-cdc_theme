@@ -111,6 +111,8 @@ a.tag:hover {
 .icon-topic-image {
   height: 26px;
   margin-bottom: 2px;
+   filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 } 
 
 .dataset-list-left-icon {
