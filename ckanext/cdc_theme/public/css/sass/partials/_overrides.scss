@@ -111,9 +111,11 @@ a.tag:hover {
 .icon-topic-image {
   height: 26px;
   margin-bottom: 2px;
-   filter: grayscale(100%) hue-rotate(30deg) ;
-    -webkit-filter: grayscale(100%) hue-rotate(30deg) ;
-  
+   filter: grayscale(100%)  ;
+    -webkit-filter: grayscale(100%)  ;
+   -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
+    transform: rotate(20deg);
 } 
 
 .dataset-list-left-icon {
