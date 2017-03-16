@@ -28,8 +28,17 @@ Example:
 
 
 <li class="{{ item_class or "dataset-item" }}">
+  
+    <div class="group-icon-list">
+            {% for item in group_items %}
+            <a href="/group/{{item.name|lower}}" fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
+               <img class="dataset-list-left-icon icon-topic-image" src="{{ item.image_display_url or '/img/icons-document.svg' }}">               
+            </a>
+            {% endfor %}
+     </div>
+  
   {% block package_item_content %}
-    <div class="dataset-content">
+      <div class="dataset-content">
       <h3 class="dataset-heading">
         {% if package.private %}
           <span class="dataset-private label label-inverse">
