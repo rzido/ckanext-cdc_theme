@@ -21,7 +21,7 @@
    <p>
     {% if res.has_views %}
             <i class="icon-bar-chart"></i>
-            {{ h.get_action('resource_view_list')  ( context, {'id': resource['id']}) }}
+           
     {% endif %}
   
     {% if res.url and h.is_url(res.url) %}
