@@ -16,18 +16,7 @@
     </p>
   {% endblock %}
   {% block resource_item_explore %}
-  
-   {% if res.has_views %}
-            <i class="fa fa-bar-chart-o"></i>
-            {{ _('Preview') }}   
-  
-   {% else %}
-            <i class="fa fa-info-circle"></i>
-            {{ _('More information') }}
-    {% endif %}
-  
-  NUM. VISTAS
-  
+ 
   
   {% if not url_is_edit %}
   <div class="dropdown btn-group">
