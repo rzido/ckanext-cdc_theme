@@ -2,6 +2,8 @@
 
 {% set pkg = c.pkg_dict %}
 
+{% set group_items = package.groups %}
+
 {% block primary_content_inner %}
   {{ super() }}
   {% block package_description %}
