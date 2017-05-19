@@ -20,7 +20,12 @@
    {% if res.has_views %}
             <i class="fa fa-bar-chart-o"></i>
             {{ _('Preview') }}   
-   {% endif %}
+  
+   {% else %}
+            <i class="fa fa-info-circle"></i>
+            {{ _('More information') }}
+    {% endif %}
+  
   
   {% if not url_is_edit %}
   <div class="dropdown btn-group">
