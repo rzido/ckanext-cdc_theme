@@ -29,10 +29,13 @@
       
         
       </div>
+         
     
-      <div class="row">
-      
-          <div class="col1">
+    {% endblock %}
+  </div>
+    <div class="container">
+    <div class="row">
+        <div class="col1">
           <a class="logo" href="{{ h.url('home') }}"><img src="/img/cdc-logo-footer.png" srcset="/img/odp-logo@2x.png 2x" alt="{{ g.site_title }} Logo" height="31" width="110" title="{{ g.site_title }} Logo" /></a>        
           </div>
           <div class="col2">
@@ -40,11 +43,8 @@
               Plaza de María Pita, 1. 15001 A Coruña.<br>
               981 184 200 | 010
           </div>
-        </div>
-    
-    {% endblock %}
+    </div>
   </div>
-
   {% block footer_debug %}
     {% if g.debug %}
       {% include 'snippets/debug.html' %}
