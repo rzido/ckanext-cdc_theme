@@ -23,8 +23,15 @@
 }
 
 .ogov-masthead {
-  background: #0083D7;
+  background-color: #0083D7;
   min-height: 36px;
+}
+
+.ogov-masthead .btn {
+    
+  background-color: transparent;
+  font-weight: normal;
+  color: white;
 }
 
 .account-masthead {
