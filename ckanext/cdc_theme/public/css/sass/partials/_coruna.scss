@@ -25,6 +25,10 @@
 .ogov-masthead {
   background-color: #0083D7;
   min-height: 36px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .ogov-masthead .btn, .ogov-masthead .btn:hover, .ogov-masthead .btn:focus {
