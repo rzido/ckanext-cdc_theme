@@ -1,13 +1,17 @@
 
+[role="main"], .main {
+  padding-top: 0px;
+}
+
 .account-masthead {
   background: #EBEBEB;
 }
 .masthead {
   color: #444849;
   background: white;
-  border-bottom: 5px #31383c solid;
+  border-bottom: 0px #31383c solid;
   min-height: 0px;
-  padding: 2px;
+  padding: 0px;
 }
 
 .masthead .nav > li > a,
