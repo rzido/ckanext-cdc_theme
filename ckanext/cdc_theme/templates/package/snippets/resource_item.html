@@ -7,7 +7,7 @@
   <a class="heading" href="{{ url }}" title="{{ res.name or res.description }}">
     {{ h.popular('views', res.tracking_summary.total, min=10) }}
     {{ h.resource_display_name(res) | truncate(50) }}
-    <span property="dc:format" data-format="{{ res.format.lower() or 'data' }}"><img src="https://cdn.datos.gob.mx/ckan/img/ic-{{ res.format.lower() or 'data' }}.png" alt="{{ res.format.lower() or 'data' }}" style="width: 40px;">{{ h.get_translated(res, 'format') }}</span>
+    <span property="dc:format" data-format="{{ res.format.lower() or 'data' }}">{{ h.get_translated(res, 'format') }}</span>
    </a>
   {% endblock %}
   {% block resource_item_description %}
