@@ -2,6 +2,10 @@
 @import "partials/_carousel";
 @import "partials/_coruna";
 
+* {
+    box-sizing: border-box;
+}
+
 body {
   background: $primary-color none;
   -moz-osx-font-smoothing: grayscale;
