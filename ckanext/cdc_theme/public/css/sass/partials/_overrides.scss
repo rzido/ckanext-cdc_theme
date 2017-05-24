@@ -192,7 +192,11 @@ button {
 }
 
 
-
+[class*="span"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 0px;
+}
 
 .span1 {width: 8.33%;}
 .span2 {width: 16.66%;}
