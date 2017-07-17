@@ -32,7 +32,7 @@ p {
 }
 
 .account-masthead {
-  background: #EBEBEB;
+  background: #000;
 }
 .masthead {
   color: #444849;
@@ -59,7 +59,7 @@ p {
   min-height: 70px; 
 }
 .account-masthead .account ul li a {
-  color: #444849 ;
+  color: #fff ;
   border-radius: 3px;
   position: relative;
   top: 10px;
@@ -135,10 +135,9 @@ a.tag:hover {
 }
 
 .site-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
-  color: #0083D7;
-  text-transform: uppercase;
+  color: #fff;  
   display: inline;
   padding-left: 5px;
   position: relative;
