@@ -1,6 +1,6 @@
 @import "partials/_variables";
 @import "partials/_carousel";
-@import "partials/_coruna";
+
 
 
 body {
@@ -460,4 +460,5 @@ label {
   padding: 20px 20px 30px;
 }
 
+@import "partials/_coruna";
 @import "partials/_overrides";
