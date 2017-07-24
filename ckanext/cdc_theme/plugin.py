@@ -186,13 +186,18 @@ class CDCThemePlugin(CDCSearchPlugin):
     def dataset_facets(self, facets_dict, package_type):
         """Add Published to the list of facets shown on the search page"""
 
-        new_facets_dict = OrderedDict()
-        new_facets_dict['published'] = tk._('Published')
-        for key, value in facets_dict.items():
-            new_facets_dict[key] = value
-        if 'groups' in new_facets_dict:
-            new_facets_dict['groups'] = tk._('Topics')
-        return new_facets_dict
+        #new_facets_dict = OrderedDict()
+        #new_facets_dict['published'] = tk._('Published')
+        #for key, value in facets_dict.items():
+        #    new_facets_dict[key] = value
+        #if 'groups' in new_facets_dict:
+        #    new_facets_dict['groups'] = tk._('Topics')
+        #return new_facets_dict
+
+	# RC	
+	if 'groups' in facets_dict:
+            facets_dict['groups'] = tk._('Topics')
+        return facets_dict
 
     def group_facets(self, facets_dict, group_type, package_type):
         if 'groups' in facets_dict:
