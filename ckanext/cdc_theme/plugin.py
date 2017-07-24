@@ -136,8 +136,7 @@ class CDCThemePlugin(plugins.SingletonPlugin):
     """
 
     plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.ITemplateHelpers)
-    plugins.implements(plugins.IFacets)
+    plugins.implements(plugins.ITemplateHelpers)    
     plugins.implements(plugins.IRoutes)
 
    
