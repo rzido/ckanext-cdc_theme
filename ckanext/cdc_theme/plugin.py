@@ -19,6 +19,8 @@ def most_recent_datasets(num=3):
     # the current_package_list_with_resources action returns private resources
     # which need to be filtered
 
+    # TO BE FIXED. When number of datasets with resources is less than num=3. 	
+
     datasets = []
     i = 0
     while len(datasets) < num:
