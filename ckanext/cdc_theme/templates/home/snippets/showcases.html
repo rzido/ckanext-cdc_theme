@@ -3,14 +3,16 @@
 set showcases =  h.cdc_theme_showcases(6)
 %}
  <div class="module-content box">
+      <!--
       <header>
           <h2 class="secondary-heading">Apps/visulizaciones destacadas</h2>       
       </header>
+      -->
       <section>
          
-         {% for package in showcases %}                          
-       
-            <img class="browse-showcase-image" src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">            
+         {% for package in showcases %}                                
+            <img class="browse-showcase-image" src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">
+            <h3 class="tertiary-heading">{{ package.name }}</h3>
          {% endfor %}                  
          
       </section>
