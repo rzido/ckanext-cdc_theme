@@ -1,7 +1,6 @@
 
 {%
 set showcases =  h.cdc_theme_showcases(6)
-set title = package.title or package.name
 %}
  <div class="module-content box">
       <!--
@@ -13,8 +12,9 @@ set title = package.title or package.name
          
          {% for package in showcases %}                                
             <img class="browse-showcase-image" src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">
-            <div class="browse-topic-title">{{ h.link_to(h.truncate(title, 80), h.url_for(controller='package', action='read', id=package.name)) }}</div>
+            <div class="browse-topic-title">{{ h.link_to(h.truncate(package.title or package.name, 80), h.url_for(controller='package', action='read', id=package.name)) }}</div>
          {% endfor %}                  
-         
+        
+       
       </section>
 </div>
