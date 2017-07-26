@@ -8,7 +8,7 @@ dropdown in the settings page and rename this file layout4.html.
 
 -->
 
-<div class="outer front">
+<div class="outer">
   
     <div class="container">
       <div class="row row1">
@@ -99,8 +99,7 @@ dropdown in the settings page and rename this file layout4.html.
     <div class="row row2">
       <div class="span12 col1">     
         <div class="module-content box">
-          <h1 class="browse-heading ">Explorar por temática</h1>
-          ::after          
+          <h1 class="browse-heading ">Explorar por temática</h1>          
               {% for topic in h.cdc_theme_groups() %}
                 <a href="/group/{{ topic.name }}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
@@ -121,8 +120,7 @@ dropdown in the settings page and rename this file layout4.html.
       <div class="span12 col1">
         <div class="module-content box">
            <h1 class="browse-heading">Explorar por organización</h1>
-          ::after          
-    
+              
 <!-- <ul class="media-grid" data-module="media-grid"> -->
 <!--        <ul> -->
   {% for topic in h.cdc_theme_organizations() %}
@@ -151,7 +149,7 @@ dropdown in the settings page and rename this file layout4.html.
       <div class="span12 col1">
        <div class="module-content box">
           <h1 class="featured-heading">Apps/visualizaciones destacadas</h1>    
-         ::after          
+         
           {% snippet 'home/snippets/showcases.html' %}
           
         </div> 
@@ -165,8 +163,7 @@ dropdown in the settings page and rename this file layout4.html.
   <div class="container">
     <div class="row row2">
       <h1 class="featured-heading">Datos</h1>
-      ::after          
-      <div class="span6 col1">
+        <div class="span6 col1">
          {% snippet 'home/snippets/latest_datasets.html' %}
       </div>
       <div class="span6 col2">
