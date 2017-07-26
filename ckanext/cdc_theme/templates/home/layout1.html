@@ -123,7 +123,7 @@ dropdown in the settings page and rename this file layout4.html.
            <h1 class="browse-heading">Explorar por organización</h1>
     
 <!-- <ul class="media-grid" data-module="media-grid"> -->
-        <ul>
+<!--        <ul> -->
   {% for topic in h.cdc_theme_organizations() %}
                <a href="/organization/{{ topic.name }}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url }}">
@@ -133,7 +133,7 @@ dropdown in the settings page and rename this file layout4.html.
                 </a> 
 {% endfor %}
 
-</ul>
+<!-- </ul> -->
 
         </div>
           
