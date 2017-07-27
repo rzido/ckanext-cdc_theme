@@ -99,7 +99,7 @@ dropdown in the settings page and rename this file layout4.html.
     <div class="row row2">
       <div class="span12 col1">     
         <div class="module-content box">
-          <h1 class="browse-heading ">Explorar por {{ _('Group')}}</h1>          
+          <h1 class="browse-heading ">{% trans %}Explore by topic{% endtrans %}</h1>          
               {% for topic in h.cdc_theme_groups() %}
                 <a href="/group/{{ topic.name }}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
