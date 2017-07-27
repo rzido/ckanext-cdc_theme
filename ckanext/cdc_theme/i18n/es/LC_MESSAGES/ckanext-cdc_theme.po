@@ -172,6 +172,23 @@ msgstr "Portal de datos abiertos de A Coruña"
 msgid "datos.coruna.gal is the open data catalog about the City of A Coruña and its local government"
 msgstr "datos.coruna.gal é o catálogo de datos abertos sobre a cidade da Coruña"
 
+
+#: ckanext/cdc_theme/templates/home/layout1.html:57
+msgid "Start by exploring the "
+msgstr "Empieza explorando los "
+
+#: ckanext/cdc_theme/templates/home/layout1.html:62
+msgid "and its  "
+msgstr "y sus "
+
+#: ckanext/cdc_theme/templates/home/layout1.html:62
+msgid "from  "
+msgstr "de "
+
+#: ckanext/cdc_theme/templates/home/layout1.html:62
+msgid "in the city about topics classified on "
+msgstr "de la ciudad sobre temáticas clasificadas en "
+
 #: ckanext/cdc_theme/templates/home/layout1.html:62
 msgid "dataset"
 msgstr "conjunto de datos"
