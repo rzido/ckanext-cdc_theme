@@ -169,8 +169,8 @@ msgid "A Coruña Open Data Portal"
 msgstr "Portal de datos abiertos de A Coruña"
 
 #: ckanext/cdc_theme/templates/home/layout1.html:18
-msgid "datos coruna gal is the open data catalog about the City of A Coruña and its local government"
-msgid "datos coruna gal é o catálogo de datos abertos sobre a cidade da Coruña"
+msgid "datos.coruna.gal is the open data catalog about the City of A Coruña and its local government"
+msgstr "datos.coruna.gal é o catálogo de datos abertos sobre a cidade da Coruña"
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
 msgid "dataset"
