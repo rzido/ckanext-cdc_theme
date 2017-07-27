@@ -176,11 +176,11 @@ msgid "Start by exploring the "
 msgstr "Escomeza explorando os "
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
-msgid "and its  "
+msgid "and its "
 msgstr "e os seus "
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
-msgid "from  "
+msgid "from "
 msgstr "de "
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
