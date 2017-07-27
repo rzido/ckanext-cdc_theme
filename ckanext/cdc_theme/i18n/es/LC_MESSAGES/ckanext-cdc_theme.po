@@ -163,6 +163,11 @@ msgstr "¿Qué son las categorías?"
 msgid " Topics are collections of datasets relating to a theme. "
 msgstr " Las categorías son colecciones de conjuntos de datos relacionados con un tema"
 
+
+#: ckanext/cdc_theme/templates/home/layout1.html:17
+msgid "A Coruña Open Data Portal"
+msgstr "Portal de datos abiertos de A Coruña"
+
 #: ckanext/cdc_theme/templates/home/layout1.html:62
 msgid "dataset"
 msgstr "conjunto de datos"
@@ -180,7 +185,6 @@ msgid "resources"
 msgstr "recursos"
 
 #: ckanext/cdc_theme/templates/home/layout1.html:72
-#: ckanext/cdc_theme/templates/home/layout1.html:122
 msgid "organization"
 msgstr "organización"
 
@@ -199,6 +203,11 @@ msgstr "grupos"
 #: ckanext/cdc_theme/templates/home/layout1.html:88
 msgid "Popular tags"
 msgstr "Etiquetas populares"
+
+#: ckanext/cdc_theme/templates/home/layout1.html:122
+msgid "Explore by organization"
+msgstr "Explorar por organización"
+
 
 #: ckanext/cdc_theme/templates/home/layout1.html:102
 msgid "Explore by topic"
