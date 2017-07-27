@@ -26,5 +26,15 @@ setup(
         [ckan.plugins]
         # Add plugins here, e.g.
         cdc_theme=ckanext.cdc_theme.plugin:CDCThemePlugin
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
     ''',
+    
+    message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None),
+        ],
+    }
 )
