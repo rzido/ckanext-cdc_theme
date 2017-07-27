@@ -165,7 +165,7 @@ msgstr " As categorías son coleccións de conxuntos de datos relacions cun tema
 
 #: ckanext/cdc_theme/templates/home/layout1.html:17
 msgid "A Coruña Open Data Portal"
-msgstr "Portal de datos abertos da Coruña"
+msgstr "O portal de datos abertos da Coruña"
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
 msgid "dataset"
