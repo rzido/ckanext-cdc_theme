@@ -8,10 +8,13 @@ from jinja2 import Undefined
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
 
+
 from ckan.lib.activity_streams import \
     activity_stream_string_functions as activity_streams
 
 from feedback_model import init_db, UnpublishedFeedback
+
+from ckan.lib.plugins import DefaultTranslation
 
 def most_recent_datasets(num=3):
     """Return a list of recent datasets."""
@@ -132,7 +135,7 @@ activity_streams['new group'] = (
 
 
 
-class CDCThemePlugin(plugins.SingletonPlugin):
+class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     """Coruna Open Data theme plugin based on OpenDataPhilly theme plugin.
 
     """
@@ -140,6 +143,7 @@ class CDCThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)    
     plugins.implements(plugins.IRoutes)
+    plugins.implements(plugins.ITranslation)
 
    
 
