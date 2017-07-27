@@ -250,6 +250,15 @@ msgstr "Buscar datos"
 msgid "Search"
 msgstr "Buscar"
 
+#: ckanext/cdc_theme/templates/home/snippets/latest_datasets.html:12
+msgid "Latest datasets"
+msgstr "Más recientes"
+
+#: ckanext/cdc_theme/templates/home/snippets/featured_popular.html:12
+msgid "Featured popular"
+msgstr "Más consultados"
+
+
 #: ckanext/cdc_theme/templates/package/group_list.html:14
 msgid "Associate this topic with this dataset"
 msgstr "Asociar esta categoría con este conjunto de datos"
