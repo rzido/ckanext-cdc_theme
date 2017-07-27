@@ -54,7 +54,7 @@ dropdown in the settings page and rename this file layout4.html.
          <div class="module-content box getstarted">
           {% set stats = h.get_site_statistics() %}
           <p>
-            {{ _('Start exploring the ')}}            
+            {{ _('Start by exploring the ')}}            
             <a href="{{ h.url_for(controller='package', action='search') }}">
             <b>{{ h.SI_number_span(stats.dataset_count) }}</b> 
             {{ _('dataset') if stats.dataset_count == 1 else _('datasets') }}
