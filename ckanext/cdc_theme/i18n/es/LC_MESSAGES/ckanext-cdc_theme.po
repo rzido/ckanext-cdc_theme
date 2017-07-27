@@ -178,11 +178,11 @@ msgid "Start by exploring the "
 msgstr "Empieza explorando los "
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
-msgid "and its  "
+msgid "and its "
 msgstr "y sus "
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
-msgid "from  "
+msgid "from "
 msgstr "de "
 
 #: ckanext/cdc_theme/templates/home/layout1.html:62
