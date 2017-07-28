@@ -1,9 +1,11 @@
 {% set latest_datasets = h.cdc_theme_most_recent_datasets() %}
 
   <div class="module-content box">
+      <!--
       <header>
           <h2 class="secondary-heading"> {{ _('Latest datasets') }} </h2>
       </header>
+      -->
       <section>
         <!-- package_list latest_datasets -->
         {% snippet 'snippets/package_list.html', packages=latest_datasets, hide_resources=true,  truncate=80 %}
