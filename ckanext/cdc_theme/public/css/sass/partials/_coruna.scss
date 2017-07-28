@@ -81,13 +81,19 @@
 }
 
 .front h1::after {
+
+    left: 25px;
+    /* border-bottom: solid 5px #0c9; */
     content: '';
     width: 40px;
+    border-bottom: solid 5px #0083D7;
+    display: block;
+    clear: both;
     position: absolute;
-    bottom: -6px;
-    left: 0;
-    border-bottom: solid 5px #0c9;
+    top:  70px;
+
 }
+
 
 
 button:focus,
