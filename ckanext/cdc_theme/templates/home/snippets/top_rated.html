@@ -29,7 +29,12 @@ set popular_datasets =  h.cdc_theme_popular_datasets(4)
                            <span class="icon icon-star-empty rating-star"></span>
                          {%- endfor -%}
                       </span>
-                  </span>
+                     </span>
+                        
+                     <span class="rating-count">
+                        {% set ratings_count = h.package_rating(None, {'package_id' : package.id} ).ratings_count%}
+                    ({{ ratings_count }})
+                    </span>
                      </div>
                   
                  
