@@ -1,0 +1,19 @@
+{%
+set popular_datasets =  h.cdc_theme_popular_datasets(4)
+%}
+ <div class="module-content box">
+     <!-- <header>
+          <h2 class="secondary-heading">{{ _('Featured popular') }}</h2>       
+      </header>
+      -->
+      <section>
+           <ul id="popular-list" class="unstyled dataset-list">
+          {% for package in popular_datasets %}
+              <li class="dataset-item">
+                 <div class="dataset-content">
+                    <h3 class="dataset-heading">{{ h.link_to(package.title or package.name, h.url_for(controller='package', action='read', id=package.name)) }}</h3>
+                    <div>{{h.package_rating(None, {'package_id' : <YOUR_PACKAGE>.id} ).ratings_count}}</div></div></li>
+          {% endfor %}
+          </ul>
+      </section>
+</div>
