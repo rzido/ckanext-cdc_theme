@@ -92,7 +92,7 @@ Example:
             <li>
           <i class="fa fa-calendar-o"></i>
           <span class="automatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_created, '%Y-%m-%d', with_hours=False) }}">
-              {{ h.render_datetime(package.metadata_created, '%Y-%m-%d', with_hours=False) }}
+              {{ h.render_datetime(package.metadata_created, '%Y-%m-%d') }}
           </span>          
           {% else %}             
           	<li>
