@@ -96,14 +96,17 @@ Example:
           </span>
           
           {% endif %}
-          {% if package.record_last_modified %}
-                          
+          {% if package.record_last_modified %}                          
               <span class="automatic-local-datetime" data-datetime="{{ h.render_datetime(package.record_last_modified, date_format='%Y-%m-%dT%H:%M:%S%z') }}">
               {{ h.render_datetime(package.record_last_modified, with_hours=False) }}             
              </span>
           {% else %}
           	<li>
               <i class="fa fa-calendar-o"></i>
+                <span class="automatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_modified, date_format='%Y-%m-%dT%H:%M:%S%z') }}">
+                       {{ h.render_datetime(package.metadata_modified, with_hours=False) }}             
+               </span> 
+                  
                {{ h.render_datetime(package.metadata_modified, '%d %B %Y') or h.render_datetime(package.revision_timestamp, '%d %B %Y') or _('unknown') }}
             </li>
           {% endif %}
