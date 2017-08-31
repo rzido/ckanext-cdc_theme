@@ -173,15 +173,16 @@ select:focus {
       width: 300%;
       margin-left: 300%; }
     .tabs .tab-3 [type="radio"]:checked + div {
-      margin-left: 0; }
+      margin-left: -100%; }
 
     .tabs .tab-3:first-child [type="radio"] + div {
       margin-left: 0; }
     .tabs .tab-3:first-child [type="radio"]:checked + div {
-      margin-left: -200%; }
+      margin-left: 0%; }
 
 
     .tabs .tab-3:last-child [type="radio"] + div {
+      width: 300%;  
       margin-left: 0; }
     .tabs .tab-3:last-child [type="radio"]:checked + div {
       margin-left: -200%; }
