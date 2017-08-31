@@ -76,22 +76,22 @@ Example:
           {% endif %}
         {% endblock %}
          {% block package_dates %}
-         <ul class="dataset-dates unstyled">
+         
           {% if package.metadata_created %}
-            <li>
-          <i class="fa fa-calendar-o"></i>
+       
+          <i class="fa fa-calendar-o">&nbsp;</i>
           <span class="automatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_created, '%Y-%m-%d', with_hours=False) }}">
               {{ h.render_datetime(package.metadata_created, with_hours=False) }}
           </span>          
           {% else %}             
-          	<li>
-              <i class="fa fa-calendar-o"></i>
+
+              <i class="fa fa-calendar-o">&nbsp;</i>
                 <span class="automatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_modified, '%Y-%m-%d', with_hours=False) or h.render_datetime(package.revision_timestamp, '%Y-%m-%d', with_hours=False) or _('unknown') }}">
                {{ h.render_datetime(package.metadata_modified, with_hours=False) or h.render_datetime(package.revision_timestamp, with_hours=False) or _('unknown') }}
                </span>                              
-            </li>
+          
           {% endif %}
-        </ul>
+        
     {% endblock %}
         
         {% block notes %}
