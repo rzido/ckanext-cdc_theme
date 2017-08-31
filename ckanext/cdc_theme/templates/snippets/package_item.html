@@ -89,16 +89,16 @@ Example:
      {% block package_dates %}
         <ul class="dataset-dates unstyled">
           {% if package.record_publish_date %}
-            <li>Creado el {{ h.render_datetime(package.record_publish_date, '%d-%B-%Y') }}</li>
+            <li>{% snippet 'snippets/local_friendly_datetime, datetime=package.record_publish_date %}</li>
           {% endif %}
           {% if package.record_last_modified %}
               <i class="fa fa-calendar-o"></i>
-               {{ h.render_datetime(package.record_last_modified, '%d-%B-%Y') }}
+               <li>{% snippet 'snippets/local_friendly_datetime, datetime=package.record_last_modified %}</li>
             </li>
           {% else %}
           	<li>
               <i class="fa fa-calendar-o"></i>
-               {{ h.render_datetime(package.metadata_modified, '%d-%B-%Y') or h.render_datetime(package.revision_timestamp, '%d-%m-%Y') or _('unknown') }}
+               {{ h.render_datetime(package.metadata_modified, '%d %B %Y') or h.render_datetime(package.revision_timestamp, '%d %B %Y') or _('unknown') }}
             </li>
           {% endif %}
         </ul>
