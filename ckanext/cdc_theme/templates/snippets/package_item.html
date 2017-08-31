@@ -69,14 +69,14 @@ Example:
             {% endblock %}
           </h3>
         {% endblock %}
-        {% block banner %}
+     
+         {% block banner %}
           {% if banner %}
             <span class="banner">{{ _('Popular') }}</span>
           {% endif %}
         {% endblock %}
-        
          {% block package_dates %}
-        <ul class="dataset-dates unstyled">
+         <ul class="dataset-dates unstyled">
           {% if package.metadata_created %}
             <li>
           <i class="fa fa-calendar-o"></i>
