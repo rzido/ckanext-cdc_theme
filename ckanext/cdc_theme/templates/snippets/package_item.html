@@ -97,11 +97,8 @@ Example:
             </li>
           {% else %}
           	<li>
-               <span class="fa-stack fa-lg">
-                <i class="fa fa-file-o fa-stack-2x"></i>
-                <i class="fa fa-clock-o fa-stack-1x"></i>
-              </span>
-              Modificado el {{ h.render_datetime(package.metadata_modified, '%d-%m-%Y') or h.render_datetime(package.revision_timestamp, '%d-%m-%Y') or _('unknown') }}
+              <i class="fa fa-calendar-o"></i>
+               {{ h.render_datetime(package.metadata_modified, '%d-%m-%Y') or h.render_datetime(package.revision_timestamp, '%d-%m-%Y') or _('unknown') }}
             </li>
           {% endif %}
         </ul>
