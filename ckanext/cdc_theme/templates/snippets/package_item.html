@@ -92,12 +92,8 @@ Example:
             <li>Creado el {{ h.render_datetime(package.record_publish_date, '%d-%m-%Y') }}</li>
           {% endif %}
           {% if package.record_last_modified %}
-            <li>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-file-o fa-stack-2x"></i>
-                <i class="fa fa-clock-o fa-stack-1x"></i>
-              </span>
-              Modificado el {{ h.render_datetime(package.record_last_modified, '%d-%m-%Y') }}
+              <i class="fa fa-calendar-o"></i>
+               {{ h.render_datetime(package.record_last_modified, '%d-%m-%Y') }}
             </li>
           {% else %}
           	<li>
