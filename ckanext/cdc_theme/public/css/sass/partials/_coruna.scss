@@ -95,15 +95,15 @@
 }
 
 
-.resource-item li {
-  clear:both;   
-}
-.resource-item-explore {
+
+.resource-item-explore ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  clear: both;
-    
+  padding: 0;  
+}
+
+.resource-item-explore li {
+  float:left;   
 }
 
 
