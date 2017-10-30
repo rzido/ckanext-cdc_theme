@@ -187,6 +187,19 @@ select:focus {
     .tabs .tab-3:last-child [type="radio"]:checked + div {
       margin-left: -200%; }
 
+
+
+.resource-item-explorer {
+  list-style-type: none;
+  margin: 0;
+    padding: 0;
+}
+
+.resource-item-explorer li{
+   float:left;
+   padding-right: 5px;
+    border: 1px solid #e5e5e5;
+}
 /*
 h1 {
                 font-family: Dosis;
