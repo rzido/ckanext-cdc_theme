@@ -94,7 +94,21 @@
 
 }
 
+.resource-item-explore {
+  list-style-type: none;
+  margin: 0;
+    padding: 0;
+}
 
+.resource-item-explore li{
+   float:left;
+   padding-right: 5px;
+   
+}
+
+.btn-explore{
+     border: 1px solid #e5e5e5;
+}
 
 button:focus,
 input:focus,
@@ -188,22 +202,6 @@ select:focus {
       margin-left: -200%; }
 
 
-
-.resource-item-explore {
-  list-style-type: none;
-  margin: 0;
-    padding: 0;
-}
-
-.resource-item-explore li{
-   float:left;
-   padding-right: 5px;
-   
-}
-
-.btn-explore{
-     border: 1px solid #e5e5e5;
-}
 /*
 h1 {
                 font-family: Dosis;
