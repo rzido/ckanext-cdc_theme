@@ -18,8 +18,10 @@
   {% endblock %}
   {% block resource_item_explore %}
  
-    
+  
+  <p>
   {% if not url_is_edit %}
+  
   <!-- <div class="dropdown btn-group">
     <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
       <i class="icon_share_alt"></i>
@@ -27,7 +29,7 @@
       <span class="caret"></span>
     </a>
    -->
-   <p>
+ 
    <!-- <ul class="dropdown-menu"> -->
    <ul class="resource-item-explore" >   
       {% block resource_item_explore_links %}
@@ -65,9 +67,10 @@
       {% endif %}
       {% endblock %}
     </ul>
-</p>
+
   <!--   </div> -->
   {% endif %}
+  </p>
   {% endblock %}
 </li>
 
