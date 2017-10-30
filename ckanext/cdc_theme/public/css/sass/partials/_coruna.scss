@@ -98,7 +98,7 @@
   list-style-type: none;
   margin: 0;
     padding: 0;
-    display: block;
+    
 }
 
 .resource-item-explore li{
@@ -108,7 +108,8 @@
 }
 
 .btn-explore{
-     border: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    display: block;
 }
 
 button:focus,
