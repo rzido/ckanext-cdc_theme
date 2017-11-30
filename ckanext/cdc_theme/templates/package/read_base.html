@@ -11,7 +11,7 @@
         <h2 class="module-heading">{{ _('Topics') }}</h2>
         <section class="module-content"> 
             {% for item in group_items %}
-            <a href="/group/{{item.name|lower}}" fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
+            <a href="/group/{{item.name|lower}}" fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
                <img class="browse-topic-image" src="{{ item.image_display_url or '/img/icons-document.svg' }}">               
             </a>
             {% endfor %}
