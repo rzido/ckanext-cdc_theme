@@ -15,10 +15,7 @@
    {% if pkg %}
         <section class="module module-narrow">
             <div class="module context-info">
-                <div class="module-content">
-                    {% block package_info_inner %}
-                        {{ super() }}
-                    {% endblock %}
+                <div class="module-content">                   
                     {% snippet "rating/snippets/rating.html", package=pkg %}
                 </div>
             </div>
