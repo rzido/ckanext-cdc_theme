@@ -1,10 +1,20 @@
 {% ckan_extends %}
 
+{% set group_items = pkg.groups %}
+
 {% block secondary_content %}
  
  {% block secondary_help_content %}{% endblock %}
 
-
+   
+       <div class="dataset-list-left-icon">
+            {% for item in group_items %}
+            <a href="/group/{{item.name|lower}}" fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
+               <img class=" icon-topic-image" src="{{ item.image_display_url or '/img/icons-document.svg' }}">               
+            </a>
+            {% endfor %}
+       </div>
+     
 
   {% block package_license %}
     {% snippet "snippets/license.html", pkg_dict=pkg %}
