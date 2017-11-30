@@ -3,6 +3,15 @@
 {% block secondary_content %}
  {{ super() }}
  
+
+  {% block package_info %}
+    {% snippet 'package/snippets/info.html', pkg=pkg %}
+  {% endblock %} 
+
+  {% block package_license %}
+    {% snippet "snippets/license.html", pkg_dict=pkg %}
+  {% endblock %}
+
  {% block package_subscribe %}
         <div class="module module-narrow module-shallow context-info">
           <h2 class="module-heading">{{ _('Subscribe for dataset updates') }}</h2>
@@ -11,4 +20,22 @@
           </section>
         </div>
  {% endblock %}
+
+ {% block package_organization %}
+    {% if pkg.organization %}
+      {% set org = h.get_organization(pkg.organization.name) %}
+      {% snippet "snippets/organization.html", organization=org, has_context_title=true %}
+    {% endif %}
+  {% endblock %}
+
+  {% block package_social %}
+    {% snippet "snippets/social.html" %}
+  {% endblock %}
+
+ 
+
+
+
+
+
  {% endblock %}
