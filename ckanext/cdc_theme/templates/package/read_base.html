@@ -4,8 +4,8 @@
  
  {% block secondary_help_content %}{% endblock %}
 
- {% block package_info %}
-    {% snippet 'package/snippets/info.html', pkg=pkg %}
+ {% block package_rating %}
+    {% snippet "rating/snippets/stars.html", package=pkg %}
   {% endblock %} 
 
   {% block package_license %}
