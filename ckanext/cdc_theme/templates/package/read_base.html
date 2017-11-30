@@ -2,6 +2,15 @@
 
 {% set group_items = pkg.groups %}
 
+{% block content_primary_nav %}
+  {{ h.build_nav_icon('dataset_read', _('Dataset'), id=pkg.name) }}
+  {% if h.check_access('package_update', {'id':pkg.id }) %}
+    {{ h.build_nav_icon('dataset_groups', _('Groups'), id=pkg.name) }}
+    {{ h.build_nav_icon('dataset_activity', _('Activity Stream'), id=pkg.name) }}
+ {% endif %}
+{% endblock %}
+
+
 {% block secondary_content %}
  
  {% block secondary_help_content %}{% endblock %}
