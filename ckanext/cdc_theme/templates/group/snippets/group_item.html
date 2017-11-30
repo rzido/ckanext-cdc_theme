@@ -1,15 +1,13 @@
 {% ckan_extends %}
-{# Using media-objects inside list-group-items (Bootstrap 3)
-   instead of media-items (Bootstrap 2) #}
 
 {% block item %}
-<li class="list-group-item">
+<li class="media-item">
   <div class="media">
   {% block item_inner %}
   {% block image %}
     <div class="media-left media-middle hidden-xs">
       <div class="image-wrapper">
-        <img class="media-items" src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}">
+        <img class="media-image img-responsive" src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}">
       </div>
     </div>
   {% endblock %}
