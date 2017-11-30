@@ -94,13 +94,13 @@ def showcase_count():
 def groups():
     """Return a list of groups"""
 
-    return tk.get_action('group_list')({}, {'all_fields': True})
+    return tk.get_action('group_list')({}, {'all_fields': True, 'include_dataset_count': True})
 
 
 def organizations():
     """Return a list of organizations"""
 
-    return tk.get_action('organization_list')({}, {'all_fields': True})
+    return tk.get_action('organization_list')({}, {'all_fields': True })
 
 
 def user_feedback(pkgid, userid):
