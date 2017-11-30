@@ -13,13 +13,12 @@
   {% block package_rating %}
  
    {% if pkg %}
-        <section class="module module-narrow">
-            <div class="module context-info">
-                <div class="module-content">                   
+         <div class="module module-narrow module-shallow context-info">
+           <h2 class="module-heading">{{ _('Rating') }}</h2>
+                <section class="module-content">                   
                     {% snippet "rating/snippets/rating.html", package=pkg %}
-                </div>
-            </div>
-        </section>
+                </section>
+          </div>
     {% endif %}
 
    {% endblock %} 
