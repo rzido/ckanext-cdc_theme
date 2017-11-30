@@ -6,7 +6,13 @@
  
  {% block secondary_help_content %}{% endblock %}
 
-   {% block package_groups %}
+ 
+
+  {% block package_license %}
+    {% snippet "snippets/license.html", pkg_dict=pkg %}
+  {% endblock %}
+
+  {% block package_groups %}
     <div class="module module-narrow module-shallow context-info">
         <h2 class="module-heading">{{ _('Topics') }}</h2>
         <section class="module-content"> 
@@ -18,10 +24,6 @@
       </section>
        </div>
   {% endblock %}   
-
-  {% block package_license %}
-    {% snippet "snippets/license.html", pkg_dict=pkg %}
-  {% endblock %}
 
   {% block package_rating %}
  
