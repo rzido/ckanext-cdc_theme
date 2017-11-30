@@ -6,15 +6,16 @@
  
  {% block secondary_help_content %}{% endblock %}
 
-   
-       <div class="dataset-list-left-icon">
+   {% block package_groups %}
+    <div class="module module-narrow module-shallow context-info">
+        <h2 class="module-heading">{{ _('Topics') }}</h2>
             {% for item in group_items %}
             <a href="/group/{{item.name|lower}}" fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
-               <img class=" icon-topic-image" src="{{ item.image_display_url or '/img/icons-document.svg' }}">               
+               <img class="browse-topic-image" src="{{ item.image_display_url or '/img/icons-document.svg' }}">               
             </a>
             {% endfor %}
        </div>
-     
+  {% endblock %}   
 
   {% block package_license %}
     {% snippet "snippets/license.html", pkg_dict=pkg %}
