@@ -102,6 +102,7 @@ dropdown in the settings page and rename this file layout4.html.
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
                     {{ topic.display_name }}
+                     {{ topic.package_count }}
                   </div>
 <!-- datasets count -->                    
                   {% if topic.package_count %}
