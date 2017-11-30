@@ -79,14 +79,16 @@ def dataset_count():
 
 
 def resource_count():
-	ds = dataset_list()
-	count = 0
-	for dsname in ds:
-		data_dict = {'id':dsname}
-		dsitem = tk.get_action('package_show')(data_dict=data_dict)
-		# count = count + dsitem['num_resources']
-		 
-	return count
+        #result = tk.get_action('resource_search')({},{'query':'name:'})
+        #return result('count')
+
+        ds = dataset_list()
+        count = 0
+        for dsname in ds:
+                data_dict2 = {'id':dsname,'include_tracking': True}
+                ds_item = tk.get_action('package_show')(data_dict=data_dict2)
+                count = count + ds_item['num_tags']
+        return count
 
 def showcase_count():
 	return tk.get_action('package_search')({}, {"rows": 1, 'fq': 'dataset_type:showcase'})['count']
