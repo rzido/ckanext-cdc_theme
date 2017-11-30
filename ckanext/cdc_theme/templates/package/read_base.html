@@ -1,10 +1,10 @@
 {% ckan_extends %}
 
 {% block secondary_content %}
- {{ super() }}
  
+ {% block secondary_help_content %}{% endblock %}
 
-  {% block package_info %}
+ {% block package_info %}
     {% snippet 'package/snippets/info.html', pkg=pkg %}
   {% endblock %} 
 
