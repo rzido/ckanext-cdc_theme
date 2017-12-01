@@ -9,6 +9,11 @@ from ckan.common import c
 from feedback_model import UnpublishedFeedback
 
 
+class AditionalInfoController(p.toolkit.BaseController):
+    controller = 'ckanext.cdc_theme.controller:AditionalInfoController' 
+    def view_org(self, org_id):
+        return tk.render('dataset/aditionalinfo.html')
+
 class UnpublishedReportController(p.toolkit.BaseController):
     controller = 'ckanext.cdc_theme.controller:UnpublishedReportController'
 
