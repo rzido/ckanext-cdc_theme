@@ -4,10 +4,10 @@
 
 {% block content_primary_nav %}
   {{ h.build_nav_icon('dataset_read', _('Dataset'), id=pkg.name) }}
-  {{ h.build_nav_icon('dataset_read', _('Additional Information'), id=pkg.name) }}
-  {{ h.build_nav_icon('dataset_groups', _('Groups'), id=pkg.name) }}
-  {{ h.build_nav_icon('dataset_activity', _('Activity Stream'), id=pkg.name) }}    
+  {{ h.build_nav_icon('dataset_read', _('Additional Information'), id=pkg.name) }}   
   {% if h.check_access('package_update', {'id':pkg.id }) %}  
+      {{ h.build_nav_icon('dataset_groups', _('Groups'), id=pkg.name) }}
+      {{ h.build_nav_icon('dataset_activity', _('Activity Stream'), id=pkg.name) }}  
   {% endif %}
 {{ h.build_nav_icon('dataset_showcase_list', _('Showcases'), id=pkg.name) }}
 {% endblock %}
@@ -23,19 +23,7 @@
     {% snippet "snippets/license.html", pkg_dict=pkg %}
   {% endblock %}
 
-  {% block package_groups %}
-    <div class="module module-narrow module-shallow context-info">
-        <h2 class="module-heading">{{ _('Topics') }}</h2>
-        <section class="module-content"> 
-            {% for item in group_items %}
-            <a href="/group/{{item.name|lower}}" fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
-               <img class="browse-topic-image" src="{{ item.image_display_url or '/img/icons-document.svg' }}">               
-            </a>
-            {% endfor %}
-      </section>
-       </div>
-  {% endblock %}   
-
+  
   {% block package_rating %}
  
    {% if pkg %}
