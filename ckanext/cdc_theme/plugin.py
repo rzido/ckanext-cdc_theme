@@ -184,11 +184,13 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     def after_map(self, map):
         unpublished_feedback_controller = 'ckanext.cdc_theme.controller:UnpublishedFeedbackController'
         unpublished_report_controller = 'ckanext.cdc_theme.controller:UnpublishedReportController'
+	aditional_info_controller = 'ckanext.cdc_theme.controller:AditionalInfoController'
 
         map.connect('view_feedback', '/dataset/{id}/feedback', action='view_feedback',
                     controller=unpublished_feedback_controller)
         map.connect('view_org', '/unpublished_report/{org_id}', action='view_org',
                     controller=unpublished_report_controller)	
 	
-	map.connect('dataset_aditional_info','/dataset/additionalinfo', action='aditional_info')
+	map.connect('dataset_aditional_info','/dataset/additionalinfo', action='aditional_info', 
+		    controller=aditional_info_controller)
         return map
