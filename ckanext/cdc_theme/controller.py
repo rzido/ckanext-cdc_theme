@@ -11,8 +11,43 @@ from feedback_model import UnpublishedFeedback
 
 class AditionalInfoController(p.toolkit.BaseController):
     controller = 'ckanext.cdc_theme.controller:AditionalInfoController' 
-    def view_org(self, org_id):
-        return tk.render('dataset/aditionalinfo.html')
+    def view_org(self, id):        
+           context = {'model': model, 'session': model.Session,
+                   'user': c.user, 'for_view': True,
+                   'auth_user_obj': c.userobj}
+           data_dict = {'id': id, 'include_tracking': True}
+
+       # check if package exists
+        try:
+            c.pkg_dict = get_action('package_show')(context, data_dict)
+            c.pkg = context['package']
+        except (NotFound, NotAuthorized):
+            abort(404, _('Dataset not found'))
+        
+        package_type = c.pkg_dict['type'] or 'dataset'
+        self._setup_template_variables(context, {'id': id},
+                                       package_type=package_type)
+
+        template = self._read_template(package_type)
+        
+        return tk.render('dataset/aditionalinfo.html', extra_vars={'dataset_type': package_type})
+    
+        try:
+            return render(template,
+                          extra_vars={'dataset_type': package_type})
+        except ckan.lib.render.TemplateNotFound as e:
+            msg = _(
+                "Viewing datasets of type \"{package_type}\" is "
+                "not supported ({file_!r}).".format(
+                    package_type=package_type,
+                    file_=e.message
+                )
+            )
+            abort(404, msg)
+
+        assert False, "We should never get here"
+        
+        
 
 class UnpublishedReportController(p.toolkit.BaseController):
     controller = 'ckanext.cdc_theme.controller:UnpublishedReportController'
