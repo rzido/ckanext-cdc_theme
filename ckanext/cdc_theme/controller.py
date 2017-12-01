@@ -9,10 +9,34 @@ from ckan.common import c
 from feedback_model import UnpublishedFeedback
 
 
-class AditionalInfoController(p.toolkit.BaseController):
+class AdditionalInfoController(p.toolkit.BaseController):
     controller = 'ckanext.cdc_theme.controller:AditionalInfoController' 
-    def view_org(self, id):                
-        return tk.render('dataset/aditionalinfo.html')         
+    def additional_info(self, id): 
+        
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user, 'for_view': True,
+                   'auth_user_obj': c.userobj}
+        data_dict = {'id': id, 'include_tracking': True}
+
+        try:
+            check_access('package_update', context, data_dict)
+        except NotFound:
+            abort(404, _('Dataset not found'))
+        except NotAuthorized:
+            abort(403, _('User %r not authorized to read %s') % (c.user, id))
+        # check if package exists
+        try:
+            c.pkg_dict = get_action('package_show')(context, data_dict)
+            c.pkg = context['package']
+        except (NotFound, NotAuthorized):
+            abort(404, _('Dataset not found'))
+
+        package_type = c.pkg_dict['type'] or 'dataset'
+        self._setup_template_variables(context, {'id': id},
+                                       package_type=package_type)
+
+        return render('package/additional_info.html',
+                      extra_vars={'dataset_type': package_type})      
                 
 
 class UnpublishedReportController(p.toolkit.BaseController):
