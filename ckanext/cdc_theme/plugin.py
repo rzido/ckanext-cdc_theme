@@ -192,5 +192,5 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                     controller=unpublished_report_controller)	
 	
 	map.connect('dataset_aditional_info','/dataset/additionalinfo/{id}', action='aditional_info', 
-		    controller=aditional_info_controller)
+		    controller=aditional_info_controller, ckan_icon='picture')
         return map
