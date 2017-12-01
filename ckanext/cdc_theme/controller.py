@@ -22,7 +22,7 @@ class AditionalInfoController(p.toolkit.BaseController):
             c.pkg_dict = get_action('package_show')(context, data_dict)
             c.pkg = context['package']
         except (NotFound, NotAuthorized):
-            abort(404, _('Dataset not found'))
+            abort(404, _('Dataset not founddd'))
         
         package_type = c.pkg_dict['type'] or 'dataset'
         self._setup_template_variables(context, {'id': id},
