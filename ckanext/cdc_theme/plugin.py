@@ -188,5 +188,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         map.connect('view_feedback', '/dataset/{id}/feedback', action='view_feedback',
                     controller=unpublished_feedback_controller)
         map.connect('view_org', '/unpublished_report/{org_id}', action='view_org',
-                    controller=unpublished_report_controller)
+                    controller=unpublished_report_controller)	
+	
+	map.connect('dataset_aditional_info','/dataset/aditionalinfo')
         return map
