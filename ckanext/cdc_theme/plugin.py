@@ -190,5 +190,5 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         map.connect('view_org', '/unpublished_report/{org_id}', action='view_org',
                     controller=unpublished_report_controller)	
 	
-	map.connect('dataset_aditional_info','/dataset/aditionalinfo')
+	map.connect('dataset_aditional_info','/dataset/new')
         return map
