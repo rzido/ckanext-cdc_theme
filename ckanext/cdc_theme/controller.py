@@ -12,12 +12,12 @@ from feedback_model import UnpublishedFeedback
 class AditionalInfoController(p.toolkit.BaseController):
     controller = 'ckanext.cdc_theme.controller:AditionalInfoController' 
     def view_org(self, id):        
-           context = {'model': model, 'session': model.Session,
+        context = {'model': model, 'session': model.Session,
                    'user': c.user, 'for_view': True,
                    'auth_user_obj': c.userobj}
-           data_dict = {'id': id, 'include_tracking': True}
+        data_dict = {'id': id, 'include_tracking': True}
 
-       # check if package exists
+        # check if package exists
         try:
             c.pkg_dict = get_action('package_show')(context, data_dict)
             c.pkg = context['package']
