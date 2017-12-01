@@ -1,6 +1,6 @@
 {% ckan_extends %}
 
-{% set group_items = pkg.groups %}
+
 
 {% block content_primary_nav %}
   {{ h.build_nav_icon('dataset_read', _('Dataset'), id=pkg.name) }}
@@ -24,6 +24,8 @@
   {% endblock %}
 
   {% block package_groups %}
+
+    {% set group_items = pkg.groups %}
     <div class="module module-narrow module-shallow context-info">
         <h2 class="module-heading">{{ _('Topics') }}</h2>
         <section class="module-content"> 
