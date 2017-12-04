@@ -20,16 +20,16 @@ class AdditionalInfoController(p.toolkit.BaseController):
 
         try:
             check_access('package_update', context, data_dict)
-        except NotFound:
-            abort(404, _('Dataset not found'))
-        except NotAuthorized:
-            abort(403, _('User %r not authorized to read %s') % (c.user, id))
+        except tk.ObjectNotFound:
+             tk.abort(404, tk._('Dataset not found'))
+        except tk.NotAuthorized:
+             tk.abort(401, tk._('Unauthorized to read package'))
         # check if package exists
         try:
             c.pkg_dict = get_action('package_show')(context, data_dict)
             c.pkg = context['package']
-        except (NotFound, NotAuthorized):
-            abort(404, _('Dataset not found'))
+        except (tk.ObjectNotFound, tk.NotAuthorized):
+            tk.abort(404, _('Dataset not found'))
 
         package_type = c.pkg_dict['type'] or 'dataset'
         self._setup_template_variables(context, {'id': id},
