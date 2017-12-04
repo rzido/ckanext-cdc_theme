@@ -27,7 +27,7 @@ class AdditionalInfoController(p.toolkit.BaseController):
              tk.abort(401, tk._('Unauthorized to read package'))
         # check if package exists
         try:
-            c.pkg_dict = get_action('package_show')(context, data_dict)
+            c.pkg_dict = tk.get_action('package_show')(context, data_dict)
             c.pkg = context['package']
         except (tk.ObjectNotFound, tk.NotAuthorized):
             tk.abort(404, _('Dataset not found'))
