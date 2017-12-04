@@ -19,7 +19,8 @@ class AdditionalInfoController(p.toolkit.BaseController):
         data_dict = {'id': id, 'include_tracking': True}
 
         try:
-            check_access('package_update', context, data_dict)
+           """ check_access('package_update', context, data_dict) """
+        
         except tk.ObjectNotFound:
              tk.abort(404, tk._('Dataset not found'))
         except tk.NotAuthorized:
