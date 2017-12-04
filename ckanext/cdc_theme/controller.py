@@ -36,7 +36,7 @@ class AdditionalInfoController(p.toolkit.BaseController):
         """ self._setup_template_variables(context, {'id': id},    """
         """                               package_type=package_type)  """
 
-        return render('package/additional_info.html',
+        return tk.render('package/additional_info.html',
                       extra_vars={'dataset_type': package_type})      
                 
 
