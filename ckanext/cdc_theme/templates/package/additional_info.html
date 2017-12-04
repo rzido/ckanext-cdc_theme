@@ -2,6 +2,9 @@
 
 {% set pkg = c.pkg_dict %}
 
+{%- set schema = h.scheming_get_dataset_schema(dataset_type) -%}
+
+
 
 {% block primary_content_inner %}
   {{ super() }}
@@ -27,9 +30,11 @@
         {% endblock %}
       </h1>
                        
-  {% block package_additional_info %}  
-    {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
-  {% endblock %}
+{% block package_additional_info %}
+  {% snippet "scheming/package/snippets/additional_info.html",
+    pkg_dict=pkg, dataset_type=dataset_type, schema=schema %}
+{% endblock %}
+
 
       
 {% endblock %}
