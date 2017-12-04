@@ -24,7 +24,7 @@
        </div>
       -->
       
-      <h1>
+      <h2>
         {% block page_heading %}
           {{ h.dataset_display_name(pkg) }}
           {% if pkg.state.startswith('draft') %}
@@ -34,7 +34,7 @@
             [{{ _('Deleted') }}]
           {% endif %}
         {% endblock %}
-      </h1>
+      </h2>
       
       
     
