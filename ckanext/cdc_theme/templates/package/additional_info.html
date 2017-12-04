@@ -28,6 +28,7 @@
       </h1>
                        
   {% block package_additional_info %}
+    {{ super() }}
     {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
   {% endblock %}
 
