@@ -10,7 +10,7 @@ from feedback_model import UnpublishedFeedback
 
 
 class AdditionalInfoController(p.toolkit.BaseController):
-    controller = 'ckanext.cdc_theme.controller:AditionalInfoController' 
+    controller = 'ckanext.cdc_theme.controller:AdditionalInfoController' 
     def additional_info(self, id): 
         
         context = {'model': model, 'session': model.Session,
