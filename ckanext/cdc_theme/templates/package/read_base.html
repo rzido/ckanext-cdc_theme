@@ -18,9 +18,7 @@
 
  
 
-  {% block package_license %}
-    {% snippet "snippets/license.html", pkg_dict=pkg %}
-  {% endblock %}
+ 
 
   {% block package_groups %}
 
@@ -62,6 +60,10 @@
 
   {% block package_social %}
     {% snippet "snippets/social.html" %}
+  {% endblock %}
+
+ {% block package_license %}
+    {% snippet "snippets/license.html", pkg_dict=pkg %}
   {% endblock %}
 
  {% block package_organization %}
