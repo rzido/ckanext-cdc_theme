@@ -33,8 +33,8 @@ class AdditionalInfoController(p.toolkit.BaseController):
             tk.abort(404, _('Dataset not found'))
 
         package_type = c.pkg_dict['type'] or 'dataset'
-        """ self._setup_template_variables(context, {'id': id},
-                                       package_type=package_type)  """
+        """ self._setup_template_variables(context, {'id': id},    """
+        """                               package_type=package_type)  """
 
         return render('package/additional_info.html',
                       extra_vars={'dataset_type': package_type})      
