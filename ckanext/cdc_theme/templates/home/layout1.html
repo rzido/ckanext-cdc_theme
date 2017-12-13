@@ -101,7 +101,7 @@ dropdown in the settings page and rename this file layout4.html.
                 <a href="/group/{{ topic.name }}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
-                    {{ topic.display_name }}                     
+                    {{ h.get_translated(topic, 'title') or topic.display_name }}                   
                   </div>
 <!-- datasets count -->                    
                   {% if topic.package_count %}
