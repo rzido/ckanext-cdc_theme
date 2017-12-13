@@ -136,6 +136,17 @@ dropdown in the settings page and rename this file layout4.html.
                   <div class="browse-topic-title">
                     {{ topic.display_name }}
                   </div>
+                 
+                 
+                 <!-- datasets count -->                    
+                  {% if topic.package_count %}
+                      <span class="count"> {{ topic.package_count }} </span>
+                     <!-- <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', topic.package_count).format(num=topic.package_count) }}</span> -->
+                  {% elif topic.package_count == 0 %}
+                       <span class="count"> 0 </span>
+                      <!-- <span class="count">{{ _('0 Datasets') }}</span> -->
+                  {% endif %}
+                 
                 </a> 
 {% endfor %}
 
