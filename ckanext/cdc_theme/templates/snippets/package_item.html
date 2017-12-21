@@ -81,14 +81,14 @@ Example:
           {% if package.metadata_created %}
        
           <i class="fa fa-calendar-o">&nbsp;</i>
-          <span class="aautomatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_created,date_format='%Y-%m-%d', with_hours=False) }}">
-              {{ h.render_datetime(package.metadata_created, date_format='%Y-%m-%d', with_hours=False) }}
+          <span class="aautomatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_created,date_format='%m-%d-%Y', with_hours=False) }}">
+              {{ h.render_datetime(package.metadata_created, date_format='%m-%d-%Y', with_hours=False) }}
           </span>          
           {% else %}             
 
               <i class="fa fa-calendar-o">&nbsp;</i>
-                <span class="aautomatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_modified, date_format='%Y-%m-%d', with_hours=False) or h.render_datetime(package.revision_timestamp, date_format='%Y-%m-%d', with_hours=False) or _('unknown') }}">
-               {{ h.render_datetime(package.metadata_modified, date_format='%Y-%m-%d', with_hours=False) or h.render_datetime(package.revision_timestamp, date_format='%Y-%m-%d', with_hours=False) or _('unknown') }}
+                <span class="aautomatic-local-datetime" data-datetime="{{ h.render_datetime(package.metadata_modified, date_format='%m-%d-%Y', with_hours=False) or h.render_datetime(package.revision_timestamp, date_format='%m-%d-%Y', with_hours=False) or _('unknown') }}">
+               {{ h.render_datetime(package.metadata_modified, date_format='%m-%d-%Y', with_hours=False) or h.render_datetime(package.revision_timestamp, date_format='%m-%d-%Y', with_hours=False) or _('unknown') }}
                </span>                              
           
           {% endif %}
