@@ -360,3 +360,17 @@ color: #313833;
 .count {
     color: gray;
 }
+
+
+.wave {
+  position: absolute;
+  left:0;
+  right:0;
+  top:250px;
+  bottom:0;
+  z-index: 1;
+}
+
+.wave + .wave {
+  z-index: 2;
+}
