@@ -11,6 +11,21 @@ from ckan.common import c
 
 from feedback_model import UnpublishedFeedback
 
+
+
+request = tk.request
+render = tk.render
+abort = tk.abort
+redirect_to = h.redirect_to
+NotFound = tk.ObjectNotFound
+ValidationError = tk.ValidationError
+check_access = tk.check_access
+get_action = tk.get_action
+tuplize_dict = logic.tuplize_dict
+clean_dict = logic.clean_dict
+parse_params = logic.parse_params
+NotAuthorized = tk.NotAuthorized
+
 class CDC_ShowcaseController(ShowcaseController):
        def read_carousel(self, id, format='html'):
         '''
