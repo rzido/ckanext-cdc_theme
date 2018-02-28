@@ -185,7 +185,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         unpublished_feedback_controller = 'ckanext.cdc_theme.controller:UnpublishedFeedbackController'
         unpublished_report_controller = 'ckanext.cdc_theme.controller:UnpublishedReportController'
 	additional_info_controller = 'ckanext.cdc_theme.controller:AdditionalInfoController'
-	cdc_showcase_controller = 'ckanext.cdc_theme.controller:CDC_ShowcaseController
+	cdc_showcase_controller = 'ckanext.cdc_theme.controller:CDC_ShowcaseController'
 
         map.connect('view_feedback', '/dataset/{id}/feedback', action='view_feedback',
                     controller=unpublished_feedback_controller)
