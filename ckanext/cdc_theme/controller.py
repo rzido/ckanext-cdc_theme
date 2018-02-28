@@ -13,18 +13,7 @@ from feedback_model import UnpublishedFeedback
 
 
 
-request = tk.request
-render = tk.render
-abort = tk.abort
-redirect_to = h.redirect_to
-NotFound = tk.ObjectNotFound
-ValidationError = tk.ValidationError
-check_access = tk.check_access
-get_action = tk.get_action
-tuplize_dict = logic.tuplize_dict
-clean_dict = logic.clean_dict
-parse_params = logic.parse_params
-NotAuthorized = tk.NotAuthorized
+
 
 class CDC_ShowcaseController(ShowcaseController):
        def read_carousel(self, id, format='html'):
@@ -39,17 +28,17 @@ class CDC_ShowcaseController(ShowcaseController):
 
         # check if showcase exists
         try:
-            c.pkg_dict = get_action('package_show')(context, data_dict)
-        except NotFound:
-            abort(404, _('Showcase not found'))
-        except NotAuthorized:
-            abort(404, _('Showcase not found'))
+            c.pkg_dict = tk.get_action('package_show')(context, data_dict)
+        except tk.ObjectNotFound:
+            tk.abort(404, _('Showcase not found'))
+        except tk.NotAuthorized:
+            tk.abort(404, _('Showcase not found'))
 
         # get showcase packages
         #  c.showcase_pkgs = get_action('ckanext_showcase_package_list')(
         #    context, {'showcase_id': c.pkg_dict['id']})
 
-        return render("cdc_showcase/read.html",
+        return tk.render("cdc_showcase/read.html",
         extra_vars={'dataset_type': 'showcase'})
 
 
