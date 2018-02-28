@@ -30,9 +30,9 @@ class CDC_ShowcaseController(ShowcaseController):
         try:
             c.pkg_dict = tk.get_action('package_show')(context, data_dict)
         except tk.ObjectNotFound:
-            tk.abort(404, _('Showcase not found'))
+            tk.abort(404, tk._('Showcase not found'))
         except tk.NotAuthorized:
-            tk.abort(404, _('Showcase not found'))
+            tk.abort(404, tk._('Showcase not found'))
 
         # get showcase packages
         #  c.showcase_pkgs = get_action('ckanext_showcase_package_list')(
@@ -64,7 +64,7 @@ class AdditionalInfoController(p.toolkit.BaseController):
             c.pkg_dict = tk.get_action('package_show')(context, data_dict)
             c.pkg = context['package']
         except (tk.ObjectNotFound, tk.NotAuthorized):
-            tk.abort(404, _('Dataset not found'))
+            tk.abort(404, tk._('Dataset not found'))
 
         package_type = c.pkg_dict['type'] or 'dataset'
         """ self._setup_template_variables(context, {'id': id},    """
