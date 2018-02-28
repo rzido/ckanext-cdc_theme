@@ -1,4 +1,7 @@
 
+
+from ckanext.showcase.controller import ShowcaseController
+
 import datetime
 
 import ckan.plugins as p
@@ -7,6 +10,33 @@ from ckan.plugins import toolkit as tk
 from ckan.common import c
 
 from feedback_model import UnpublishedFeedback
+
+class CDC_ShowcaseController(ShowcaseController):
+       def read(self, id, format='html'):
+        '''
+        Carousel view for a single showcase
+        '''
+
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author, 'for_view': True,
+                   'auth_user_obj': c.userobj}
+        data_dict = {'id': id}
+
+        # check if showcase exists
+        try:
+            c.pkg_dict = get_action('package_show')(context, data_dict)
+        except NotFound:
+            abort(404, _('Showcase not found'))
+        except NotAuthorized:
+            abort(404, _('Showcase not found'))
+
+        # get showcase packages
+        #  c.showcase_pkgs = get_action('ckanext_showcase_package_list')(
+        #    context, {'showcase_id': c.pkg_dict['id']})
+
+        return render("cdc_showcase/read.html",
+        extra_vars={'dataset_type': 'showcase'})
+
 
 
 class AdditionalInfoController(p.toolkit.BaseController):
