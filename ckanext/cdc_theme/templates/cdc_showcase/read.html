@@ -1,1 +1,21 @@
-showcase
+{%
+set showcases =  h.cdc_theme_showcases(6)
+%}
+ <div class="module-content box">
+      <!--
+      <header>
+          <h2 class="secondary-heading">Apps/visulizaciones destacadas</h2>       
+      </header>
+      -->
+      <section>
+      
+         {% for package in showcases %}                                
+         <a class="browse-showcase" href="{{ h.url_for(controller='package', action='read', id=package.name) }}">
+            <img class="browse-showcase-image" src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">
+            <div class="browse-showcase-title">{{ h.truncate(package.title or package.name, 80) }} </div>
+         </a>
+         {% endfor %}                  
+          
+       
+      </section>
+</div>
