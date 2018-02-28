@@ -188,71 +188,66 @@ dropdown in the settings page and rename this file layout4.html.
 
 <div class="main-featured front">
   
-  <!--
-  <svg id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <path id="trianglePath1" style="fill:#fff" d="M0 0 L50 100 L100 0 Z"></path>
-    <path id="trianglePath2" d="M50 100 L100 40 L100 0 Z" style="fill:#444849"></path>
-   </svg>
-  -->
-  
-  <!--
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="100%" viewBox="0 0 100 50" style="background-color:white" height="70">
-                <polygon points="0,20 30,10 70,30 100,0 100,50 0,50" fill="#ddd"></polygon>
-                <polygon points="0,50 30,8 70,48 100,30 100,50" fill="transparent"></polygon>
-            </svg>
-  -->
+ svg class="chart" width="100%" style="background-color:white;border-bottom: 1px dotted #aaa;" height="50" viewBox="0 0 1000 50">
+<g transform="scale(1,-1) translate(0,-50)" stroke-width="1" stroke="#aaa" stroke-dasharray="2 2">
+    <g stroke="#ccc" stroke-dasharray="1 5">
+		<line x1="-1000" y1="25" x2="2000" y2="25"></line>
+		<line x1="-1000" y1="50" x2="2000" y2="50"></line>
+	</g>
+	<g fill="#ddd" y="0">
+		<rect x="0"  height="10" width="20"></rect>
+		<rect x="100" height="5" width="20"></rect>
+		<rect x="200" height="10" width="20"></rect>
+		<rect x="300" height="35" width="20"></rect>
+		<rect x="400" height="8" width="20"></rect>
+		<rect x="500" height="48" width="20"></rect>
+		<rect x="600" height="36" width="20"></rect>
+		<rect x="700" height="36" width="20"></rect>
+		<rect x="800" height="36" width="20"></rect>
+		<rect x="900" height="36" width="20"></rect>		
+	</g>
+ 
+	<g fill="#bbb" y="0" stroke-dasharray="2 2" >
+		<rect x="50" height="12" width="20"></rect>
+		<rect x="150" height="43" width="20"></rect>
+		<rect x="250" height="2" width="20"></rect>
+		<rect x="350" height="9" width="20"></rect>
+		<rect x="450" height="32" width="20"></rect>
+		<rect x="550" height="22" width="20"></rect>
+		<rect x="650" height="34" width="20"></rect>
+		<rect x="750" height="7" width="20"></rect>
+		<rect x="850" height="26" width="20"></rect>
+		<rect x="950" height="19" width="20"></rect>
+		
+	</g> 
 
-  
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" style="background-color:white" viewBox="0 0 1000 50" preserveAspectRatio="none slice" height="70">
-<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#bbb"></stop>
-      <stop stop-color="#ddd" offset="95%"></stop>
-</linearGradient>
-<linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#20b3e7"></stop>
-      <stop offset="70%" stop-color="#0083D7"></stop>
-</linearGradient>
-<linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38a7c4"></stop>
-      <stop stop-color="#187794" offset="90%"></stop>
-</linearGradient>
+	<g fill="#eee" y="0">
+		<rect x="25" height="28" width="20"></rect>		
+		<rect x="125" height="14" width="20"></rect>		
+		<rect x="225" height="16" width="20"></rect>		
+		<rect x="325" height="39" width="20"></rect>
+		<rect x="425" height="7" width="20"></rect>
+		<rect x="525" height="49" width="20"></rect>
+		<rect x="625" height="5" width="20"></rect>
+		<rect x="725" height="19" width="20"></rect>		
+		<rect x="825" height="46" width="20"></rect>
+		<rect x="925" height="22" width="20"></rect>		
+	</g>
+	
+	<g fill="#0083D7" fill-opacity="0.3" y="0">
+		<rect x="75" height="23" width="20"></rect> 
+		<rect x="175" height="45" width="20"></rect>
+		<rect x="275" height="3" width="20"></rect>
+		<rect x="375" height="9" width="20"></rect>
+		<rect x="475" height="23" width="20"></rect>
+		<rect x="575" height="37" width="20"></rect>
+		<rect x="675" height="7" width="20"></rect>
+		<rect x="775" height="11" width="20"></rect>
+		<rect x="875" height="19" width="20"></rect>
+		<rect x="975" height="41" width="20"></rect>
+	</g>
 
-
-<path fill="url(#gradient3)" fill-opacity="0.4" style="stroke:#ddd;stroke-width:2;stroke-opacity:0.8" d="M-10,0L100 5 200 0 300 15 400 0 500 0 600 15  700 7 800 5  900 15 1000 0 1000 50 0 50z"></path>
-<path fill="url(#gradient2)" fill-opacity="0.7" style="stroke:#ddd;stroke-width:2;stroke-opacity:0.4"d="M-10,15L100 20 200 15 300 25 400 10 500 15 600 35 700 20 800 15 900 30 1000 20 1000 50 0 50z"></path>               
-<path fill="url(#gradient)" style="stroke:#ddd;stroke-width:4;stroke-opacity:0.4" d="M-10,50L100 35 200 30 300 50 400 20 500 30 600 50 700 30 800 32 900 50 1000 50 1000 52 -10 52z"></path>
-
-<!--   
-<polygon fill="url(#gradient3)" fill-opacity="0.4" style="stroke:#ddd;stroke-width:2;stroke-opacity:0.8" points="-10,0 100,5 200,0 300,15 400,0 500,0 600,15, 700,7 800,5, 900,15 1000,0 1000,50 0,50"></polygon>
-<polygon fill="url(#gradient2)" fill-opacity="0.7" style="stroke:#ddd;stroke-width:2;stroke-opacity:0.4" points="-10,15 100,20 200,15 300,25 400,10 500,15 600,35 700,20 800,15 900,30 1000,20 1000,50 0,50"></polygon>               
-<circle cx="-10" cy="15" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="100" cy="20" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="200" cy="15" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="300" cy="25" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="400" cy="10" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="500" cy="15" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="600" cy="35" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="700" cy="20" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="800" cy="15" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="900" cy="30" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>
-<circle cx="1000" cy="20" stroke-width="1" r="3" stroke="#ddd" fill="#0083D7" stroke-opacity="0.4" fill-opacity="0.8"></circle>  
-
-<polygon fill="url(#gradient)" style="stroke:#ddd;stroke-width:4;stroke-opacity:0.4" points="-10,50 100,35 200,30 300,50 400,20 500,30 600,50 700,30 800,32 900,50 1000,50 1000,52 -10,52"></polygon>
-
-<circle cx="-10" cy="50" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="100" cy="35" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="200" cy="30" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="300" cy="50" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>  
-<circle cx="400" cy="20" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="500" cy="30" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="600" cy="50" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="700" cy="30" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>  
-<circle cx="800" cy="32" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="900" cy="50" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>
-<circle cx="1000" cy="50" stroke-width="1" stroke="#aaa" fill="#ddd" fill-opacity="1" r="3"></circle>  
-<circle cx="100" cy="5" stroke-width="1" stroke="#aaa" r="3" fill="#187794" fill-opacity="0.4"></circle>
--->
-
+</g>
 </svg>
   
   <div class="container">
