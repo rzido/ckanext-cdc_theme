@@ -191,7 +191,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                     controller=unpublished_feedback_controller)
         map.connect('view_org', '/unpublished_report/{org_id}', action='view_org',
                     controller=unpublished_report_controller)	
-	map.connect('read_carousel','/showcase/carousel_view/{id}', action='read_carousel, 
+	map.connect('read_carousel','/showcase/carousel_view/{id}', action='read_carousel', 
 		    controller=cdc_showcase_controller)
 	
 	map.connect('dataset_additional_info','/dataset/additional_info/{id}', action='additional_info', 
