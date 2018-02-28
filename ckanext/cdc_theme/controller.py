@@ -12,7 +12,7 @@ from ckan.common import c
 from feedback_model import UnpublishedFeedback
 
 class CDC_ShowcaseController(ShowcaseController):
-       def read(self, id, format='html'):
+       def read_carousel(self, id, format='html'):
         '''
         Carousel view for a single showcase
         '''
