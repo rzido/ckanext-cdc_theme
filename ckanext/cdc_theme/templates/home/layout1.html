@@ -32,10 +32,10 @@ set showcases =  h.cdc_theme_showcases(6)
             <div class="spinner"></div>
             <div class="carousel-inner">  
 	    {% set counter=0 %}
-            {% for package in showcases %}
-	      {% set counter +=1 %}    
-	      {% if counter==1 %}
-		<div class="active item in" data-url="/showcase/carousel_view/{{package.name}}" data-slide-number="0"></div>		        
+            {% for package in showcases %}	    
+	      {% if counter==0 %}
+		<div class="active item in" data-url="/showcase/carousel_view/{{package.name}}" data-slide-number="0"></div>
+		{% set counter=1 %}
 	      {% else %}    		
               	<div class="item" data-url="/showcase/carousel_view/{{package.name}}"></div>
 	      {% endif %}
