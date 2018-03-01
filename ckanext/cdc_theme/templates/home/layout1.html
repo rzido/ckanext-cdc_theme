@@ -33,7 +33,7 @@ set showcases =  h.cdc_theme_showcases(6)
             <div class="carousel-inner">
               <div class="active item in" data-url="/showcase/carousel_view/obras-y-proyectos" data-slide-number="0"></div>		    
             {% for package in showcases %}                                		    
-              <div class="item" data-url="/render/viz-partial-landinventory"></div>
+              <div class="item" data-url="/showcase/carousel_view/{{package.name}}"></div>
 	    {% endfor %} 		            
             </div>
           </div>
