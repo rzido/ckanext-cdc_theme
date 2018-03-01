@@ -1,5 +1,6 @@
-     
-       <div class="vizcarousel-desc">
+{% set package = c.pkg_dict %}     
+       
+      <div class="vizcarousel-desc">
          <h1 class="vizcarousel-desc-text"><a target="_blank" href="{{ h.url_for(controller='package', action='read', id=package.name) }}">{{ h.truncate(package.title or package.name, 80) }} </a></h1>
          <p class="vizcarousel-desc-text author">by <a target="_blank" href="http://davewalk.net/">Civio</a></p>
          <p class="vizcarousel-desc-text"> {{ h.truncate(package.title or package.name, 80) }} <a href="/dataset/crime-incidents">dataset built</a>.</p>
