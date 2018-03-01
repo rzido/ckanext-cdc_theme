@@ -1,21 +1,14 @@
 {%
 set showcases =  h.cdc_theme_showcases(6)
 %}
- <div class="module-content box">
-      <!--
-      <header>
-          <h2 class="secondary-heading">Apps/visulizaciones destacadas</h2>       
-      </header>
-      -->
-      <section>
       
-         {% for package in showcases %}                                
-         <a class="browse-showcase" href="{{ h.url_for(controller='package', action='read', id=package.name) }}">
-            <img class="browse-showcase-image" src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">
-            <div class="browse-showcase-title">{{ h.truncate(package.title or package.name, 80) }} </div>
-         </a>
-         {% endfor %}                  
-          
+       {% for package in showcases %}            
+       <div class="vizcarousel-desc">
+         <h1 class="vizcarousel-desc-text"><a target="_blank" href="{{ h.url_for(controller='package', action='read', id=package.name) }}">Visualizador Impuestos</a></h1>
+         <p class="vizcarousel-desc-text author">by <a target="_blank" href="http://davewalk.net/">Civio</a></p>
+         <p class="vizcarousel-desc-text"> {{ h.truncate(package.title or package.name, 80) }} <a href="/dataset/crime-incidents">dataset built</a>.</p>
+         </div>
        
-      </section>
-</div>
+       </div>
+       {% endfor %}                  
+         
