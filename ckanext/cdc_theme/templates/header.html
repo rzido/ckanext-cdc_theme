@@ -33,12 +33,15 @@
 
   {% block header_account %}
   <header class="account-masthead">
+    
+   
     <div class="container">
     
   
     {# The .header-image class hides the main text and uses image replacement for the title #}
     <hgroup class="{{ g.header_class }} pull-left">
 
+      
       {% block header_logo %}
         {% if g.site_logo %}
           <a class="logo" href="{{ h.url_for('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
@@ -52,12 +55,10 @@
       {% endblock %}
 
     </hgroup>
-  
-  
+       
    
-      {% block header_account_container_content %}
-       {{ super() }}
-      {% endblock %}
+    {{ super() }}
+
       
    </div>
     </header>  
