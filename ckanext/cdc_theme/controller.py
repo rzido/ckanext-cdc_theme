@@ -34,7 +34,7 @@ class CDC_ShowcaseController(ShowcaseController):
         except tk.NotAuthorized:
             tk.abort(404, tk._('Showcase not found'))
 
-         get showcase packages
+        # get showcase packages
           c.showcase_pkgs = get_action('ckanext_showcase_package_list')(
             context, {'showcase_id': c.pkg_dict['id']})
 
