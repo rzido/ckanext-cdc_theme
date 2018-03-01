@@ -1,5 +1,5 @@
 {% block header_wrapper %}
-{% block header_account %}
+
 
  <!-- CORUÑA -->
  <div class="headers">
@@ -31,6 +31,7 @@
   </header>  
   <!-- CORUÑA -->
 
+  {% block header_account %}
   <header class="account-masthead">
     <div class="container">
     
@@ -111,10 +112,10 @@
         {% endif %}
       {% endblock %}
       </div>
-    </header>
- 
- 
+    </header>  
 {% endblock %}
+  
+  
 <header class="navbar navbar-static-top masthead">
   {% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
