@@ -1,7 +1,9 @@
-{% block header_wrapper %} {% block header_account %}
+{% block header_wrapper %} 
+
 
  <!-- CORUÑA -->
  <div class="headers">
+  
   <header class="ogov-masthead">
     <div class="container">
       <div class="row">
@@ -30,21 +32,28 @@
   </header>  
   <!-- CORUÑA -->
 
+{% block header_account %}
+  
 <header class="account-masthead">
   <div class="container">
    
-     {# The .header-image class hides the main text and uses image replacement for the title #}
-     <hgroup class="{{ g.header_class }} navbar-left">
-      {% block header_logo %} {% if g.site_logo %}
+  {# The .header-image class hides the main text and uses image replacement for the title #}
+  <hgroup class="{{ g.header_class }} navbar-left">
+      {% block header_logo %} 
+      {% if g.site_logo %}
       <a class="logo" href="{{ h.url_for('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
       {% else %}
       <h1>
         <a href="{{ h.url_for('home') }}">{{ g.site_title }}</a>
       </h1>
       {% if g.site_description %}
-      <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
+      <h2>{{ g.site_description }}</h2>
+      {% endif %}
+      {% endif %} 
+      {% endblock %}
     </hgroup>
    
+    <hgroup>
     {% block header_account_container_content %} {% if c.userobj %}
     <div class="account avatar authed" data-module="me" data-me="{{ c.userobj.id }}">
       <ul class="list-unstyled">
@@ -99,10 +108,13 @@
         {% endif %} {% endblock %}
       </ul>
     </nav>
-    {% endif %} {% endblock %}
+   </hgroup>
+   {% endif %}{% endblock %}
   </div>
 </header>
 {% endblock %}
+  
+  
 <header class="navbar navbar-static-top masthead">
   {% block header_debug %} {% if g.debug and not g.debug_supress_header %}
   <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
@@ -131,10 +143,13 @@
           <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
         </div>
       </form>
-      {% endblock %}
+     {% endblock %}
     </div>
   </div>
-</header>
+</header>   
+  
+  
 </div>  
+
 {% endblock %}
 
