@@ -5,7 +5,7 @@
          <p class="vizcarousel-desc-text author">by <a target="_blank" href="http://davewalk.net/">Civio</a></p>
          <p class="vizcarousel-desc-text"> {{ h.truncate(package.title or package.name, 80) }} <a href="/dataset/crime-incidents">dataset built</a>.</p>
        </div>
-       <img width=1050 src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" srcset="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}">       
+       <img height=750 src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" srcset="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}">       
       
            
          
