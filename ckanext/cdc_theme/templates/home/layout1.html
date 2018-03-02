@@ -34,8 +34,7 @@ set showcases =  h.cdc_theme_showcases(6)
 	    {% set counter=0 %}
             {% for package in showcases %}	    
 	      {% if counter==0 %}
-		<div class="active item in" data-url="/showcase/carousel_view/{{package.name}}" data-slide-number="0"></div>
-		  {{ h.url_for(controller='showcase', action='index') }}
+		<div class="active item in" data-url="{{ h.url_for(controller='showcase', action='read') }}/carousel_view/{{package.name}}" data-slide-number="0"></div>		  
 		{% set counter=1 %}
 	      {% else %}    		
               	<div class="item" data-url="/showcase/carousel_view/{{package.name}}"></div>
