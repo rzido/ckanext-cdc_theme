@@ -3,11 +3,15 @@
          <h1 class="vizcarousel-desc-text"><a target="_blank" href="{{ h.url_for(controller='package', action='read', id=package.name) }}">{{ h.truncate(package.title or package.name, 80) }} </a></h1>
          <p class="vizcarousel-desc-text author">{{ package.author }}</p>
          <p class="vizcarousel-desc-text"> {{ h.markdown_extract(package.notes, extract_length=200)|forceescape }} <a href="/dataset/crime-incidents">dataset built</a>.</p>
+         
+         
          {% if c.showcase_pkgs %}
+         <p class="vizcarousel-desc-text"> {{ _('Used datasets') }} :             
             {% for package in c.showcase_pkgs %}
-            
-            {% endfor %}                  
-         {% else %}
+               {% set title = h.get_translated(package,'title') or package.name %} 
+            {% endfor %}     
+            </p>  
+          {% else %}
            <p class="vizcarousel-desc-text">{{_('There are no Datasets in this Showcase')}}</p>
          {% endif %}
        </div>
