@@ -475,8 +475,8 @@ msgstr "Non se atoparon conxuntos de datos"
 #: ckanext/cdc_theme/templates/snippets/search_result_text.html:21
 msgid "{number} topic found for \"{query}\""
 msgid_plural "{number} topics found for \"{query}\""
-msgstr[0] "{number} categoría atopadas por \"{query}\"
-msgstr[1] "{number} categorías atopadas por \"{query}\"
+msgstr[0] "{number} categoría atopadas por \"{query}\""
+msgstr[1] "{number} categorías atopadas por \"{query}\""
 
 #: ckanext/cdc_theme/templates/snippets/search_result_text.html:22
 msgid "No topics found for \"{query}\""
