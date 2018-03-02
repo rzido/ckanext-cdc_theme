@@ -8,6 +8,11 @@ import ckan.plugins as p
 import ckan.model as model
 from ckan.plugins import toolkit as tk
 from ckan.common import c
+from ckan.controllers.package import (PackageController,
+                                      url_with_params,
+                                      _encode_params)
+
+from ckanext.showcase.model import ShowcasePackageAssociation
 
 from feedback_model import UnpublishedFeedback
 
