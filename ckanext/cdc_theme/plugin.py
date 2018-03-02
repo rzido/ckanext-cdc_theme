@@ -34,22 +34,23 @@ def most_recent_datasets(num=3):
 #
 #    return datasets[:num]
 
-search_dict = {
+    search_dict = {
         'sort': 'metadata_created desc',
         'rows': num
     }
 
-    items = logic.get_action('package_search')({}, search_dict)
+    items = tk.get_action('package_search')({}, search_dict)
 
-    result = []
-    for item in items['results']:
-        result.append({
-            'title': item['title'],
-            'metadata_created': item['metadata_created'],
-            'href': '/' + item['type'] + '/' + item['name']
-        })
+    # result = []
+    #for item in items['results']:
+    #    result.append({
+    #        'title': item['title'],
+    #        'metadata_created': item['metadata_created'],
+    #        'href': '/' + item['type'] + '/' + item['name']
+    #    })
 
-     return result
+    #return result
+    return items
 
 
 def get_summary_list(num_packages):
