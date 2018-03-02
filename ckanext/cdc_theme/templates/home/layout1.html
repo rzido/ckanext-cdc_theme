@@ -138,7 +138,7 @@ set showcases =  h.cdc_theme_showcases(6)
 <!-- <ul class="media-grid" data-module="media-grid"> -->
 <!--        <ul> -->
   {% for topic in h.cdc_theme_organizations() %}
-               <a href="/organization/{{ topic.name }}" class="browse-topic">
+               <a href="{% url_for controller='organization', action='read', id=topic.name %}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url }}">
                   <div class="browse-topic-title">
                     {{ topic.display_name }}
