@@ -35,8 +35,7 @@ class CDC_ShowcaseController(ShowcaseController):
             tk.abort(404, tk._('Showcase not found'))
 
         # get showcase packages
-          c.showcase_pkgs = get_action('ckanext_showcase_package_list')(
-            context, {'showcase_id': c.pkg_dict['id']})
+        c.showcase_pkgs = get_action('ckanext_showcase_package_list')(context, {'showcase_id': c.pkg_dict['id']})
 
         return tk.render("cdc_showcase/read.html",
         extra_vars={'dataset_type': 'showcase'})
