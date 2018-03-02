@@ -17,23 +17,27 @@ from feedback_model import init_db, UnpublishedFeedback
 from ckan.lib.plugins import DefaultTranslation
 
 def most_recent_datasets(num=3):
-    """Return a list of recent datasets."""
+    """Return a list of most recent modified datasets."""
 
     # the current_package_list_with_resources action returns private resources
     # which need to be filtered
 
     # TO BE FIXED. When number of datasets with resources is less than num=3. 	
 
-#    datasets = []
-#    i = 0
-#    while len(datasets) < num:
-#        datasets += filter(lambda ds: not ds['private'],
-#                           tk.get_action('current_package_list_with_resources')({},
-#                                         {'limit': num, 'offset': i * num}))
-#        i += 1
-#
-#    return datasets[:num]
+    datasets = []
+    i = 0
+    while len(datasets) < num:
+        datasets += filter(lambda ds: not ds['private'],
+                           tk.get_action('current_package_list_with_resources')({},
+                                         {'limit': num, 'offset': i * num}))
+        i += 1
 
+    return datasets[:num]
+
+
+def most_new_datasets(num=3):
+	
+    """Return a list of most new datasets."""
     search_dict = {
         'sort': 'metadata_created desc',
         'rows': num
@@ -41,16 +45,16 @@ def most_recent_datasets(num=3):
 
     items = tk.get_action('package_search')({}, search_dict)
 
-    # result = []
-    #for item in items['results']:
-    #    result.append({
-    #        'title': item['title'],
-    #        'metadata_created': item['metadata_created'],
-    #        'href': '/' + item['type'] + '/' + item['name']
-    #    })
+    result = []
+    for item in items['results']:
+        result.append({
+            'title': item['title'],
+            'metadata_created': item['metadata_created'],
+            'href': '/' + item['type'] + '/' + item['name']
+     })
 
-    #return result
-    return items[:num]
+    return result
+
 
 
 def get_summary_list(num_packages):
@@ -183,6 +187,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         """Register cdc_theme_* helper functions"""
 
         return {'cdc_theme_most_recent_datasets': most_recent_datasets,
+		'cdc_theme_most_new_datasets': most_new_datasets,
                 'cdc_theme_popular_datasets': get_summary_list,
                 'cdc_theme_dataset_count': dataset_count,
                 'cdc_theme_dataset_list': dataset_list,
