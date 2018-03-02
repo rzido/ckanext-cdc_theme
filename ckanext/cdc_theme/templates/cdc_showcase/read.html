@@ -1,18 +1,19 @@
 {% set package = c.pkg_dict %}           
       <div class="vizcarousel-desc">
          <h1 class="vizcarousel-desc-text"><a target="_blank" href="{{ h.url_for(controller='package', action='read', id=package.name) }}">{{ h.truncate(package.title or package.name, 80) }} </a></h1>
-         <p class="vizcarousel-desc-text author">{{ package.author }}</p>
-         <p class="vizcarousel-desc-text"> {{ h.markdown_extract(package.notes, extract_length=200)|forceescape }} <a href="/dataset/crime-incidents">dataset built</a>.</p>
-         
-         
+         <p class="vizcarousel-desc-text author">{{ _('Author') }} {{ package.author }}
          {% if c.showcase_pkgs %}
-         <p class="vizcarousel-desc-text"> {{ _('Related datasets') }} :             
+            {{ _('Datasets') }} :             
             {% for package in c.showcase_pkgs %}
                {% set title = h.get_translated(package,'title') or package.name %} 
                {{ h.link_to(title, h.url_for(controller='package', action='read', id=package.name)) }}.    
-            {% endfor %}     
-            </p>           
-         {% endif %}
+            {% endfor %}              
+         {% endif %}                        
+         </p>
+         <p class="vizcarousel-desc-text"> {{ h.markdown_extract(package.notes, extract_length=200)|forceescape }}</p>
+         
+         
+         
        </div>
 
        <img height=450 width=450 src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" srcset="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}">
