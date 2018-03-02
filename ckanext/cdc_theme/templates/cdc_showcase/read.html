@@ -6,19 +6,15 @@
          
          
          {% if c.showcase_pkgs %}
-         <p class="vizcarousel-desc-text"> {{ _('Used datasets') }} :             
+         <p class="vizcarousel-desc-text"> {{ _('Related datasets') }} :             
             {% for package in c.showcase_pkgs %}
                {% set title = h.get_translated(package,'title') or package.name %} 
-               {{ title }}
+               &nbsp;{{ title }}. 
             {% endfor %}     
-            </p>  
-          {% else %}
-           <p class="vizcarousel-desc-text">{{_('There are no Datasets in this Showcase')}}</p>
+            </p>           
          {% endif %}
        </div>
 
-       <img height=450 width=450 src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" srcset="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}">       
-      
-    <h2 class="module-heading">{{ _('Used datasets') }}</h2>
+       <img height=450 width=450 src="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" srcset="{{ package.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}">
    
          
