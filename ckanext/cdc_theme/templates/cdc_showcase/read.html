@@ -4,7 +4,7 @@
          <p class="vizcarousel-desc-text author">{{ package.author }}</p>
          <p class="vizcarousel-desc-text"> {{ h.markdown_extract(package.notes, extract_length=200)|forceescape }} <a href="/dataset/crime-incidents">dataset built</a>.</p>
          {% if c.showcase_pkgs %}
-            {% for package in packages %}
+            {% for package in c.showcase_pkgs %}
             
             {% endfor %}                  
          {% else %}
