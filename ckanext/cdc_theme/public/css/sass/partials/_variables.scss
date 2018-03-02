@@ -24,8 +24,8 @@ $heading-line-height: 1.3;
 $text-line-height: 1.5;
 
 
-$font-size-base: 14px;   
-$margin-small-horizontal: 0;
+$font-size-base: 15px;   
+$margin-small-horizontal: 2px;
 $line-height-base: 1.5;
 
 // Rating (ckan extension)
@@ -33,3 +33,5 @@ $rating-text-color: $text-color;
 $rating-star-color--hover: $secondary-color;
 $rating-star-color--empty: $gray-light;
 $rating-star-color--filled: $text-color;
+
+
