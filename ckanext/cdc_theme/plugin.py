@@ -24,15 +24,32 @@ def most_recent_datasets(num=3):
 
     # TO BE FIXED. When number of datasets with resources is less than num=3. 	
 
-    datasets = []
-    i = 0
-    while len(datasets) < num:
-        datasets += filter(lambda ds: not ds['private'],
-                           tk.get_action('current_package_list_with_resources')({},
-                                         {'limit': num, 'offset': i * num}))
-        i += 1
+#    datasets = []
+#    i = 0
+#    while len(datasets) < num:
+#        datasets += filter(lambda ds: not ds['private'],
+#                           tk.get_action('current_package_list_with_resources')({},
+#                                         {'limit': num, 'offset': i * num}))
+#        i += 1
+#
+#    return datasets[:num]
 
-    return datasets[:num]
+search_dict = {
+        'sort': 'metadata_created desc',
+        'rows': num
+    }
+
+    items = logic.get_action('package_search')({}, search_dict)
+
+    result = []
+    for item in items['results']:
+        result.append({
+            'title': item['title'],
+            'metadata_created': item['metadata_created'],
+            'href': '/' + item['type'] + '/' + item['name']
+        })
+
+     return result
 
 
 def get_summary_list(num_packages):
