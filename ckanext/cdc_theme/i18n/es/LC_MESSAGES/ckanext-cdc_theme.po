@@ -259,7 +259,7 @@ msgid "Featured popular"
 msgstr "Más consultados"
 
 #: ckanext/cdc_theme/templates/home/layout1.html:237
-msgid "Top Rated"
+msgid "Top rated"
 msgstr "Más valorados"
 
 #: ckanext/cdc_theme/templates/package/group_list.html:14
