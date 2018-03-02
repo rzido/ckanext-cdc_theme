@@ -50,7 +50,7 @@ def most_recent_datasets(num=3):
     #    })
 
     #return result
-    return items
+    return items[:num]
 
 
 def get_summary_list(num_packages):
