@@ -4,7 +4,9 @@
          <p class="vizcarousel-desc-text author">{{ package.author }}</p>
          <p class="vizcarousel-desc-text"> {{ h.markdown_extract(package.notes, extract_length=200)|forceescape }} <a href="/dataset/crime-incidents">dataset built</a>.</p>
          {% if c.showcase_pkgs %}
-            {{ h.snippet('snippets/package_list.html', packages=c.showcase_pkgs, list_class='dataset-list related-datasets') }}
+            {% for package in packages %}
+            
+            {% endfor %}                  
          {% else %}
            <p class="vizcarousel-desc-text">{{_('There are no Datasets in this Showcase')}}</p>
          {% endif %}
