@@ -8,11 +8,7 @@ import ckan.plugins as p
 import ckan.model as model
 from ckan.plugins import toolkit as tk
 from ckan.common import c
-from ckan.controllers.package import (PackageController,
-                                      url_with_params,
-                                      _encode_params)
 
-from ckanext.showcase.model import ShowcasePackageAssociation
 
 from feedback_model import UnpublishedFeedback
 
@@ -39,7 +35,7 @@ class CDC_ShowcaseController(ShowcaseController):
         except tk.NotAuthorized:
             tk.abort(404, tk._('Showcase not found'))
         # get showcase packages
-        c.showcase_pkgs = c.get_action('ckanext_showcase_package_list')(context, {'showcase_id': c.pkg_dict['id']})
+        c.showcase_pkgs = tk.get_action('ckanext_showcase_package_list')(context, {'showcase_id': c.pkg_dict['id']})
        
         return tk.render("cdc_showcase/read.html",
         extra_vars={'dataset_type': 'showcase'})
