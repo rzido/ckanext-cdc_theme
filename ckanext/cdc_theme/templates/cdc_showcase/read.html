@@ -9,6 +9,7 @@
          <p class="vizcarousel-desc-text"> {{ _('Used datasets') }} :             
             {% for package in c.showcase_pkgs %}
                {% set title = h.get_translated(package,'title') or package.name %} 
+               {{ title }}
             {% endfor %}     
             </p>  
           {% else %}
