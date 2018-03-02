@@ -22,3 +22,9 @@ $font: 'Dosis';
 
 $heading-line-height: 1.3;
 $text-line-height: 1.5;
+
+// Rating (ckan extension)
+$rating-text-color: $text-color;
+$rating-star-color--hover: $secondary-color;
+$rating-star-color--empty: $gray-light;
+$rating-star-color--filled: $text-color;
