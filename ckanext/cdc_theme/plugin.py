@@ -28,7 +28,7 @@ def top_rated_datasets(limit=3):
     # NB Not using sqlalchemy as sqla 0.4 doesn't work using both group_by
     # and apply_avg
     package = table('package')
-    rating = table('review')
+    rating = table('rating')
     sql = select([package.c.id, func.avg(rating.c.rating), func.count(rating.c.rating)], from_obj=[package.join(rating)]).\
           where(and_(package.c.private==False, package.c.state=='active')). \
           group_by(package.c.id).\
