@@ -11,7 +11,7 @@ set top_rated_datasets =  h.cdc_theme_top_rated_datasets(3)
       -->
       <section>
        
-           {% for package, rating, num_ratings in top_rated_packages %}
+           {% for package, rating, num_ratings in top_rated_datasets %}
               <tr>
                 <th>{{ h.link_to(package.title or package.name, h.url_for(controller='package', action='read', id=package.name)) }}</th>
                 <td class="metric">{{ rating }}</td>
