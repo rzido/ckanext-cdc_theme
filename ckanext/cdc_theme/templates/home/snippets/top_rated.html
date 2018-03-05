@@ -14,5 +14,6 @@ set popular_datasets =  h.cdc_theme_popular_datasets(4)
           {% for pkg in popular_datasets %}
               {% snippet "rating/snippets/rating_single_flat.html", package=pkg, enable_input="false" %}
           </ul>
+          {% endfor %}
       </section>
 </div>
