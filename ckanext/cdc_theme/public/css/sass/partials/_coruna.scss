@@ -173,37 +173,38 @@ select:focus {
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
-  .tabs .tab-2 {
-    width: 50%; }
-    .tabs .tab-2 [type="radio"] + div {
-      width: 200%;
-      margin-left: 200%; }
-    .tabs .tab-2 [type="radio"]:checked + div {
-      margin-left: 0; }
-    .tabs .tab-2:last-child [type="radio"] + div {
-      margin-left: 100%; }
-    .tabs .tab-2:last-child [type="radio"]:checked + div {
-      margin-left: -100%; }
-
+ 
 .tabs .tab-3 {
     width: 33%; }
     .tabs .tab-3 [type="radio"] + div {
       width: 300%;
       margin-left: 300%; }
     .tabs .tab-3 [type="radio"]:checked + div {
-      margin-left: -100%; }
+      margin-left: -100%;
+      visibility: true;}
+    .tabs .tab-3 [type="radio"]:not(:checked) + div {
+      margin-left: -100%;
+      visibility: hidden;}
 
     .tabs .tab-3:first-child [type="radio"] + div {
       margin-left: 0; }
     .tabs .tab-3:first-child [type="radio"]:checked + div {
-      margin-left: 0%; }
-
+      margin-left: 0%;
+      visibility:true;}
+    .tabs .tab-3:first-child [type="radio"]:not(:checked) + div {
+      margin-left: 0%;
+      visibility:hidden;}
+     }    
 
     .tabs .tab-3:last-child [type="radio"] + div {
       width: 300%;  
       margin-left: 0; }
     .tabs .tab-3:last-child [type="radio"]:checked + div {
-      margin-left: -200%; }
+      margin-left: -200%;
+      visibility: true}
+    .tabs .tab-3:last-child [type="radio"]:not(:checked) + div {
+      margin-left: -200%;
+      visibility: hidden}
 
 /*
 svg {
