@@ -8,6 +8,8 @@ from jinja2 import Undefined
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
 
+import ckan.model as model
+
 
 from ckan.lib.activity_streams import \
     activity_stream_string_functions as activity_streams
@@ -15,6 +17,20 @@ from ckan.lib.activity_streams import \
 from feedback_model import init_db, UnpublishedFeedback
 
 from ckan.lib.plugins import DefaultTranslation
+
+def top_rated_datasets(limit=3):
+    # NB Not using sqlalchemy as sqla 0.4 doesn't work using both group_by
+    # and apply_avg
+    package = table('package')
+    rating = table('rating')
+    sql = select([package.c.id, func.avg(rating.c.rating), func.count(rating.c.rating)], from_obj=[package.join(rating)]).\
+          where(and_(package.c.private==False, package.c.state=='active')). \
+          group_by(package.c.id).\
+          order_by(func.avg(rating.c.rating).desc(), func.count(rating.c.rating).desc()).\
+          limit(limit)
+    res_ids = model.Session.execute(sql).fetchall()
+    res_pkgs = [(model.Session.query(model.Package).get(unicode(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
+    return res_pkgs
 
 def most_recent_datasets(num=3):
     """Return a list of most recent modified datasets."""
@@ -189,6 +205,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         return {'cdc_theme_most_recent_datasets': most_recent_datasets,
 		'cdc_theme_most_new_datasets': most_new_datasets,
                 'cdc_theme_popular_datasets': get_summary_list,
+		'cdc_theme_top_rated_datasets': top_rated_datasets,
                 'cdc_theme_dataset_count': dataset_count,
                 'cdc_theme_dataset_list': dataset_list,
                 'cdc_theme_resource_count': resource_count,
