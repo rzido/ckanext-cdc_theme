@@ -35,7 +35,8 @@ def top_rated_datasets(limit=3):
           order_by(func.avg(rating.c.rating).desc(), func.count(rating.c.rating).desc()).\
           limit(limit)
     res_ids = model.Session.execute(sql).fetchall()
-    res_pkgs = [(model.Session.query(model.Package).get(unicode(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
+    #res_pkgs = [(model.Session.query(model.Package).get(unicode(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
+    res_pkgs = [(model.Session.query(model.Package).get(unicode(pkg_id))) for pkg_id in res_ids]
     return res_pkgs
 
 def most_recent_datasets(num=3):
