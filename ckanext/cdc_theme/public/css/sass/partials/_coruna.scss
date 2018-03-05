@@ -130,6 +130,7 @@ select:focus {
   flex-wrap: wrap;
   margin: 0;
   overflow: hidden; }
+
   .tabs [class^="tab"] label,
   .tabs [class*=" tab"] label {
     color: #6E7A81;
@@ -140,6 +141,7 @@ select:focus {
     line-height: 1em;
     padding: 0rem 0;
     text-align: center; }
+
   .tabs [class^="tab"] [type="radio"],
   .tabs [class*=" tab"] [type="radio"] {
     border-bottom: 1px solid #0083D7;
@@ -153,16 +155,20 @@ select:focus {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+
     .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
     .tabs [class*=" tab"] [type="radio"]:hover,
     .tabs [class*=" tab"] [type="radio"]:focus {
       border-bottom: 2px solid #0083D7; }
+
     .tabs [class^="tab"] [type="radio"]:checked,
     .tabs [class*=" tab"] [type="radio"]:checked {
       border-bottom: 3px solid #0083D7; }
+
     .tabs [class^="tab"] [type="radio"]:checked + div,
     .tabs [class*=" tab"] [type="radio"]:checked + div {
       opacity: 1; }
+
     .tabs [class^="tab"] [type="radio"] + div,
     .tabs [class*=" tab"] [type="radio"] + div {
       display: block;
@@ -176,32 +182,39 @@ select:focus {
  
 .tabs .tab-3 {
     width: 33%; }
+
     .tabs .tab-3 [type="radio"] + div {
       width: 300%;
       margin-left: 300%; }
+
     .tabs .tab-3 [type="radio"]:checked + div {
       margin-left: -100%;
       visibility: true;}
+
     .tabs .tab-3 [type="radio"]:not(:checked) + div {
       margin-left: -100%;
       visibility: hidden;}
 
     .tabs .tab-3:first-child [type="radio"] + div {
       margin-left: 0; }
+
     .tabs .tab-3:first-child [type="radio"]:checked + div {
       margin-left: 0%;
       visibility:true;}
+
     .tabs .tab-3:first-child [type="radio"]:not(:checked) + div {
       margin-left: 0%;
       visibility:hidden;}
-     }    
+
 
     .tabs .tab-3:last-child [type="radio"] + div {
       width: 300%;  
       margin-left: 0; }
+
     .tabs .tab-3:last-child [type="radio"]:checked + div {
       margin-left: -200%;
       visibility: true}
+
     .tabs .tab-3:last-child [type="radio"]:not(:checked) + div {
       margin-left: -200%;
       visibility: hidden}
