@@ -39,9 +39,10 @@ def top_rated_datasets(limit=3):
           order_by(func.avg(rating.c.rating).desc(), func.count(rating.c.rating).desc()).\
           limit(limit)
     res_ids = model.Session.execute(sql).fetchall()
-    res_pkgs = [(model.Session.query(model.Package).get(text_type(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
-    print "top rated"
-    print res_pkgs
+    # res_pkgs = [(model.Session.query(model.Package).get(text_type(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
+	
+    pkg_dict = [tk.get_action('package_show')(dict(context, return_type='dict'),{'id': model.Session.query(model.Package).get(text_type(package_id))}) for package_id in res_ids]
+	
     return res_pkgs
 
 def most_recent_datasets(num=3):
