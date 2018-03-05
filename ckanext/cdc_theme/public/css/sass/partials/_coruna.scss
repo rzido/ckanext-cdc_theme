@@ -185,39 +185,32 @@ select:focus {
 
     .tabs .tab-3 [type="radio"] + div {
       width: 300%;
-      margin-left: 300%; }
+      margin-left: 300%;
+      visibility: hidden;}
 
     .tabs .tab-3 [type="radio"]:checked + div {
       margin-left: -100%;
       visibility: visible;}
 
-    .tabs .tab-3 [type="radio"]:not(:checked) + div {
-      margin-left: -100%;
-      visibility: hidden;}
-
+    
     .tabs .tab-3:first-child [type="radio"] + div {
-      margin-left: 0; }
+      margin-left: 0;
+      visibility: hidden;}
 
     .tabs .tab-3:first-child [type="radio"]:checked + div {
       margin-left: 0%;
       visibility:visible;}
 
-    .tabs .tab-3:first-child [type="radio"]:not(:checked) + div {
-      margin-left: 0%;
-      visibility:hidden;}
-
-
+    
     .tabs .tab-3:last-child [type="radio"] + div {
       width: 300%;  
-      margin-left: 0; }
+      margin-left: 0;
+      visibility: hidden;}
 
     .tabs .tab-3:last-child [type="radio"]:checked + div {
       margin-left: -200%;
-      visibility:visible}
+      visibility: visible;}
 
-    .tabs .tab-3:last-child [type="radio"]:not(:checked) + div {
-      margin-left: -200%;
-      visibility: hidden}
 
 /*
 svg {
