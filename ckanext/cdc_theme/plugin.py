@@ -9,6 +9,8 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
 
 import ckan.model as model
+from sqlalchemy import Table, select, join, func, and_
+
 
 
 from ckan.lib.activity_streams import \
