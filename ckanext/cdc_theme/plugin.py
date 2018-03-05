@@ -4,6 +4,7 @@ from collections import OrderedDict
 import pylons
 
 from jinja2 import Undefined
+from six import text_type
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
