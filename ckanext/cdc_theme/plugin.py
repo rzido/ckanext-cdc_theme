@@ -28,6 +28,7 @@ def table(name):
 def top_rated_datasets(limit=3):
     # NB Not using sqlalchemy as sqla 0.4 doesn't work using both group_by
     # and apply_avg
+    
     package = table('package')
     rating = table('review')
     sql = select([package.c.id, func.avg(rating.c.rating), func.count(rating.c.rating)], from_obj=[package.join(rating)]).\
@@ -37,7 +38,7 @@ def top_rated_datasets(limit=3):
           limit(limit)
     res_ids = model.Session.execute(sql).fetchall()
     res_pkgs = [(model.Session.query(model.Package).get(text_type(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
-    
+    print "top rated"
     print res_pkgs
     return res_pkgs
 
