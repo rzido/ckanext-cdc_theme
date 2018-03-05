@@ -180,8 +180,7 @@ select:focus {
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
  
-.tabs .tab-3 {
-    width: 33%; }
+.tabs .tab-3 { width: 33%; }
 
     .tabs .tab-3 [type="radio"] + div {
       width: 300%;
@@ -191,8 +190,9 @@ select:focus {
     .tabs .tab-3 [type="radio"]:checked + div {
       margin-left: -100%;
       visibility: visible;}
-
     
+
+
     .tabs .tab-3:first-child [type="radio"] + div {
       margin-left: 0;
       visibility: hidden;}
@@ -200,7 +200,6 @@ select:focus {
     .tabs .tab-3:first-child [type="radio"]:checked + div {
       margin-left: 0%;
       visibility:visible;}
-
     
     .tabs .tab-3:last-child [type="radio"] + div {
       width: 300%;  
