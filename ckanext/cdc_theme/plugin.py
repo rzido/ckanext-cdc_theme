@@ -98,6 +98,11 @@ def most_popular_datasets(num_packages):
 
     items = tk.get_action('package_search')({}, search_dict)
 
+    # "tracking_summary": {
+    #	"recent": 5,
+    #	"total": 15
+    # }
+
     result = []
     for item in items['results']:
         result.append(tk.get_action('package_show')(
@@ -105,6 +110,7 @@ def most_popular_datasets(num_packages):
 		      )
         
     
+
     return result
 
 
