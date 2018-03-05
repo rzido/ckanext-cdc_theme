@@ -87,6 +87,27 @@ def most_new_datasets(num=3):
     return result
 
 
+def most_popular_datasets(num_packages):
+
+    	
+    """Return a list of most popular datasets."""
+    search_dict = {
+        'sort': 'tracking desc',
+        'rows': num
+    }
+
+    items = tk.get_action('package_search')({}, search_dict)
+
+    result = []
+    for item in items['results']:
+        result.append(tk.get_action('package_show')(
+                                 data_dict={'id':package['name'],'include_tracking':True})
+		      )
+        
+    
+    return result
+
+
 
 def get_summary_list(num_packages):
 
