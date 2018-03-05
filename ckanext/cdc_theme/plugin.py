@@ -20,6 +20,10 @@ from feedback_model import init_db, UnpublishedFeedback
 
 from ckan.lib.plugins import DefaultTranslation
 
+def table(name):
+    return Table(name, model.meta.metadata, autoload=True)
+
+
 def top_rated_datasets(limit=3):
     # NB Not using sqlalchemy as sqla 0.4 doesn't work using both group_by
     # and apply_avg
