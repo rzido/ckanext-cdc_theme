@@ -11,7 +11,7 @@ set popular_datasets =  h.cdc_theme_popular_datasets(4)
       -->
       <section>
            <ul id="popular-list" class="unstyled dataset-list">
-          {% for package in popular_datasets %}
+          {% for pkg in popular_datasets %}
               {% snippet "rating/snippets/rating_single_flat.html", package=pkg, enable_input="false" %}
           </ul>
       </section>
