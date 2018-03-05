@@ -41,7 +41,7 @@ def top_rated_datasets(limit=3):
     res_ids = model.Session.execute(sql).fetchall()
     # res_pkgs = [(model.Session.query(model.Package).get(text_type(pkg_id)), avg, num) for pkg_id, avg, num in res_ids]
 	
-    res_pkgs = [(tk.get_action('package_show')(data_dict={'id': model.Session.query(model.Package).get(text_type(package_id))})) for package_id in res_ids]
+    res_pkgs = [(tk.get_action('package_show')(data_dict={'id': model.Session.query(model.Package).get(text_type(package_id))})) for package_id,avg,num in res_ids]
 	
     return res_pkgs
 
