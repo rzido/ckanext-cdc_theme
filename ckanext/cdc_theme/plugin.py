@@ -27,8 +27,10 @@ def table(name):
 
 def top_rated_datasets(limit=3):
     # NB Not using sqlalchemy as sqla 0.4 doesn't work using both group_by
-    # and apply_avg
-    
+    # and apply_avg 
+	
+    print "top rated init"    
+
     package = table('package')
     rating = table('review')
     sql = select([package.c.id, func.avg(rating.c.rating), func.count(rating.c.rating)], from_obj=[package.join(rating)]).\
