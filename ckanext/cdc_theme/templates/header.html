@@ -4,6 +4,7 @@
  <!-- CORUÑA -->
  <div class="headers">
   
+  <!-- OPEN GOVERNMENT AND LANGUAGE SELECTOR HEADER -->
   <header class="ogov-masthead">
     <div class="container">
       <div class="row">
@@ -33,6 +34,7 @@
 
 {% block header_account %}
   
+<!-- ACCOUNT RELATED INFORMATION HEADER AND LOGO-->  
 <header class="account-masthead">
   <div class="container">
    
@@ -114,18 +116,22 @@
 </header>
 {% endblock %}
   
-  
+<!-- NAVIGATION HEADER -->  
 <header class="navbar navbar-static-top masthead">
   {% block header_debug %} {% if g.debug and not g.debug_supress_header %}
   <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
   {% endif %} {% endblock %}
+ 
+ 
+ 
   <div class="container">
-    <div class="navbar-right">
-      <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-        <span class="fa fa-bars"></span>
-      </button>
-    </div>
    
+  <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+      <span class="fa-bar"></span>
+      <span class="fa-bar"></span>
+      <span class="fa-bar"></span>
+   </button>
+     
 
     <div class="collapse nav-bar-collapse" id="main-navigation-toggle">
       {% block header_site_navigation %}
@@ -135,7 +141,9 @@
           ('group_index', _('Groups')), ('about', _('About')) ) }} {% endblock %}
         </ul>
       </nav>
-      {% endblock %} {% block header_site_search %}
+      {% endblock %}
+     
+     {% block header_site_search %}
       <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
         <div class="field">
           <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
@@ -144,6 +152,7 @@
         </div>
       </form>
      {% endblock %}
+     
     </div>
   </div>
 </header>   
