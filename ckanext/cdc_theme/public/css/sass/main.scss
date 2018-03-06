@@ -75,6 +75,7 @@ input, textarea, select {
 }
 
 
+/*
 .btn, .label {
   background-image: none;
   font-weight: normal;
@@ -401,8 +402,10 @@ label {
   }
 }
 
+*/
+/*
 .outer {
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   padding-top: 160px;
   height: 420px;
@@ -469,6 +472,8 @@ label {
 .feedback-icons {
   padding: 20px 20px 30px;
 }
+
+*/
 
 @import "partials/_coruna";
 @import "partials/_overrides";
