@@ -3,4 +3,4 @@ include README.rst
 #include ckanext/cdc_theme/presets.json
 recursive-include ckanext/cdc_theme/schemas *.json
 recursive-include ckanext/cdc_theme/licenses *.json
-recursive-include ckanext/cdc_theme/i18n/*
+recursive-include ckanext/cdc_theme/i18n/ *
