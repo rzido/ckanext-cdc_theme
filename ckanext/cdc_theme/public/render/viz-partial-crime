@@ -1,6 +1,0 @@
-<div class="vizcarousel-desc">
-  <h1 class="vizcarousel-desc-text"><a target="_blank" href="http://www.phlcrimemapper.com/">Visualizador Impuestos</a></h1>
-  <p class="vizcarousel-desc-text author">by <a target="_blank" href="http://davewalk.net/">Civio</a></p>
-  <p class="vizcarousel-desc-text">Built using <a href="/dataset/crime-incidents">A dónde van mis impuestos</a>.</p>
-</div>
-<img src="/img/impostos2.png" srcset="/img/impostos2.png 2x">
