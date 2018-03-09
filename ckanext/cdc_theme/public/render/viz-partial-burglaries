@@ -1,6 +1,0 @@
-<div class="vizcarousel-desc">
-  <h1 class="vizcarousel-desc-text"><a href="http://epro.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=73c96c2d13bf457faf4d604a2ea82d11" target="_blank">Mapping Residential Burglaries in Philadelphia</a></h1>
-  <p class="vizcarousel-desc-text author">by <a href="https://twitter.com/rachelweeden" target="_blank">Rachel Weeden</a></p>
-  <p class="vizcarousel-desc-text">Built using <a href="/dataset/crime-incidents">Philadelphia Police Crime Incidents</a>.</p>
-</div>
-<img src="/img/impostos.png" srcset="/img/impostos.png 2x">
