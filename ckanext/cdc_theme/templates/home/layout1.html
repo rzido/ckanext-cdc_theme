@@ -131,6 +131,36 @@ set showcases =  h.cdc_theme_showcases(6)
 <div class="main-browse front">
   <div class="container">
     <div class="row row2">
+      <div class="span12 col1">     
+        <div class="module-content box">
+          <h1 class="browse-heading ">{{ _('Explore by collection')}}</h1>          
+              {% for topic in h.cdc_theme_collections() %}		
+                <a href="{% url_for controller='group', action='read', id=topic.name %}" class="browse-topic">
+                    <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
+                  <div class="browse-topic-title">
+                    {{ h.get_translated(topic, 'title') or topic.display_name }}                   
+                  </div>
+<!-- datasets count -->                    
+                  {% if topic.package_count %}
+                      <span class="count"> {{ topic.package_count }} </span>
+                     <!-- <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', topic.package_count).format(num=topic.package_count) }}</span> -->
+                  {% elif topic.package_count == 0 %}
+                       <span class="count"> 0 </span>
+                      <!-- <span class="count">{{ _('0 Datasets') }}</span> -->
+                  {% endif %}
+
+                  
+                </a>
+              {% endfor %}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-browse front">
+  <div class="container">
+    <div class="row row2">
       <div class="span12 col1">
         <div class="module-content box">
            <h1 class="browse-heading">{{ _('Explore by organization')}}</h1>
