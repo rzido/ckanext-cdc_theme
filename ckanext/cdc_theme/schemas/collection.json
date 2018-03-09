@@ -3,18 +3,25 @@
   "group_type": "collection",
   "about_url": "http://github.com/ckan/ckanext-scheming",
   "fields": [
+    
+    {
+      "field_name": "title",
+      "label": "Title",
+      "preset": "title",
+      "form_placeholder": "eg. My collection"
+    },
     {
       "field_name": "title_translated",
       "label": "Title",
-      "preset": "fluent_core_title_translated",
+      "preset": "fluent_core_translated",
       "form_languages": [
-        "fi",
-        "sv",
-        "en"
+        "en",
+        "es",
+        "gl"
       ],
       "form_placeholder": "My Collection",
-      "only_default_lang_required": true
-    },
+      "required": true
+    },        
     {
       "field_name": "name",
       "label": "URL",
