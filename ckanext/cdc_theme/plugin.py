@@ -179,6 +179,11 @@ def groups():
 
     return tk.get_action('group_list')({}, {'all_fields': True, 'include_dataset_count': True})
 
+def collections():
+    """Return a list of collections"""
+
+    return tk.get_action('collection_list')({}, {'all_fields': True, 'include_dataset_count': True})
+
 
 def organizations():
     """Return a list of organizations"""
@@ -254,6 +259,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'cdc_theme_resource_count': resource_count,
 		'cdc_theme_showcase_count': showcase_count,		
                 'cdc_theme_groups': groups,
+		'cdc_theme_collections': collections,
                 'cdc_theme_organizations': organizations,
 		'cdc_theme_showcases': showcases,
                 'cdc_theme_apps': apps,		
