@@ -25,7 +25,12 @@ setup(
     entry_points='''
         [ckan.plugins]
         # Add plugins here, e.g.
-        cdc_theme=ckanext.cdc_theme.plugin:CDCThemePlugin
+        cdc_theme=ckanext.cdc_theme.plugin:CDCThemePlugin         
+        scheming_datasets=ckanext.scheming.plugins:SchemingDatasetsPlugin
+        scheming_groups=ckanext.scheming.plugins:SchemingGroupsPlugin
+        scheming_organizations=ckanext.scheming.plugins:SchemingOrganizationsPlugin        
+        [paste.paster_command]
+        scheming=ckanext.scheming.commands:SchemingCommand
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
     ''',
