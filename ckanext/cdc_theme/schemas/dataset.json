@@ -1,0 +1,249 @@
+{
+  "scheming_version": 1,
+  "dataset_type": "dataset",
+  "about": "A reimplementation of the default CKAN dataset schema",
+  "about_url": "http://github.com/ckan/ckanext-scheming",
+  "dataset_fields": [
+    {
+      "field_name": "title",
+      "label": "Title",
+      "preset": "title",
+      "form_placeholder": "eg. A descriptive title"
+    },
+    {
+     "field_name": "title_translated",
+     "preset": "fluent_core_translated",
+      "label": {
+         "es": "Título",
+	 "gl": "Título",
+         "en": "Title"
+      },
+      "form_languages": ["es","gl"]
+    },
+    {
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": "eg. my-dataset"
+    },
+    {
+      "field_name": "notes",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "eg. Some useful notes about the data"
+    },
+    {
+     "field_name": "notes_translated",
+     "preset": "fluent_core_translated",
+      "label": {
+         "es": "Descripción",
+	 "gl": "Descrición",
+	 "en": "Description"
+      },
+     "form_languages": ["es","gl"]
+    },
+    {
+      "field_name": "tag_string",
+      "label": "Tags",
+      "preset": "tag_string_autocomplete",
+      "form_placeholder": "eg. economy, mental health, government"
+    },
+    {
+      "field_name": "license_id",
+      "label": "License",
+      "form_snippet": "license.html",
+      "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+    },
+    {
+      "field_name": "owner_org",
+      "label": "Organization",
+      "preset": "dataset_organization"
+    },
+    {
+      "field_name": "url",
+      "label": "Source",
+      "form_placeholder": "http://example.com/dataset.json",
+      "display_property": "foaf:homepage",
+      "display_snippet": "link.html"
+    },
+    {
+      "field_name": "version",
+      "label": "Version",
+      "validators": "ignore_missing unicode package_version_validator",
+      "form_placeholder": "1.0"
+    },
+    {
+      "field_name": "author",
+      "label": "Author",
+      "form_placeholder": "Joe Bloggs",
+      "display_property": "dc:creator"
+    },
+    {
+      "field_name": "author_email",
+      "label": "Author Email",
+      "form_placeholder": "joe@example.com",
+      "display_property": "dc:creator",
+      "display_snippet": "email.html",
+      "display_email_name_field": "author"
+    },
+    {
+      "field_name": "maintainer",
+      "label": "Maintainer",
+      "form_placeholder": "Joe Bloggs",
+      "display_property": "dc:contributor"
+    },
+    {
+      "field_name": "maintainer_email",
+      "label": "Maintainer Email",
+      "form_placeholder": "joe@example.com",
+      "display_property": "dc:contributor",
+      "display_snippet": "email.html",
+      "display_email_name_field": "maintainer"
+    },
+     {
+      "field_name": "frequency",
+      "label": {
+	    "en": "Update Frequency",
+	    "es": "Frecuencia de actualización",
+	    "gl": "Frecuenza de actualización"
+      },
+      "form_placeholder": {
+	    "en": "monthly",
+	    "es": "mensual",
+	    "gl": "mensual"
+      },
+      "preset": "select",
+      "choices": [
+         {
+	 "value":"realtime",
+         "label": {
+                "en": "Real Time",
+                "es": "Tiempo real",
+                "gl": "Tempo real"
+         }
+         },
+         {
+         "value":"daily",
+         "label": {
+                "en": "Daily",
+                "es": "Diario",
+                "en": "Diario"
+         }
+         },
+         {
+         "value":"monthly",
+         "label": {
+		"en": "Monthly",
+		"es": "Mensual",
+		"gl": "Mensual"
+         }
+         },
+         { 
+	 "value":"anual",
+         "label": {
+                "en": "Anual",
+                "es": "Anual",
+                "gl": "Anual"
+         }
+         }
+      ],
+      "required": true
+    },
+    {
+      "field_name": "languages",
+      "label": {
+            "en": "Language(s)",
+            "es": "Idioma(s)",
+            "gl": "Idioma(s)"
+      },
+      "form_placeholder": {
+            "en":  "Spanish",
+            "es":  "Español",
+            "gl":  "Español"
+      },
+      "preset": "multiple_select",
+      "choices": [
+      {
+     	 "value": "es",
+	 "label": "Español"
+      },
+       {
+         "value": "gl",
+         "label": "Galego"
+      }
+      ],
+      "required": true
+    },
+    {
+      "field_name": "temporal_coverage",
+      "label": {
+            "en": "Temporal Coverage",
+            "es": "Cobertura temporal",
+            "gl": "Cobertura temporal"
+      },
+      "form_placeholder": {
+            "en":  "2017",
+            "es":  "2017",
+            "gl":  "2017"
+      },
+      "required": false
+    },
+   {
+    "field_name": "reminder",
+    "label": "Next reminder date",
+    "preset": "date",
+    "display_snippet": null
+  }
+ ],
+  "resource_fields": [
+    {
+      "field_name": "url",
+      "label": "URL",
+      "preset": "resource_url_upload"
+    },
+    {
+      "field_name": "name",
+      "label": "Name",
+      "form_placeholder": "eg. January 2011 Gold Prices"
+    },
+    {
+     "field_name": "name_translated",
+     "preset": "fluent_core_translated",
+      "label": {
+         "es": "Nombre",
+         "gl": "Nome",
+         "en": "Name"
+      },
+      "form_languages": ["es","gl"]
+    },
+    {
+      "field_name": "description",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "Some useful notes about the data"
+    },
+    {
+     "field_name": "description_translated",
+     "preset": "fluent_core_translated",
+      "label": {
+         "es": "Descripción",
+         "gl": "Descrición",
+         "en": "Description"
+      },
+      "form_languages": ["es","gl"]
+    },
+    {
+      "field_name": "format",
+      "label": "Format",
+      "preset": "resource_format_autocomplete"
+    },
+    {
+      "field_name": "format_aditional_information",
+      "label": {
+  	     "en": "Format Additional Information",
+	     "es": "Información adicional sobre el formato",
+	     "gl": "Información adicional en relación co recurso"
+      }
+    }
+  ]
+}
