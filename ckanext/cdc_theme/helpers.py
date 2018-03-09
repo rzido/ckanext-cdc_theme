@@ -94,4 +94,4 @@ def show_qa():
     if plugin_loaded('qa'):
         return True
 
-return False
+    return False
