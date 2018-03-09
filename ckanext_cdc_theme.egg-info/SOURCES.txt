@@ -1,6 +1,7 @@
 setup.py
 ckanext/__init__.py
 ckanext/cdc_theme/__init__.py
+ckanext/cdc_theme/schemas/__init__.py
 ckanext/cdc_theme/controller.py
 ckanext/cdc_theme/feedback_model.py
 ckanext/cdc_theme/plugin.py
