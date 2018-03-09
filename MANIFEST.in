@@ -4,5 +4,6 @@ include README.rst
 recursive-include ckanext/cdc_theme/schemas *.json
 recursive-include ckanext/cdc_theme/licenses *.json
 recursive-include ckanext/cdc_theme/i18n/ *
-recursive-include ckanext/cdc_theme *.html *.json *.js *.less *.css *.config
+recursive-include ckanext/cdc_theme *.html *.json *.js *.less *.css *.config 
+recursive-include ckanext/cdc_theme *.svg *.png *.jpg
 recursive-include ckanext/cdc_theme/fanstatic *
