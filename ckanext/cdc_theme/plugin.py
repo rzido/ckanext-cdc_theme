@@ -2,6 +2,7 @@
 from collections import OrderedDict
 
 import pylons
+import helpers
 
 from jinja2 import Undefined
 from six import text_type
@@ -255,7 +256,15 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'cdc_theme_groups': groups,
                 'cdc_theme_organizations': organizations,
 		'cdc_theme_showcases': showcases,
-                'cdc_theme_apps': apps,
+                'cdc_theme_apps': apps,		
+                'add_locale_to_source': helpers.add_locale_to_source,
+                'get_lang': helpers.get_current_lang,
+                'get_lang_prefix': helpers.get_lang_prefix,
+                'scheming_field_only_default_required': helpers.scheming_field_only_default_required,
+                'get_current_date': helpers.get_current_date,
+                'get_package_groups_by_type': helpers.get_package_groups_by_type,
+                'get_translated_or_default_locale': helpers.get_translated_or_default_locale,
+		'show_qa': helpers.show_qa,				
                 'unpublished_count': UnpublishedFeedback.count_for_package,
                 'user_feedback': user_feedback,
                 'feedback_for_pkg': feedback_for_pkg}
