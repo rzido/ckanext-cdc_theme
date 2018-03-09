@@ -26,7 +26,7 @@
       "field_name": "name",
       "label": "URL",
       "validators": "not_empty unicode name_validator group_name_validator",
-      "form_snippet": "slug_sixodp_ex.html",
+      "form_snippet": "slug.html",
       "form_placeholder": "my-collection"
     },
     {
@@ -34,9 +34,9 @@
       "preset": "fluent_core_markdown_translated",
       "form_placeholder": "A little information about my collection...",
       "form_languages": [
-        "fi",
-        "sv",
-        "en"
+        "en",
+        "es",
+        "gl"
       ],
       "label": "Description",
       "display_snippet": null
