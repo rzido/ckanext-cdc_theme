@@ -23,6 +23,12 @@ Example:
   {% set text_no_query = ungettext('{number} topic found', '{number} topics found', count) %}
   {% set text_no_query_none = _('No topics found') %}
 
+{% elif type == 'collection' %}
+  {% set text_query = ungettext('{number} collection found for "{query}"', '{number} collection found for "{query}"', count) %}
+  {% set text_query_none = _('No collections found for "{query}"') %}
+  {% set text_no_query = ungettext('{number} collection found', '{number} collection found', count) %}
+{% set text_no_query_none = _('No collections found') %}
+
 {% elif type == 'organization' %}
   {% set text_query = ungettext('{number} organization found for "{query}"', '{number} organizations found for "{query}"', count) %}
   {% set text_query_none = _('No organizations found for "{query}"') %}
