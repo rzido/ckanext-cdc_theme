@@ -240,7 +240,7 @@ msgstr "Explorar por colección"
 
 #: ckanext/cdc_theme/templates/home/layout1.html:152
 msgid "showcases"
-msgstr "destacados"
+msgstr "aplicaciones"
 
 #: ckanext/cdc_theme/templates/home/snippets/search.html:2
 msgid "E.g. environment"
