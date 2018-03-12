@@ -232,6 +232,10 @@ msgstr "Explorar por temática"
 msgid "Explore by organization"
 msgstr "Explorar por organización"
 
+#: ckanext/cdc_theme/templates/home/layout1.html:132
+msgid "Explore by collection"
+msgstr "Explorar por colección"
+
 #: ckanext/cdc_theme/templates/home/layout1.html:152
 msgid "showcases"
 msgstr "destacados"
