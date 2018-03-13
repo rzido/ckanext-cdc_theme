@@ -1,5 +1,21 @@
 {% ckan_extends %}
 
+{% block subtitle %}{{ h.dataset_display_name(pkg) }} - {{ super() }}{% endblock %}
+
+{% block head_extras -%}
+  {{ super() }}
+  {% set description = h.markdown_extract(pkg.notes, extract_length=200)|forceescape %}
+  <meta property="og:title" content="{{ h.dataset_display_name(pkg) }} - {{ g.site_title }}">
+  <meta property="og:description" content="{{ description|forceescape|trim }}">
+{% endblock -%}
+
+{% block content_action %}
+  {% if h.check_access('package_update', {'id':pkg.id }) %}
+    {% link_for _('Manage'), controller='package', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
+  {% endif %}
+{% endblock %}
+
+
 
 {% block content_primary_nav %}
   {{ h.build_nav_icon('dataset_read', _('Dataset'), id=pkg.name) }}
