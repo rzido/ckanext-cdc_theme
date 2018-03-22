@@ -135,7 +135,7 @@ set showcases =  h.cdc_theme_showcases(6)
         <div class="module-content box">
           <h1 class="browse-heading ">{{ _('Explore by collection')}}</h1>          
               {% for topic in h.cdc_theme_collections() %}		
-                <a href="{% url_for controller='collection', action='read', id=topic.name %}" class="browse-topic">
+                <a href="{% url_for controller='ckanext.collection.controller:CollectionController', action='read', id=topic.name %}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
                     {{ h.get_translated(topic, 'title') or topic.display_name }}                   
