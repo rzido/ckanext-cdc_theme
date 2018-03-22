@@ -141,8 +141,12 @@ set showcases =  h.cdc_theme_showcases(6)
                     {{ h.get_translated(topic, 'title') or topic.display_name }}                   
                   </div>
 <!-- datasets count -->                    
-                  {% if topic.package_count %}
-                      <span class="count"> {{ topic.package_count }} </span>
+                  {% if topic.packages %}
+			
+			
+                      <span class="count">
+		     {{ ungettext('{num} Dataset', '{num} Datasets', topic.packages).format(num=topic.packages) }}
+		    </span>
                      <!-- <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', topic.package_count).format(num=topic.package_count) }}</span> -->
                   {% elif topic.package_count == 0 %}
                        <span class="count"> 0 </span>
