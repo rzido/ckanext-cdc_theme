@@ -114,6 +114,30 @@
       },
       "preset": "select",
       "choices": [
+	 { 
+	 "value":"asneeded",
+         "label": {
+                "en": "As Needed",
+                "es": "Según necesidad",
+                "gl": "Segundo necesidade"
+         }
+         },
+	 { 
+	 "value":"irregular",
+         "label": {
+                "en": "Irregular",
+                "es": "Irregular",
+                "gl": "Irregular"
+         }
+         },
+	 { 
+	 "value":"notplanned",
+         "label": {
+                "en": "Not planned",
+                "es": "No prevista",
+                "gl": "Non prevista"
+         }
+         },     
          {
 	 "value":"realtime",
          "label": {
@@ -145,7 +169,15 @@
                 "es": "Anual",
                 "gl": "Anual"
          }
+         },
+	 { 
+	 "value":"unknown",
+         "label": {
+                "en": "Unknown",
+                "es": "Desconocida",
+                "gl": "Descoñecida"
          }
+         }	
       ],
       "required": true
     },
