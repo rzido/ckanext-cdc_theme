@@ -146,12 +146,20 @@
                 "gl": "Tempo real"
          }
          },
+	 {
+	 "value":"continual",
+         "label": {
+                "en": "Continual",
+                "es": "Continua",
+                "gl": "Continua"
+         }
+         },
          {
          "value":"daily",
          "label": {
                 "en": "Daily",
-                "es": "Diario",
-                "en": "Diario"
+                "es": "Diaria",
+                "en": "Diaria"
          }
          },
          {
@@ -160,6 +168,22 @@
 		"en": "Monthly",
 		"es": "Mensual",
 		"gl": "Mensual"
+         }
+         },
+	 {
+         "value":"quarterly",
+         "label": {
+		"en": "Quarterly",
+		"es": "Trimestral",
+		"gl": "Trimestral"
+         }
+         },
+	 {
+         "value":"biannual",
+         "label": {
+		"en": "Biannual",
+		"es": "Semestral",
+		"gl": "Semestral"
          }
          },
          { 
