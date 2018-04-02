@@ -33,14 +33,15 @@ Example:
   
   {% block content %}
   
-    <div class="dataset-list-left-icon">
+  {#
+  <div class="dataset-list-left-icon">
             {% for item in group_items %}
             <a href="/group/{{item.name|lower}}" fiso-facet="groups" fiso-category="{{item.name|lower}}" data-format="{{item.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{item.title}}">
                <img class=" icon-topic-image" src="{{ item.image_display_url or '/img/icons-document.svg' }}">               
             </a>
             {% endfor %}
      </div>
-  
+  #}
 
       <div class="dataset-content">
         
@@ -50,7 +51,9 @@ Example:
             <span class="banner">{{ _('Popular') }}</span>
           {% endif %}
         {% endblock %}
-         {% block package_dates %}
+     
+        
+        {% block package_dates %}
          
           {% if package.metadata_created %}
        
@@ -65,6 +68,16 @@ Example:
           {% endif %}
         
     {% endblock %}    
+        
+    {% block groups %}                
+        {% for group in group_items %}
+            <a href="/group/{{group.name|lower}}" fiso-facet="groups" fiso-category="{{group.name|lower}}" data-format="{{group.name|lower}}" class="pull-right group-icon fiso-toggle-category" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{group.title}}">
+              {{ h.get_translated(group, 'title') or group.display_name }}
+           </a>
+            {% endfor %}
+    {% endblock %}
+        
+        
 
     {% block heading %}
           <h3 class="dataset-heading">
