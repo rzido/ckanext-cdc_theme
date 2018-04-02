@@ -93,9 +93,14 @@ Example:
                 </span>
               {% endif %}
             {% endblock %}
+            
             {% block heading_title %}
               {{ h.link_to(h.truncate(title, truncate_title), h.url_for(controller='package', action='read', id=package.name)) }}
             {% endblock %}
+            
+            
+             {% snippet "rating/snippets/rating_single_flat.html", package=pkg, enable_input="false" %}
+            
             {% block heading_meta %}
               {% if package.get('state', '').startswith('draft') %}
                 <span class="label label-info">{{ _('Draft') }}</span>
@@ -104,6 +109,7 @@ Example:
               {% endif %}
               {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
             {% endblock %}
+            
           </h3>
         {% endblock %}
      
