@@ -72,8 +72,9 @@ Example:
     {% block groups %}                
         <span>
         {% for group in group_items %}            
-            <a href="/group/{{group.name|lower}}" fiso-facet="groups" fiso-category="{{group.name|lower}}" data-format="{{group.name|lower}}" class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{group.title}}">
-             &nbsp;|&nbsp;{{ h.get_translated(group, 'title') or group.display_name }} 
+           &nbsp;|&nbsp;   
+          <a href="/group/{{group.name|lower}}" fiso-facet="groups" fiso-category="{{group.name|lower}}" data-format="{{group.name|lower}}" class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{group.title}}">
+            {{ h.get_translated(group, 'title') or group.display_name }} 
            </a> 
            
             {% endfor %}
