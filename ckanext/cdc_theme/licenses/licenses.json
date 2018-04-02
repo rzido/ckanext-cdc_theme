@@ -22,7 +22,11 @@
     "od_conformance": "approved",
     "osd_conformance": "not reviewed",
     "status": "active",
-    "title": "Condiciones generales documentos reutilizables del Ayuntamiento de A Coruña",
+    "title": {
+      "es": "Condiciones generales documentos reutilizables del Ayuntamiento de A Coruña",
+      "en": "General conditions for reusable documents - A Coruña City Council",
+      "gl": "Condicións xerais de documentos reutilizables do Concello da Coruña"
+    },
     "url": "https://www.coruna.gal/opendata/avisolegal"
   },
   {
