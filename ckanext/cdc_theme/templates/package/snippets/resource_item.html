@@ -37,10 +37,10 @@
       <li>
         <a class="btn btn-small btn-explore" href="{{ url }}">
           {% if res.has_views %}
-            <i class="icon-bar-chart"></i>
+            <i class="fa fa-bar-chart-o"></i>
             {{ _('Preview') }}
           {% else %}
-            <i class="icon-info-sign"></i>
+            <i class="fa fa-info-circle"></i>
             {{ _('More information') }}
           {% endif %}
         </a>
@@ -49,10 +49,10 @@
       <li>
         <a class="btn btn-small btn-explore" href="{{ res.url }}" class="resource-url-analytics" target="_blank">
           {% if res.has_views or res.url_type == 'upload' %}
-            <i class="icon-download"></i>
+            <i class="fa fa-arrow-circle-o-down"></i>
             {{ _('Download') }}
           {% else %}
-            <i class="icon-external-link"></i>
+            <i class="fa fa-external-link"></i>
             {{ _('Go to resource') }}
           {% endif %}
         </a>
@@ -61,7 +61,7 @@
       {% if can_edit %}
       <li>
         <a class="btn btn-small btn-explore" href="{{ h.url_for(controller='package', action='resource_edit', id=pkg.name, resource_id=res.id) }}">
-          <i class="icon-edit"></i>
+          <i class="fa fa-pencil-square-o"></i>
           {{ _('Edit') }}
         </a>
       </li>
