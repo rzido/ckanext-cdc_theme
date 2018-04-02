@@ -15,15 +15,15 @@
   {
     "domain_content": true,
     "domain_data": true,
-    "domain_software": true,
+    "domain_software": false,
     "family": "",
-    "id": "CC0-1.0",
-    "maintainer": "Creative Commons",
+    "id": "RISP_AC",
+    "maintainer": "",
     "od_conformance": "approved",
     "osd_conformance": "not reviewed",
     "status": "active",
-    "title": "CC0 1.0",
-    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    "title": "Condiciones generales documentos reutilizables del Ayuntamiento de A Coruña",
+    "url": "https://www.coruna.gal/opendata/avisolegal"
   },
   {
     "domain_content": true,
