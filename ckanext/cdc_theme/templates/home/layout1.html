@@ -218,6 +218,35 @@ set showcases =  h.cdc_theme_showcases(6)
 -->
 
 
+  {% set posts = h.get_recent_blog_posts(number=5) %}
+
+  <div class="main-browse front">	  
+    <div class="container">
+   <div class="row row1">
+   <div class="module-content box">	   
+    <h1 class="browse-heading">
+      {{ _('Blog') }}
+    </h1>
+          {% for post in posts %}
+     <div class="page-list-item dataset-item">	   
+            <div class="blog-title">
+                <h3 class="dataset-heading">
+                    <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a>
+                    <br>
+                    {% if post.publish_date %}
+                        <small> {{ h.render_datetime(post.publish_date) }} </small>
+                    {% endif %}
+                </h3>
+            </div>
+            <div class="blog-content">
+                {{ h.markdown_extract(post.content) }}             
+            </div>
+	   </div>     
+        {% endfor %}
+	   </div> 
+	    </div>   
+    </div>
+</div>
 
 
 <!--
@@ -279,35 +308,7 @@ set showcases =  h.cdc_theme_showcases(6)
 </div>
 
 	
-  {% set posts = h.get_recent_blog_posts(number=5) %}
 
-  <div class="main-browse front">	  
-    <div class="container">
-   <div class="row row1">
-   <div class="module-content box">	   
-    <h1 class="browse-heading">
-      {{ _('Blog') }}
-    </h1>
-          {% for post in posts %}
-     <div class="row page-list-item dataset-item">	   
-            <div class="blog-title">
-                <h3 class="dataset-heading">
-                    <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a>
-                    <br>
-                    {% if post.publish_date %}
-                        <small> {{ h.render_datetime(post.publish_date) }} </small>
-                    {% endif %}
-                </h3>
-            </div>
-            <div class="blog-content">
-                {{ h.markdown_extract(post.content) }}             
-            </div>
-	   </div>     
-        {% endfor %}
-	   </div> 
-	    </div>   
-    </div>
-</div>
 	
   
 <svg class="chart" width="100%" style="background-color:white;border-bottom: 1px dotted #aaa;margin-bottom:-24px" preserveAspectRatio="slice" height="50" viewBox="0 0 1000 50">
