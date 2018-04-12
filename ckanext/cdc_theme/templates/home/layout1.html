@@ -227,17 +227,13 @@ set showcases =  h.cdc_theme_showcases(6)
     <h1 class="browse-heading">
       {{ _('Blog') }}
     </h1>
-          {% for post in posts %}
-	   
-	   
- 
-	   
+          {% for post in posts %}	
        <div class="page-list-item dataset-item">	   
 	       
 	       	   
 	    {% if post.image %}
              <div class="span3 image">
-              <a style="background-image:url({{ post.image }})" href="{{ url }}">
+              <a style="background-image:url({{ post.image }})" href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}"">
              </a>
             </div>
 	    {% endif %}
