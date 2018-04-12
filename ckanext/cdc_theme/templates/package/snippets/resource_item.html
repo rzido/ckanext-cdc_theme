@@ -55,9 +55,23 @@
    <ul class="resource-item-explore">  
       {% block resource_item_explore_links %}
 
+
+      <li>
+        <a class="btn btn-small btn-explore" href="{{ url }}">
+          {% if res.has_views %}
+            <i class="fa fa-bar-chart-o"></i>
+            {{ _('Preview') }}
+          {% else %}
+            <i class="fa fa-info-circle"></i>
+            {{ _('More information') }}
+          {% endif %}
+        </a>
+      </li>
+	   
 	   <!-- Open with Apps -->
  <li>	   
   <button class="btn  btn-small btn-explore" data-toggle="dropdown" style="border-top-right-radius:0;border-bottom-right-radius:0">Open With
+	 <i class="fa fa-arrow"></i>  
   </button>
   <button class="btn  btn-small btn-explore" data-toggle="dropdown" style="margin-left:0px;margin-right:10px;border-top-left-radius:0;border-bottom-left-radius:0">
    <i class="fa fa-arrow"></i>
@@ -113,18 +127,10 @@
 	
 {% endif %}  
 	   </li>	   
-	   <!-- End Open with Apps -->
-      <li>
-        <a class="btn btn-small btn-explore" href="{{ url }}">
-          {% if res.has_views %}
-            <i class="fa fa-bar-chart-o"></i>
-            {{ _('Preview') }}
-          {% else %}
-            <i class="fa fa-info-circle"></i>
-            {{ _('More information') }}
-          {% endif %}
-        </a>
-      </li>
+	   <!-- End Open with Apps -->	   
+	   
+	   
+	   
       {% if res.url and h.is_url(res.url) %}
       <li>
         <a class="btn btn-small btn-explore" href="{{ res.url }}" class="resource-url-analytics" target="_blank">
