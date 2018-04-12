@@ -230,14 +230,14 @@ set showcases =  h.cdc_theme_showcases(6)
           {% for post in posts %}	
        <div class="page-list-item dataset-item">	   
 	       
-	       	   
+	 <!--      	   
 	    {% if post.image %}
   	    <div class="span3 image">
              <img src="{{ post.image }}" width="50px">
 	    </div>
 	    {% endif %}
-
-            <div class="blog-title span8">
+          -->
+            <div class="blog-title">
                 <h3 class="dataset-heading">
                     <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a>
                     <br>
@@ -246,7 +246,7 @@ set showcases =  h.cdc_theme_showcases(6)
                     {% endif %}
                 </h3>
             </div>
-            <div class="blog-content span8">
+            <div class="blog-content">
                 {{ h.markdown_extract(post.content) }}             
             </div>
 	   </div>     
