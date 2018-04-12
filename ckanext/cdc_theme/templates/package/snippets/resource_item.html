@@ -68,7 +68,8 @@
         </a>
       </li>
 	   
-	   <!-- Open with Apps -->
+ <!-- Open with Apps -->
+{% if is_map_format %}	   
  <li>	   
   <button class="btn  btn-small btn-explore" data-toggle="dropdown" style="border-top-right-radius:0;border-bottom-right-radius:0">Open With
 	 <i class="fa fa-arrow"></i>  
@@ -78,7 +79,7 @@
    <span class="sr-only">Toggle dropdown</span>
   
  </button>
-  {% if is_map_format %}
+  {% if is_map_format or is_web_format or is_preview_format or is_cartodb_format or is_plotly_format %}
 	<ul class="dropdown-menu">
 	  <li class="datagov_viewer"><a href="{{ resource_url }}"><i></i><span>OD Coruña</span></a></li>
 	  {% if is_plotly_format %}
@@ -128,6 +129,7 @@
 {% endif %}  
 	   </li>	   
 	   <!-- End Open with Apps -->	   
+  {% endif %}	   
 	   
 	   
 	   
