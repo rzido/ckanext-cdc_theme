@@ -82,7 +82,7 @@
 	  <li class="plotly"><a href="{{ plotly_url }}?url={{ res.url }}"><span>plotly</span></a></li>
 	  {% endif %}
 	  {% if is_cartodb_format %}
-	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=data.gov"><span>CartoDB</span></a></li>
+	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=datos.coruna.gal"><span>CartoDB</span></a></li>
 	  {% endif %}
 	  {% if is_arcgis_format %}
 	  <li class="arcgis"><a href="{{ arcgis_url }}?{{ arcgis_format_query }}={{ res.url }}"><span>ArcGIS</span></a></li>
@@ -103,18 +103,18 @@
 	  <li class="plotly"><a href="{{ plotly_url }}?url={{ res.url }}"><span>plotly</span></a></li>
 	  {% endif %}
 	  {% if is_cartodb_format %}
-	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=data.gov"><span>CartoDB</span></a></li>
+	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=datos.coruna.gal"><span>CartoDB</span></a></li>
 	  {% endif %}
 	</ul>
 
 {% elif is_cartodb_format and is_plotly_format  %}	
 	<ul class="dropdown-menu">
 	  <li class="plotly"><a href="{{ plotly_url }}?url={{ res.url }}"><span>plotly</span></a></li>
-	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=data.gov"><span>CartoDB</span></a></li>
+	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=datos.coruna.gal"><span>CartoDB</span></a></li>
 	</ul>
 {% elif is_cartodb_format %}
 	<ul class="dropdown-menu">
-	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=data.gov"><span>CartoDB</span></a></li>
+	  <li class="cartodb"><a href="{{ cartodb_url }}?file={{ res.url }}&provider=datos.coruna.gal"><span>CartoDB</span></a></li>
 	</ul>
 
 {% elif is_plotly_format %}
