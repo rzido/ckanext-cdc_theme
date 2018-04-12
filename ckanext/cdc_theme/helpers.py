@@ -7,6 +7,7 @@ import ckan.lib.base as base
 import ckan.model as model
 from ckan.model.package import Package
 from ckan.lib.dictization.model_dictize import group_list_dictize
+import re
 
 NotFound = logic.NotFound
 abort = base.abort
