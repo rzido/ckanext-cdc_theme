@@ -159,5 +159,4 @@ def convert_resource_format(format):
         format = RESOURCE_MAPPING[format][1]
     else:
         format = 'Web Page'
-
-return format
+    return format
