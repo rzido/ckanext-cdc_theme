@@ -281,10 +281,10 @@ set showcases =  h.cdc_theme_showcases(6)
 	
   {% set posts = h.get_recent_blog_posts(number=5) %}
 
-  <div class="main-browse front">
-	  
+  <div class="main-browse front">	  
     <div class="container">
    <div class="row row1">
+   <div class="module-content box">	   
     <h1 class="browse-heading">
       {{ _('Blog') }}
     </h1>
@@ -299,13 +299,10 @@ set showcases =  h.cdc_theme_showcases(6)
                 </h3>
             </div>
             <div class="blog-content">
-                {{ h.markdown_extract(post.content) }}
-                {% if post.publish_date %}
-                   <br>
-                   <a class="btn btn-small btn-primary more" href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ _('More') }}</a>
-                {% endif %}
+                {{ h.markdown_extract(post.content) }}             
             </div>
         {% endfor %}
+	   </div> 
 	    </div>   
     </div>
 </div>
