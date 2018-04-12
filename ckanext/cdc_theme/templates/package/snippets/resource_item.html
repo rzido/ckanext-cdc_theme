@@ -55,6 +55,7 @@
    <ul class="resource-item-explore">  
       {% block resource_item_explore_links %}
 
+	   <!-- Open with Apps -->
  <li>	   
   <button class="btn  btn-small btn-explore" data-toggle="dropdown" style="border-top-right-radius:0;border-bottom-right-radius:0">Open With
   </button>
@@ -112,7 +113,7 @@
 	
 {% endif %}  
 	   </li>	   
-	   
+	   <!-- End Open with Apps -->
       <li>
         <a class="btn btn-small btn-explore" href="{{ url }}">
           {% if res.has_views %}
