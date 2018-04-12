@@ -73,16 +73,14 @@
 	  {% if is_arcgis_format %}
 	  <li class="arcgis"><a href="{{ arcgis_url }}?{{ arcgis_format_query }}={{ res.url }}"><span>ArcGIS</span></a></li>
 	  {% endif %}	  
-	</ul>
-	<a href="{{ resource_url }}" class="btn btn-primary"{% if is_web_format %} target="_blank"{% endif %} style="border-radius:4px;"> <i class="icon-globe"></i> {{ _('View Map') }} </a>
+	</ul>	
 
 {% elif is_web_format %}
 	{% if is_arcgis_format %}		
 		<ul class="dropdown-menu">
 		  <li class="arcgis"><a href="{{ arcgis_url }}?url={{ res.url }}"><span>ArcGIS</span></a></li>
 		</ul>
-	{% endif %}
-	<a href="{{ resource_url }}" class="btn btn-primary"{% if is_web_format %} target="_blank"{% endif %}> <i class="icon-external-link"></i> {{ _('Visit page') }} </a>
+	{% endif %}	
 
 {% elif is_preview_format %}	
 	<ul class="dropdown-menu ul-preview">
