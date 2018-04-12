@@ -278,10 +278,36 @@ set showcases =  h.cdc_theme_showcases(6)
    </div>
 </div>
 
-<div>
-  	{% snippet 'ckanext_pages/snippets/pages_list.html', pages=c.page.items, type='blog' %}
-</div>	
+	
+  {% set posts = h.get_recent_blog_posts(number=5 %}
 
+  <div class="module module-narrow module-shallow">
+    <h2 class="module-heading">
+      {{ _('Blog') }}
+    </h2>
+    <div class="module-content">
+        {% for post in posts %}
+            <div class="blog-title">
+                <h3 class="dataset-heading">
+                    <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a>
+                    <br>
+                    {% if post.publish_date %}
+                        <small> {{ h.render_datetime(post.publish_date) }} </small>
+                    {% endif %}
+                </h3>
+            </div>
+            <div class="blog-content">
+                {{ h.markdown_extract(post.content) }}
+                {% if post.publish_date %}
+                   <br>
+                   <a class="btn btn-small btn-primary more" href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ _('More') }}</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+	
+  
 <svg class="chart" width="100%" style="background-color:white;border-bottom: 1px dotted #aaa;margin-bottom:-24px" preserveAspectRatio="slice" height="50" viewBox="0 0 1000 50">
 <g transform="scale(1,-1) translate(0,-50)" stroke-width="1" stroke="#aaa" stroke-dasharray="2 2">
     <g stroke="#ccc" stroke-dasharray="1 5">
