@@ -281,12 +281,14 @@ set showcases =  h.cdc_theme_showcases(6)
 	
   {% set posts = h.get_recent_blog_posts(number=5) %}
 
-  <div class="module module-narrow module-shallow">
-    <h2 class="module-heading">
+  <div class="main-browse front">
+	  
+    <div class="container">
+   <div class="row row1">
+    <h1 class="browse-heading">
       {{ _('Blog') }}
-    </h2>
-    <div class="module-content">
-        {% for post in posts %}
+    </h1>
+          {% for post in posts %}
             <div class="blog-title">
                 <h3 class="dataset-heading">
                     <a href="{{ h.url_for(controller='ckanext.pages.controller:PagesController', action='blog_show', page='/' + post.name) }}">{{ post.title or post.name }}</a>
@@ -304,6 +306,7 @@ set showcases =  h.cdc_theme_showcases(6)
                 {% endif %}
             </div>
         {% endfor %}
+	    </div>   
     </div>
 </div>
 	
