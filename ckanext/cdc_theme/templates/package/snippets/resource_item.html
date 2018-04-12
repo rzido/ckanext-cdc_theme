@@ -2,7 +2,7 @@
 {% set url_action = 'resource_edit' if url_is_edit and can_edit else 'resource_read' %}
 {% set url = h.url_for(controller='package', action=url_action, id=pkg.name, resource_id=res.id) %}
 
-
+<!-- Open with apps settings -->
 {% set format = res.format.lower() or 'data' %}
 {% set is_web_format = h.is_web_format(res) %}
 {% set is_preview_format = h.is_preview_format(res) %}
@@ -14,7 +14,7 @@
 {% set plotly_url = "https://plot.ly/external/" %}
 {% set cartodb_url = "http://oneclick.cartodb.com/" %}
 {% set arcgis_url = "https://ide.coruna.es/arcgis/home/webmap/viewer.html" %}
-
+<!-- End Open with apps settings -->
 
 <li class="resource-item" data-id="{{ res.id }}">
   {% block resource_item_title %}
