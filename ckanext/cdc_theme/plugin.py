@@ -228,7 +228,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         # see http://docs.ckan.org/en/latest/theming/fanstatic.html
         tk.add_public_directory(config, 'public')
         tk.add_resource('fanstatic', 'cdc_theme')
-        init_db()
+        
 
     def get_helpers(self):
         """Register cdc_theme_* helper functions"""
