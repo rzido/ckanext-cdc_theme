@@ -277,6 +277,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'get_current_date': helpers.get_current_date,
                 'get_package_groups_by_type': helpers.get_package_groups_by_type,
                 'get_translated_or_default_locale': helpers.get_translated_or_default_locale,
+		'translate_text': helpers.translate_text,
 		'show_qa': helpers.show_qa,				
                 'unpublished_count': UnpublishedFeedback.count_for_package,
                 'user_feedback': user_feedback,
