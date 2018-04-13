@@ -18,7 +18,6 @@ from sqlalchemy import Table, select, join, func, and_
 from ckan.lib.activity_streams import \
     activity_stream_string_functions as activity_streams
 
-from feedback_model import init_db, UnpublishedFeedback
 
 from ckan.lib.plugins import DefaultTranslation
 
@@ -191,22 +190,6 @@ def organizations():
     return tk.get_action('organization_list')({}, {'all_fields': True })
 
 
-def user_feedback(pkgid, userid):
-    """Return user feedback for a dataset"""
-
-    if isinstance(userid, Undefined):
-        return None
-    feedback = UnpublishedFeedback.get(dataset=pkgid, user=userid)
-    if feedback is None:
-        feedback = UnpublishedFeedback()
-    return feedback
-
-
-def feedback_for_pkg(pkgid):
-    """Return all feedback for a dataset"""
-
-    return UnpublishedFeedback.get_for_package(pkgid).all()
-
 
 # monkeypatch activity streams
 activity_streams['changed group'] = (
@@ -277,24 +260,15 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'get_current_date': helpers.get_current_date,
                 'get_package_groups_by_type': helpers.get_package_groups_by_type,
                 'get_translated_or_default_locale': helpers.get_translated_or_default_locale,
-		'show_qa': helpers.show_qa,				
-                'unpublished_count': UnpublishedFeedback.count_for_package,
-                'user_feedback': user_feedback,
-                'feedback_for_pkg': feedback_for_pkg}
+		'show_qa': helpers.show_qa}
 
     def before_map(self, map):
         return map
 
     def after_map(self, map):
-        unpublished_feedback_controller = 'ckanext.cdc_theme.controller:UnpublishedFeedbackController'
-        unpublished_report_controller = 'ckanext.cdc_theme.controller:UnpublishedReportController'
 	additional_info_controller = 'ckanext.cdc_theme.controller:AdditionalInfoController'
 	cdc_showcase_controller = 'ckanext.cdc_theme.controller:CDC_ShowcaseController'
 
-        map.connect('view_feedback', '/dataset/{id}/feedback', action='view_feedback',
-                    controller=unpublished_feedback_controller)
-        map.connect('view_org', '/unpublished_report/{org_id}', action='view_org',
-                    controller=unpublished_report_controller)	
 	map.connect('read_carousel','/showcase/carousel_view/{id}', action='read_carousel', 
 		    controller=cdc_showcase_controller)	
 	map.connect('dataset_additional_info','/dataset/additional_info/{id}', action='additional_info', 
