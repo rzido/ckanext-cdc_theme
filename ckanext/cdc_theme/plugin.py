@@ -2,6 +2,7 @@
 from collections import OrderedDict
 
 import pylons
+from pylons import config
 import helpers
 
 from jinja2 import Undefined
