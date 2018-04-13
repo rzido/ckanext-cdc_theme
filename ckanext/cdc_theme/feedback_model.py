@@ -45,7 +45,8 @@ def init_db():  # inspired by db.py from ckanext-pages
         sqlalchemy.Column('dataset', types.String),
         sqlalchemy.Column('comments', types.Text),
         sqlalchemy.Column('modified', types.DateTime,
-                          default=datetime.datetime.utcnow)
+                          default=datetime.datetime.utcnow),
+         extend_existing=True
     )
 
     try:
