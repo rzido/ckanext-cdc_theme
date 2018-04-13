@@ -2,6 +2,9 @@
 
 from ckanext.showcase.controller import ShowcaseController
 
+from pylons import config
+import pylons
+
 import datetime
 
 import ckan.plugins as p
