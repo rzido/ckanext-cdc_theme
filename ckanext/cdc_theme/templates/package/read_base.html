@@ -1,4 +1,4 @@
-{% ckan_extends %}
+{% extends "package/base.html" %}
 
 {% block subtitle %}{{ h.dataset_display_name(pkg) }} - {{ super() }}{% endblock %}
 
