@@ -177,7 +177,7 @@ def showcase_count():
 def groups():
     """Return a list of groups"""
 
-    return tk.get_action('group_list')(data_dict={'all_fields': true, 'include_extras': true, 'include_dataset_count': true })
+    return tk.get_action('group_list')({},{'all_fields': True, 'include_extras': True, 'include_dataset_count': True })
 
 def collections():
     """Return a list of collections"""
