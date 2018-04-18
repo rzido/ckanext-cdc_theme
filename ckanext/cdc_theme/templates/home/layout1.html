@@ -175,11 +175,11 @@ set showcases =  h.cdc_theme_showcases(6)
               
 <!-- <ul class="media-grid" data-module="media-grid"> -->
 <!--        <ul> -->
-  {% for topic in h.cdc_theme_organizations() %}
-               <a href="{% url_for controller='organization', action='read', id=topic.name %}" class="browse-topic">
-                    <img class="browse-topic-image" src="{{ topic.image_display_url }}">
+  {% for organization in h.cdc_theme_organizations() %}
+               <a href="{% url_for controller='organization', action='read', id=organization.name %}" class="browse-topic">
+                    <img class="browse-topic-image" src="{{ organization.image_display_url }}">
                   <div class="browse-topic-title">
-                    {{ topic.display_name }}
+                    {{ h.get_translated(organization, 'title') or organization.display_name }}                   
                   </div>
                  
                  
