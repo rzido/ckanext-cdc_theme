@@ -108,10 +108,9 @@ set showcases =  h.cdc_theme_showcases(6)
                 <a href="{% url_for controller='group', action='read', id=topic.name %}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
-	            {{ topic }}
-	            {{ topic.title }}
+	           
 		    {{ topic.title_translated }}
-	            {{ topic.display_name }}
+	        
                     {{ h.get_translated_or_default_locale(topic, 'title') or topic.display_name }}                  
 			  
                   </div>
