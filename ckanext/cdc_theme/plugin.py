@@ -182,13 +182,13 @@ def groups():
 def collections():
     """Return a list of collections"""
 
-    return tk.get_action('group_list')(data_dict={'all_fields': True, 'type':'collection', 'include_dataset_count': True, 'include_extras': True})
+    return tk.get_action('group_list')({}, {'type':'collection', 'all_fields': True, 'include_extras': True, 'include_dataset_count': True })
 
 
 def organizations():
     """Return a list of organizations"""
 
-    return tk.get_action('organization_list')({}, {'all_fields': True })
+    return tk.get_action('organization_list')({}, {'all_fields': True, 'include_extras': True })
 
 
 
