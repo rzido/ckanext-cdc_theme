@@ -109,10 +109,10 @@ set showcases =  h.cdc_theme_showcases(6)
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
 	           
-		    {{ topic.title_translated }}
-		    {{ topic.title}}
-	        
+		    	        
                     {{ h.get_translated(topic, 'title') or topic.display_name }}                  
+			
+			  <div> topic  {{ topic }}	   </div>
 			  
                   </div>
 <!-- datasets count -->                    
