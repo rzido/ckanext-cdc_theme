@@ -110,8 +110,9 @@ set showcases =  h.cdc_theme_showcases(6)
                   <div class="browse-topic-title">
 	           
 		    {{ topic.title_translated }}
+		    {{ topic.title}}
 	        
-                    {{ h.get_translated_or_default_locale(topic, 'title') or topic.display_name }}                  
+                    {{ h.get_translated(topic, 'title') or topic.display_name }}                  
 			  
                   </div>
 <!-- datasets count -->                    
