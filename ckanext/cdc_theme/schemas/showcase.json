@@ -1,8 +1,8 @@
 {
   "scheming_version": 1,
   "dataset_type": "showcase",
-  "about": "Sixodp Showcase schema",
-  "about_url": "http://github.com/6aika/sixodp",
+  "about": "cdc_theme showcase schema",
+  "about_url": "",
   "dataset_fields": [
     {
       "field_name": "title",
@@ -51,7 +51,7 @@
       "field_name": "keywords",
       "label": "Tags",
       "form_placeholder":"eg. every second week",
-      "form_languages": ["fi", "en", "sv"],
+      "form_languages": ["en", "es", "gl"],
       "preset": "fluent_vocabulary_with_autocomplete",
       "validators": "fluent_tags create_fluent_tags(keywords)",
       "form_attrs": {
@@ -101,7 +101,7 @@
       "label": "Description",
       "preset": "fluent_core_markdown_translated",
       "form_placeholder": "eg. A detailed description",
-      "form_languages": ["fi", "en", "sv"],
+      "form_languages": ["en", "es", "gl"],
       "description": "An universal, compact and easy to understand description of the added resource.",
       "only_default_lang_required": true
     },
