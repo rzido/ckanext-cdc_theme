@@ -67,7 +67,7 @@ def get_package_groups_by_type(package_id, group_type):
 
     return group_list
 
-_LOCALE_ALIASES = {'en_GB': 'en'}
+_LOCALE_ALIASES = {'en_GB': 'en', 'es' : 'es', 'en': 'en', 'gl': 'gl'}
 
 def get_lang_prefix():
     language = i18n.get_lang()
