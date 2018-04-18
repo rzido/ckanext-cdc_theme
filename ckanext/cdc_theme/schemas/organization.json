@@ -9,7 +9,19 @@
       "form_snippet": "large_text.html",
       "form_attrs": {"data-module": "slug-preview-target"},
       "form_placeholder": "My Organization"
-    },
+    },   
+    {
+      "field_name": "title_translated",
+      "label": "Title",
+      "preset": "fluent_core_translated",
+      "form_languages": [
+        "en",
+        "es",
+        "gl"
+      ],
+      "form_placeholder": "My Organization",
+      "required": true
+     },
     {
       "field_name": "name",
       "label": "URL",
@@ -22,6 +34,16 @@
       "label": "Description",
       "form_snippet": "markdown.html",
       "form_placeholder": "A little information about my organization..."
+    },
+    {
+     "field_name": "notes_translated",
+     "preset": "fluent_core_translated",
+      "label": {
+         "es": "Descripción",
+	 "gl": "Descrición",
+	 "en": "Description"
+      },
+     "form_languages": ["es","gl"]
     },
     {
       "field_name": "url",
