@@ -43,6 +43,18 @@ msgstr "{actor} eliminou a categoría {group}"
 msgid "{actor} created the topic {group}"
 msgstr "{actor} creou a categoría {group}"
 
+
+#: ckanext/cdc_theme/templates/header.html
+msgid "Open Data"
+msgstr "Datos abertos"
+
+msgid "Transparency"
+msgstr "Transparencia"
+
+msgid "Participation"
+msgstr "Participación"
+
+
 #: ckanext/cdc_theme/templates/footer.html:11
 #: ckanext/cdc_theme/templates/header.html:143
 #: ckanext/cdc_theme/templates/home/layout1.html:167
