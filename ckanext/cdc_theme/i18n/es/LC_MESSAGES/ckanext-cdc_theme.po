@@ -49,6 +49,17 @@ msgstr "{actor} creó la categoría {group}"
 msgid "Datasets"
 msgstr "Conjuntos de datos"
 
+
+#: ckanext/cdc_theme/templates/header.html
+msgid "Open Data"
+msgstr "Datos abiertos"
+
+msgid "Transparency"
+msgstr "Transparencia"
+
+msgid "Participation"
+msgstr "Participación"
+
 #: ckanext/cdc_theme/templates/feedback/org.html:11
 #: ckanext/cdc_theme/templates/footer.html:12
 #: ckanext/cdc_theme/templates/footer.html:22
