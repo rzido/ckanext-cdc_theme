@@ -291,3 +291,26 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 	facets_dict['frequency'] = tk._('Frequency')
 	return facets_dict
 
+
+     def after_search(self, search_results, search_params):
+
+        if(search_results['search_facets'].get('groups')):
+            groups_with_extras = []
+            for result in search_results['results']:
+                for group in result.get('groups', []):
+                    context = {'for_view': True, 'with_private': False}
+
+                    data_dict = {
+                        'all_fields': True,
+                        'include_extras': True,
+                        'type': 'group',
+                        'id': group['name']
+                    }
+                    groups_with_extras.append(get_action('group_show')(context, data_dict))
+
+            for i, facet in enumerate(search_results['search_facets']['groups'].get('items', [])):
+                for group in groups_with_extras:
+                    if facet['name'] == group['name']:
+                        search_results['search_facets']['groups']['items'][i]['title_translated'] = group.get('title_translated')
+
+     return search_results
