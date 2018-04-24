@@ -313,5 +313,4 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 for group in groups_with_extras:
                     if facet['name'] == group['name']:
                         search_results['search_facets']['groups']['items'][i]['title_translated'] = group.get('title_translated')
-
-     return search_results
+    return search_results
