@@ -216,6 +216,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IRoutes)
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IFacets, inherit=True)
+    plugins.implements(plugins.IPackageController, inherit=True)
 
    
 
