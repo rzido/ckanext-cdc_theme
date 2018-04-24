@@ -217,15 +217,16 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
+   
+    #plugins.implements(plugins.IDatasetForm)
 
-    def _customize_package_schema(self, schema):
-
+    #def _customize_package_schema(self, schema):
         #schema['resources']['url_viz'] = [tk.get_validator('not_missing')]
 
-    def show_package_schema(self):
-        schema = super(PluginClass, self).show_package_schema()
-        self._customize_package_schema(schema)
-	return schema
+    #def show_package_schema(self):
+    #    schema = super(PluginClass, self).show_package_schema()
+    #    self._customize_package_schema(schema)
+    #	 return schema
 
 	
 	
