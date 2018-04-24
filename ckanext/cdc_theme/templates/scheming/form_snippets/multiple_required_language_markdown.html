@@ -10,7 +10,7 @@
         or data.get(field.field_name, {})[lang],
     error=errors[field.field_name + '-' + lang],
     attrs=field.form_attrs or {},
-    is_required=h.dge_multiple_field_required(field,lang)
+    is_required=h.multiple_field_required(field,lang)
     ) %}
     {%- snippet 'scheming/form_snippets/fluent_help_text.html',
       field=field,
