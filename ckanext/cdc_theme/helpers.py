@@ -38,6 +38,17 @@ def scheming_field_only_default_required(field, lang):
 
     return False
 
+def scheming_multiple_field_required(field, lang):
+    """
+    Return field['required'] or guess based on validators if not present.
+    """
+    if 'required' in field:
+        return field['required']
+    if 'required_language' in field and field['required_language'] == lang:
+        return True
+    return 'not_empty' in field.get('validators', '').split()
+
+
 def get_current_date():
     import datetime
     return datetime.date.today().strftime("%d.%m.%Y")
