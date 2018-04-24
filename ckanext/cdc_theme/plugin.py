@@ -333,5 +333,26 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 for group in groups_with_extras:
                     if facet['name'] == group['name']:
                         search_results['search_facets']['groups']['items'][i]['title_translated'] = group.get('title_translated')
+			
+	if(search_results['search_facets'].get('organizations')):
+            organizations_with_extras = []
+            for result in search_results['results']:
+                for organization in result.get('organizations', []):
+                    context = {'for_view': True, 'with_private': False}
+
+                    data_dict = {
+                        'all_fields': True,
+                        'include_extras': True,
+                        'type': 'organization',
+                        'id': organization['name']
+                    }
+                    organization_with_extras.append(tk.get_action('organization_show')(context, data_dict))
+
+            for i, facet in enumerate(search_results['search_facets']['organizations'].get('items', [])):
+                for organization in organizations_with_extras:
+                    if facet['name'] == organization['name']:
+                        search_results['search_facets']['organizations']['items'][i]['title_translated'] = organization.get('title_translated')
+						
+			
         return search_results
 
