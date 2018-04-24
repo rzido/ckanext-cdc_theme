@@ -35,8 +35,7 @@
     {
      "field_name": "notes_translated",
      "preset": "fluent_core_translated",
-     "form_snippet": "multiple_required_language_markdown.html",
-     "validators": "multiple_one_value multiple_required_language fluent_text",	    
+     "form_snippet": "multiple_required_language_markdown.html",   
      "form_placeholder": "eg. Some useful notes about the data",
      "required_language": "gl",
       "label": {
