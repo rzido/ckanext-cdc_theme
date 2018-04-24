@@ -14,10 +14,10 @@
     {
       "field_name": "title_translated",
       "label": "Title",
-      "preset": "fluent_core_translated",
+      "preset": "fluent_core_translated",	    
       "form_languages": [
-        "en",
         "es",
+        "en",
         "gl"
       ],
       "form_placeholder": "My Organization",
@@ -37,14 +37,16 @@
       "form_placeholder": "A little information about my organization..."
     },
     {
-     "field_name": "notes_translated",
-     "preset": "fluent_core_translated",
+      "field_name": "notes_translated",
+      "preset": "fluent_core_translated",
+      "form_snippet": "multiple_required_language_markdown.html",         
+      "required_language": "gl",	    
       "label": {
          "es": "Descripción",
 	 "gl": "Descrición",
 	 "en": "Description"
       },
-     "form_languages": ["es","gl"]
+      "form_languages": ["es","en","gl"]
     },
     {
       "field_name": "url",
