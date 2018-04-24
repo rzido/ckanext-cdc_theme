@@ -284,6 +284,10 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 	return facets_dict
 		
     def organization_facets(self, facets_dict, organization_type, package_type):	
-	facets_dict['frequency'] = toolkit._('Frequency')
+	#facets_dict['frequency'] = toolkit._('Frequency')
+	return facets_dict
+
+    def group_facets(self, facets_dict, organization_type, package_type):	
+	#facets_dict['frequency'] = toolkit._('Frequency')
 	return facets_dict
 
