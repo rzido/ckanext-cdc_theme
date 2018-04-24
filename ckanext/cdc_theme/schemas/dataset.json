@@ -36,7 +36,7 @@
      "field_name": "notes_translated",
      "preset": "fluent_core_translated",
      "form_snippet": "multilanguage_markdown.html",
-     "form_placeholder": "eg. Some useful notes about the data"
+     "form_placeholder": "eg. Some useful notes about the data",
       "label": {
          "es": "Descripción",
 	 "gl": "Descrición",
