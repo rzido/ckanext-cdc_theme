@@ -5,6 +5,7 @@
   {% if items %}
     <nav>
       <ul class="{{ nav_class or 'unstyled nav nav-simple nav-facet' }}">
+        <i class="icon-medium icon-filter"></i>
         {% for item in items %}
           {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
           {% set label = label_function(item) if label_function else h.get_translated(item, 'title') or item.display_name %}
