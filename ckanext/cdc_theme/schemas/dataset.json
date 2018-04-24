@@ -44,7 +44,12 @@
 	 "gl": "Descrición",
 	 "en": "Description"
       },
-     "form_languages": ["gl","es","en"]
+     "form_languages": ["gl","es","en"],
+     "help_text": {
+	  "es": "Introducir una descripción para el conjunto de datos",   
+	  "gl": "Introducir unha descrición para o conxunto de datos",
+	  "en": "Enter a description for this dataset"   
+     }	     
     },
     {
       "field_name": "tag_string",
