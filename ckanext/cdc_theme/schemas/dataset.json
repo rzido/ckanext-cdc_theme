@@ -278,7 +278,8 @@
          "gl": "Nome",
          "en": "Name"
       },
-      "form_languages": ["gl","es","en"]
+      "form_languages": ["gl","es","en"],
+      "required_language": "gl"
     },
     {
       "field_name": "description",
@@ -287,8 +288,11 @@
       "form_placeholder": "Some useful notes about the data"
     },
     {
-     "field_name": "description_translated",
-     "preset": "fluent_core_translated",
+      "field_name": "description_translated",
+      "preset": "fluent_core_translated",
+      "form_snippet": "multiple_required_language_markdown.html",   
+      "form_placeholder": "eg. Some useful notes about the data",
+      "required_language": "gl",
       "label": {
          "es": "Descripción",
          "gl": "Descrición",
