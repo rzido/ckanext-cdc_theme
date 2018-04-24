@@ -18,7 +18,7 @@
 	 "gl": "Título",
          "en": "Title"
       },
-      "form_languages": ["es","gl"]
+      "form_languages": ["es","gl","en"]
     },
     {
       "field_name": "name",
@@ -43,7 +43,7 @@
 	 "gl": "Descrición",
 	 "en": "Description"
       },
-     "form_languages": ["es","gl"]
+     "form_languages": ["es","gl",'"en"]
     },
     {
       "field_name": "tag_string",
@@ -293,7 +293,7 @@
          "gl": "Descrición",
          "en": "Description"
       },
-      "form_languages": ["es","gl"]
+      "form_languages": ["es","gl","en"]
     },
     {
       "field_name": "format",
