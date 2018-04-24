@@ -19,6 +19,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
+#: ckan/templates/package/snippets/package_metadata_fields.html
+msgid "asneeded"
+msgstr "Segundo necesidade"
+
 #: ckanext/cdc_theme/controller.py:34
 msgid "Unauthorized to read report"
 msgstr "Non está autorizado a ler o informe"
