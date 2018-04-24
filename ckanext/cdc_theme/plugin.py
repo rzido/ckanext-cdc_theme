@@ -209,13 +209,13 @@ activity_streams['new group'] = (
 
 class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     """Coruna Open Data theme plugin based on OpenDataPhilly theme plugin.
-
     """
 
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)    
     plugins.implements(plugins.IRoutes)
     plugins.implements(plugins.ITranslation)
+    plugins.implements(plugins.IFacets, inherit=True)
 
    
 
@@ -275,3 +275,15 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 	map.connect('dataset_additional_info','/dataset/additional_info/{id}', action='additional_info', 
 		    controller=additional_info_controller, ckan_icon='info')
         return map
+
+    # Add custom facets
+    def dataset_facets(self, facets_dict, package_type):	
+	facets_dict['frequency'] = tk._('Frequency')
+	#if toolkit.c.userobj:
+	#	facets_dict['private'] = toolkit._('Private')
+	return facets_dict
+		
+    def organization_facets(self, facets_dict, organization_type, package_type):	
+	facets_dict['frequency'] = toolkit._('Frequency')
+	return facets_dict
+
