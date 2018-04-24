@@ -292,7 +292,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 	return facets_dict
 
 
-     def after_search(self, search_results, search_params):
+    def after_search(self, search_results, search_params):
 
         if(search_results['search_facets'].get('groups')):
             groups_with_extras = []
@@ -313,4 +313,4 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                     if facet['name'] == group['name']:
                         search_results['search_facets']['groups']['items'][i]['title_translated'] = group.get('title_translated')
 
-     return search_results
+    return search_results
