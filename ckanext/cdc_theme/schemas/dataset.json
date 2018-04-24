@@ -18,7 +18,8 @@
 	 "gl": "Título",
          "en": "Title"
       },
-      "form_languages": ["es","gl","en"]
+      "form_languages": ["gl","es","en"],
+      "required_language": "gl" 	    
     },
     {
       "field_name": "name",
@@ -43,7 +44,7 @@
 	 "gl": "Descrición",
 	 "en": "Description"
       },
-     "form_languages": ["es","gl","en"]
+     "form_languages": ["gl","es","en"]
     },
     {
       "field_name": "tag_string",
@@ -277,7 +278,7 @@
          "gl": "Nome",
          "en": "Name"
       },
-      "form_languages": ["es","gl","en"]
+      "form_languages": ["gl","es","en"]
     },
     {
       "field_name": "description",
@@ -293,7 +294,7 @@
          "gl": "Descrición",
          "en": "Description"
       },
-      "form_languages": ["es","gl","en"]
+      "form_languages": ["gl","es","en"]
     },
     {
       "field_name": "format",
