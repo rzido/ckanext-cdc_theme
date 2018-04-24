@@ -16,9 +16,9 @@
       "label": "Title",
       "preset": "fluent_core_translated",	    
       "form_languages": [
+        "gl",
         "es",
-        "en",
-        "gl"
+        "en"
       ],
       "form_placeholder": "My Organization",
       "required": true
@@ -46,7 +46,7 @@
 	 "gl": "Descrición",
 	 "en": "Description"
       },
-      "form_languages": ["es","en","gl"]
+      "form_languages": ["gl","es","en"]
     },
     {
       "field_name": "url",
