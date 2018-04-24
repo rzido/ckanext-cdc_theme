@@ -1,0 +1,17 @@
+{
+  "scheming_presets_version": 1,
+  "about": "scheming presets for fluent fields",
+  "about_url": "http://github.com/open-data/ckanext-fluent",
+  "presets": [
+    {
+      "preset_name": "fluent_core_translated",
+      "values": {
+        "form_snippet": "fluent_text.html",
+        "display_snippet": "fluent_text.html",
+        "error_snippet": "fluent_text.html",
+        "validators": "fluent_text",
+        "output_validators": "fluent_core_translated_output"
+      }
+    }
+  ]
+}
