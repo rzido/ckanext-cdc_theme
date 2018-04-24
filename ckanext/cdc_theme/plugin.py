@@ -263,7 +263,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'get_package_groups_by_type': helpers.get_package_groups_by_type,
                 'get_translated_or_default_locale': helpers.get_translated_or_default_locale,
 		'show_qa': helpers.show_qa,
-	        'multiple_field_required': helpers.multiple_field_required}
+	        'multiple_field_required': helpers.scheming_multiple_field_required}
 
     def before_map(self, map):
         return map
