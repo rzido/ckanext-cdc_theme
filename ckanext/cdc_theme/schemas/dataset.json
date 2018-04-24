@@ -34,7 +34,7 @@
     },
     {
      "field_name": "notes_translated",
-     "preset": "fluent_core_translated",
+     "preset": "multilanguage_markdown",
       "label": {
          "es": "Descripción",
 	 "gl": "Descrición",
