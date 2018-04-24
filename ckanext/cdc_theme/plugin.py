@@ -307,7 +307,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                         'type': 'group',
                         'id': group['name']
                     }
-                    groups_with_extras.append(get_action('group_show')(context, data_dict))
+                    groups_with_extras.append(tk.get_action('group_show')(context, data_dict))
 
             for i, facet in enumerate(search_results['search_facets']['groups'].get('items', [])):
                 for group in groups_with_extras:
