@@ -343,7 +343,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                         'all_fields': True,
                         'include_extras': True,
                         'type': 'organization',
-                        'id': organization.get['name']
+                        'id': organization['name']
                     }
                     organization_with_extras.append(tk.get_action('organization_show')(context, data_dict))
 
