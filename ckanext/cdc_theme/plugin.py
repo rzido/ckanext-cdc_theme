@@ -337,14 +337,13 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 	if(search_results['search_facets'].get('organization')):
             organization_with_extras = []
             for result in search_results['results']:
-                for organization in result.get('organization', []):
+                    organization = result.get('organization')
                     context = {'for_view': True, 'with_private': False}
-
                     data_dict = {
                         'all_fields': True,
                         'include_extras': True,
                         'type': 'organization',
-                        'id': organization['name']
+                        'id': organization.get['name']
                     }
                     organization_with_extras.append(tk.get_action('organization_show')(context, data_dict))
 
