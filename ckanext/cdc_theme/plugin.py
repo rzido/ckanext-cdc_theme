@@ -334,10 +334,10 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                     if facet['name'] == group['name']:
                         search_results['search_facets']['groups']['items'][i]['title_translated'] = group.get('title_translated')
 			
-	if(search_results['search_facets'].get('organizations')):
-            organizations_with_extras = []
+	if(search_results['search_facets'].get('organization')):
+            organization_with_extras = []
             for result in search_results['results']:
-                for organization in result.get('organizations', []):
+                for organization in result.get('organization', []):
                     context = {'for_view': True, 'with_private': False}
 
                     data_dict = {
@@ -348,10 +348,10 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                     }
                     organization_with_extras.append(tk.get_action('organization_show')(context, data_dict))
 
-            for i, facet in enumerate(search_results['search_facets']['organizations'].get('items', [])):
-                for organization in organizations_with_extras:
+            for i, facet in enumerate(search_results['search_facets']['organization'].get('items', [])):
+                for organization in organization_with_extras:
                     if facet['name'] == organization['name']:
-                        search_results['search_facets']['organizations']['items'][i]['title_translated'] = organization.get('title_translated')
+                        search_results['search_facets']['organization']['items'][i]['title_translated'] = organization.get('title_translated')
 						
 			
         return search_results
