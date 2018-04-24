@@ -14,9 +14,9 @@
       "label": "Title",
       "preset": "fluent_core_translated",
       "form_languages": [
-        "en",
+        "gl",
         "es",
-        "gl"
+        "es"
       ],
       "form_placeholder": "My Group",
       "required": true
@@ -32,10 +32,12 @@
       "field_name": "description_translated",
       "preset": "fluent_core_translated",
       "form_placeholder": "A little information about my group...",
+      "form_snippet": "multiple_required_language_markdown.html",         
+      "required_language": "gl",      
       "form_languages": [
-        "en",
+        "gl",
         "es",
-        "gl"
+        "en"
       ],
       "label": "Description",
       "display_snippet": null
