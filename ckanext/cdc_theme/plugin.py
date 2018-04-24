@@ -287,10 +287,12 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 		
     def organization_facets(self, facets_dict, organization_type, package_type):	
 	facets_dict['frequency'] = tk._('Frequency')
+	facets_dict['vocab_frequency'] = tk._('Frequency')
 	return facets_dict
 
     def group_facets(self, facets_dict, organization_type, package_type):	
 	facets_dict['frequency'] = tk._('Frequency')
+	facets_dict['vocab_frequency'] = tk._('Frequency')
 	return facets_dict
 
 
