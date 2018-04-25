@@ -81,6 +81,15 @@ Example:
             {% endfor %}
         </span>  
     {% endblock %}
+        
+        
+
+                <div class="dataset-meta-right">
+                  {% block rating %}
+                    {% snippet "rating/snippets/rating_single_flat.html", package=package %}
+                  {% endblock %}
+                </div>
+
         </div>    
         
         
