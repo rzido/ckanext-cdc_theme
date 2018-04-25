@@ -117,6 +117,11 @@ def get_package_groups(package_id):
 
             for group in group_list:
                 group['user_member'] = (group['id'] in user_group_ids)
+                
+                
+            c.group_dropdown = [[group['id'], group]
+                                 for group in group_list if
+                                 group['id'] not in pkg_group_ids]
 
     except (NotFound):
         abort(404, _('Dataset not found'))
