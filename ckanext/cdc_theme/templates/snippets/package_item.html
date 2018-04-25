@@ -23,7 +23,8 @@ Example:
 {# NUEVO   #}
 {% set tag_items = package.tags %}
 {% set format_items = h.dict_list_reduce(package.resources, 'format') %}
-{% set group_items = package.groups %}
+{% set group_items = h.get_package_groups(package.id) %}
+
 
 {# NUEVO   #}
 
