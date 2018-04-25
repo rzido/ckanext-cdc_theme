@@ -1,4 +1,4 @@
-{% ckan_extends %}
+{% extends "package/read_base.html" %}
 
 {% set pkg = c.pkg_dict %}
 
@@ -40,21 +40,14 @@
       
       <span>:::::::::</span>
   
-      {% block package_notes %}
-
-            {%- set schema = h.scheming_get_dataset_schema(dataset_type) -%}
-
-  {% if h.scheming_field_by_name(schema.dataset_fields, 'notes') and
-    pkg.notes%}
-    <div class="notes embedded-content">
-      {{ h.render_markdown(h.get_translated(pkg,'notes')) }}
-    </div>
-  {% endif %}
-{% endblock %}
-      
-
-      
-      
+     {% block package_notes %}
+      {% if pkg.notes %}
+        <div class="notes embedded-content">
+          {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  {% endblock %}
       
       
      <span> ****** </span>
@@ -71,4 +64,4 @@
     <span class="insert-comment-thread"></span>
  
   {% endblock %}
-{% endblock %}
+
