@@ -29,7 +29,7 @@
       <h2>
         {% block page_heading %}
           {{ h.dataset_display_name(pkg) }}
-           {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
+           
           {% if pkg.state.startswith('draft') %}
             [{{ _('Draft') }}]
           {% endif %}
@@ -42,25 +42,20 @@
       </h2>
       
       
-      <span>:::::::::</span>
-  
-     {% block package_notes %}
-      {% if pkg.notes %}
+     {% if pkg.notes %}
         <div class="notes embedded-content">
           {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
         </div>
       {% endif %}
-    {% endblock %}
-  {% endblock %}
-      
-      
-     <span> ****** </span>
-    {% block package_tags %}
+  
+     {% block package_notes %}{% endblock %}
+     
+     {% block package_tags %}
           {% snippet "package/snippets/tags.html", tags=pkg.tags %}
-    {% endblock %}
+     {% endblock %}
 
 
-  {% block package_resources %}
+   {% block package_resources %}
     {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
   {% endblock %}
 
