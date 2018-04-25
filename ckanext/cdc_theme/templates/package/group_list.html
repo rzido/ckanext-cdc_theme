@@ -1,6 +1,8 @@
 {% extends "package/read_base.html" %}
 {% import 'macros/form.html' as form %}
 
+{% set pkg_groups = h.get_package_groups(c.pkg_dict.id) %}
+
 {% block primary_content_inner %}
   <h2 class="hide-heading">{{ _('Topics') }}</h2>
 
@@ -15,7 +17,7 @@
     </form>
   {% endif %}
 
-  {% set pkg_groups = h.get_package_groups(c.pkg_dict.id) %}
+
   {% if  pkg_groups %}
     <form method="post">
       {% snippet 'group/snippets/group_list.html', groups=pkg_groups %}
