@@ -39,19 +39,7 @@
       
       
       <span>:::::::::</span>
-      {% block package_notes %}
-      <span>--</span>
-        {% if pkg.notes or pkg.notes_translated %}
-        <span>-- --</span>
-          <div class="notes embedded-content">
-            <span>-- -- -- --</span>
-            NOTAS {{ h.markdown_extract(h.get_translated(pkg, 'notes')) }}            
-          </div>
-          <span>:::</span>
-        {% endif %}
-      {% endblock %}   
-    </div>
-
+  
  <span> ****** </span>
     {% block package_tags %}
           {% snippet "package/snippets/tags.html", tags=pkg.tags %}
