@@ -38,10 +38,13 @@
       </h2>
       
       
-                   <span>:::::::::</span>
+      <span>:::::::::</span>
       {% block package_notes %}
-        {% if pkg.notes %}
+      <span>--</span>
+        {% if pkg.notes or pkg.notes_translated %}
+        <span>-- --</span>
           <div class="notes embedded-content">
+            <span>-- -- -- --</span>
             NOTAS {{ h.markdown_extract(h.get_translated(pkg, 'notes')) }}            
           </div>
           <span>:::</span>
