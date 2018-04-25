@@ -1,7 +1,7 @@
 from ckan.plugins import toolkit
 from ckan.lib.i18n import get_lang
 import ckan.lib.i18n as i18n
-from ckan.common import config
+from ckan.common import config,_, c
 import ckan.logic as logic
 import ckan.lib.base as base
 import ckan.model as model
