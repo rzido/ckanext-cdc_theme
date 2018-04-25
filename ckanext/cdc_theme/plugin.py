@@ -271,6 +271,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'scheming_field_only_default_required': helpers.scheming_field_only_default_required,
                 'get_current_date': helpers.get_current_date,
                 'get_package_groups_by_type': helpers.get_package_groups_by_type,
+		'get_package_groups': helpers.get_package_groups,
                 'get_translated_or_default_locale': helpers.get_translated_or_default_locale,
 		'show_qa': helpers.show_qa,
 	        'multiple_field_required': helpers.scheming_multiple_field_required}
