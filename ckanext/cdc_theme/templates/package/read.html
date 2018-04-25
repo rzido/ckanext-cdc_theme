@@ -41,14 +41,15 @@
      
       </h2>
       
-      
+     
+     {# FIXME This should be inside package_notes block. This is a workaround for display correct translated content #} 
      {% if pkg.notes %}
         <div class="notes embedded-content">
           {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
         </div>
      {% endif %}
     {% endblock %} 
-       
+      
      
      
      {% block package_tags %}
