@@ -6,7 +6,8 @@
 
 {% block primary_content_inner %}
   {{ super() }}
-  {% block package_description %}
+  
+   {% block package_description %}
     {% if pkg.private %}
       <span class="dataset-private label label-inverse pull-right">
         <i class="fa fa-lock"></i>
@@ -37,8 +38,7 @@
       </h2>
       
       
-    
-      
+                   <span>:::::::::</span>
       {% block package_notes %}
         {% if pkg.notes %}
           <div class="notes embedded-content">
@@ -46,9 +46,9 @@
           </div>
           <span>:::</span>
         {% endif %}
-           
+      {% endblock %}   
     </div>
-    {% endblock %}
+
 
     {% block package_tags %}
           {% snippet "package/snippets/tags.html", tags=pkg.tags %}
@@ -61,8 +61,6 @@
 
     {# FIXME why is this here? seems wrong #}
     <span class="insert-comment-thread"></span>
+ 
   {% endblock %}
-
-   
-
 {% endblock %}
