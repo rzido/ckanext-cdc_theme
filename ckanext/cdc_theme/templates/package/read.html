@@ -29,6 +29,7 @@
       <h2>
         {% block page_heading %}
           {{ h.dataset_display_name(pkg) }}
+           {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
           {% if pkg.state.startswith('draft') %}
             [{{ _('Draft') }}]
           {% endif %}
@@ -36,6 +37,8 @@
             [{{ _('Deleted') }}]
           {% endif %}
         {% endblock %}
+         
+     
       </h2>
       
       
