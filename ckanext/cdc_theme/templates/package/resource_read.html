@@ -80,17 +80,17 @@
           {% endblock %}
           <div class="prose notes" property="rdfs:label">
          
-            {% if c.package.notes %}
+            {% if res.description  %}
+              {{ h.render_markdown(h.get_translated(res, 'description')) }}
+            {% endif %}      
+            
+            {% if not res.description and c.package.notes %}
               <h3>{{ _('From the dataset abstract') }}</h3>
-              <blockquote>{{ h.markdown_extract(h.get_translated(c.package, 'notes')) }}</blockquote>
-              <p>---</p>
+              <blockquote>{{ h.markdown_extract(h.get_translated(c.package, 'notes')) }}</blockquote>            
               <p>{% trans dataset=c.package.title, url=h.url_for(controller='package', action='read', id=c.package['name']) %}Source: <a href="{{ url }}">{{ dataset }}</a>{% endtrans %}
             {% endif %}
                 
-            {% if res.description and not c.package.notes %}
-              {{ h.render_markdown(res.description) }}
-              <p>:::</p>
-            {% endif %}                
+                    
                 
           </div>
         {% endblock %}
