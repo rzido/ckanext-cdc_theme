@@ -19,7 +19,7 @@
 {% block content_primary_nav %}
   {{ h.build_nav_icon('dataset_read', _('Dataset'), id=pkg.name, icon='sitemap') }}
   {{ h.build_nav_icon('dataset_additional_info', _('Additional Information'), id=pkg.name, icon='info') }}
-  {{ h.build_nav_icon('dataset_showcase_list', _('Showcases'), id=pkg.name, icon='view') }}
+  {{ h.build_nav_icon('dataset_showcase_list', _('Showcases'), id=pkg.name, icon='tablet') }}
   {% if h.check_access('package_update', {'id':pkg.id }) %}
    
       {{ h.build_nav_icon('dataset_groups', _('Groups'), id=pkg.name) }}
