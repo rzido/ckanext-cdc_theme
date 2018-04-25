@@ -221,3 +221,4 @@ def convert_resource_format(format):
     else:
         format = 'Web Page'
     return format
+
