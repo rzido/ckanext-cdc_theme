@@ -15,9 +15,10 @@
     </form>
   {% endif %}
 
-  {% if c.pkg_dict.groups %}
+  {% set pkg_groups = h.get_package_groups(c.pkg_dict.id) %}
+  {% if  pkg_groups %}
     <form method="post">
-      {% snippet 'group/snippets/group_list.html', groups=c.pkg_dict.groups %}
+      {% snippet 'group/snippets/group_list.html', groups=c.pkg_groups %}
     </form>
   {% else %}
     <p class="empty">{{ _('There are no topics associated with this dataset') }}</p>
