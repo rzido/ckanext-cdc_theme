@@ -110,7 +110,7 @@ def get_package_groups(package_id):
                        'is_member': True}
 
             data_dict = {'id': package_id}
-            users_groups = get_action('group_list_authz')(context, data_dict)
+            users_groups = tk.get_action('group_list_authz')(context, data_dict)
 
             user_group_ids = set(group['id'] for group
                                  in users_groups)
