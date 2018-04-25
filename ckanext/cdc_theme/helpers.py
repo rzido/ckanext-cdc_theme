@@ -121,7 +121,7 @@ def get_package_groups(package_id):
     except (NotFound):
         abort(404, _('Dataset not found'))
 
-return group_list
+    return group_list
 
 
 _LOCALE_ALIASES = {'en_GB': 'en', 'es' : 'es', 'en': 'en', 'gl': 'gl'}
