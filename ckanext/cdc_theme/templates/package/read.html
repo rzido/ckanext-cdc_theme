@@ -40,7 +40,11 @@
       
       <span>:::::::::</span>
   
- <span> ****** </span>
+      {% block package_notes %}
+        {{ super() }}      
+      {% endblock %}
+      
+     <span> ****** </span>
     {% block package_tags %}
           {% snippet "package/snippets/tags.html", tags=pkg.tags %}
     {% endblock %}
