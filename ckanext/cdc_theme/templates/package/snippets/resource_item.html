@@ -26,14 +26,14 @@
    </a>
   {% endblock %}
 	
-	
-  {# FIXME This should be inside resource_item_description block. This is a workaround for display correct translated content #} 
+	  
+  {% block resource_item_description %}	
     <p class="description">
       {% if res.description %}
         {{ h.markdown_extract(h.get_translated(res, 'description'), extract_length=120) }}
       {% endif %}
     </p>
-
+  {% endblock %}
   
 
     
