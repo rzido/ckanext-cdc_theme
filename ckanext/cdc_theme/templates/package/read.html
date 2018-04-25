@@ -41,7 +41,20 @@
       <span>:::::::::</span>
   
       {% block package_notes %}
-        {{ super() }}      
+
+            {%- set schema = h.scheming_get_dataset_schema(dataset_type) -%}
+
+  {% if h.scheming_field_by_name(schema.dataset_fields, 'notes') and
+    pkg.notes%}
+    <div class="notes embedded-content">
+      {{ h.render_markdown(h.get_translated(pkg,'notes')) }}
+    </div>
+  {% endif %}
+{% endblock %}
+      
+
+      
+      
       {% endblock %}
       
      <span> ****** </span>
