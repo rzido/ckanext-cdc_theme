@@ -53,6 +53,7 @@ def get_current_date():
     import datetime
     return datetime.date.today().strftime("%d.%m.%Y")
 
+# This function list packages for a group_type (group, collection,..)
 def get_package_groups_by_type(package_id, group_type):
     context = {'model': model, 'session': model.Session,
                'for_view': True, 'use_cache': False}
@@ -77,6 +78,51 @@ def get_package_groups_by_type(package_id, group_type):
         abort(404, _('Dataset not found'))
 
     return group_list
+
+
+# This is not the most efficient way of listing package groups that include all group schema fields, however
+# at this point the only way without major CKAN core changes
+def get_package_groups(package_id):
+    context = {'model': model, 'session': model.Session,
+               'for_view': True, 'use_cache': False}
+
+    data_dict = {
+        'all_fields': True,
+        'include_extras': True
+    }
+
+    groups = get_action('group_list')(context, data_dict)
+    group_list = []
+
+    try:
+        pkg_obj = Package.get(package_id)
+        pkg_group_ids = set(group['id'] for group
+                        in group_list_dictize(pkg_obj.get_groups('group', None), context))
+
+        group_list = [group
+                     for group in groups if
+                     group['id'] in pkg_group_ids]
+
+        if c.user:
+            context = {'model': model, 'session': model.Session,
+                       'user': c.user, 'for_view': True,
+                       'auth_user_obj': c.userobj, 'use_cache': False,
+                       'is_member': True}
+
+            data_dict = {'id': package_id}
+            users_groups = get_action('group_list_authz')(context, data_dict)
+
+            user_group_ids = set(group['id'] for group
+                                 in users_groups)
+
+            for group in group_list:
+                group['user_member'] = (group['id'] in user_group_ids)
+
+    except (NotFound):
+        abort(404, _('Dataset not found'))
+
+return group_list
+
 
 _LOCALE_ALIASES = {'en_GB': 'en', 'es' : 'es', 'en': 'en', 'gl': 'gl'}
 
