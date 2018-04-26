@@ -242,6 +242,40 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         tk.add_resource('fanstatic', 'cdc_theme')
         
 
+def get_helpers(self):
+        """Register cdc_theme_* helper functions"""
+
+        return {'cdc_theme_most_recent_datasets': most_recent_datasets,
+		'cdc_theme_most_new_datasets': most_new_datasets,
+                'cdc_theme_popular_datasets': get_summary_list,
+		'cdc_theme_top_rated_datasets': top_rated_datasets,
+                'cdc_theme_dataset_count': dataset_count,
+                'cdc_theme_dataset_list': dataset_list,
+                'cdc_theme_resource_count': resource_count,
+		'cdc_theme_showcase_count': showcase_count,		
+                'cdc_theme_groups': groups,
+		'cdc_theme_collections': collections,
+                'cdc_theme_organizations': organizations,
+		'cdc_theme_showcases': showcases,
+                'cdc_theme_apps': apps,	
+    		'is_web_format': helpers.is_web_format,            	
+            	'is_preview_format': helpers.is_preview_format,
+            	'is_map_format': helpers.is_map_format,
+            	'is_plotly_format': helpers.is_plotly_format,
+            	'is_cartodb_format': helpers.is_cartodb_format,
+            	'is_arcgis_format': helpers.is_arcgis_format,
+		'arcgis_format_query': helpers.arcgis_format_query,
+		'call_toolkit_function': helpers.call_toolkit_function,
+                'add_locale_to_source': helpers.add_locale_to_source,
+                'get_lang': helpers.get_current_lang,
+                'get_lang_prefix': helpers.get_lang_prefix,
+                'scheming_field_only_default_required': helpers.scheming_field_only_default_required,
+                'get_current_date': helpers.get_current_date,
+                'get_package_groups_by_type': helpers.get_package_groups_by_type,
+		'get_package_groups': helpers.get_package_groups,
+                'get_translated_or_default_locale': helpers.get_translated_or_default_locale,
+		'show_qa': helpers.show_qa,
+	        'multiple_field_required': helpers.scheming_multiple_field_required}	
     
 
     def before_map(self, map):
@@ -339,38 +373,3 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         return search_results
 
 
-
-def get_helpers(self):
-        """Register cdc_theme_* helper functions"""
-
-        return {'cdc_theme_most_recent_datasets': most_recent_datasets,
-		'cdc_theme_most_new_datasets': most_new_datasets,
-                'cdc_theme_popular_datasets': get_summary_list,
-		'cdc_theme_top_rated_datasets': top_rated_datasets,
-                'cdc_theme_dataset_count': dataset_count,
-                'cdc_theme_dataset_list': dataset_list,
-                'cdc_theme_resource_count': resource_count,
-		'cdc_theme_showcase_count': showcase_count,		
-                'cdc_theme_groups': groups,
-		'cdc_theme_collections': collections,
-                'cdc_theme_organizations': organizations,
-		'cdc_theme_showcases': showcases,
-                'cdc_theme_apps': apps,	
-    		'is_web_format': helpers.is_web_format,            	
-            	'is_preview_format': helpers.is_preview_format,
-            	'is_map_format': helpers.is_map_format,
-            	'is_plotly_format': helpers.is_plotly_format,
-            	'is_cartodb_format': helpers.is_cartodb_format,
-            	'is_arcgis_format': helpers.is_arcgis_format,
-		'arcgis_format_query': helpers.arcgis_format_query,
-		'call_toolkit_function': helpers.call_toolkit_function,
-                'add_locale_to_source': helpers.add_locale_to_source,
-                'get_lang': helpers.get_current_lang,
-                'get_lang_prefix': helpers.get_lang_prefix,
-                'scheming_field_only_default_required': helpers.scheming_field_only_default_required,
-                'get_current_date': helpers.get_current_date,
-                'get_package_groups_by_type': helpers.get_package_groups_by_type,
-		'get_package_groups': helpers.get_package_groups,
-                'get_translated_or_default_locale': helpers.get_translated_or_default_locale,
-		'show_qa': helpers.show_qa,
-	        'multiple_field_required': helpers.scheming_multiple_field_required}
