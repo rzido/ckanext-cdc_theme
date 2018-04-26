@@ -1,3 +1,6 @@
+# From ckanext-sixodpscheming https://github.com/6aika/sixodp/
+
+
 from ckan.common import _
 import ckan.authz as authz
 import ckan.plugins.toolkit as toolkit
