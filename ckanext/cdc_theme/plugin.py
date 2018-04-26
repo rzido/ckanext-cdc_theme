@@ -242,7 +242,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         tk.add_resource('fanstatic', 'cdc_theme')
         
 
-def get_helpers(self):
+    def get_helpers(self):
         """Register cdc_theme_* helper functions"""
 
         return {'cdc_theme_most_recent_datasets': most_recent_datasets,
