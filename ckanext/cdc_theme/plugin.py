@@ -4,6 +4,8 @@ from collections import OrderedDict
 from pylons import config
 import pylons
 import helpers
+import validators
+from datetime import datetime
 
 from jinja2 import Undefined
 from six import text_type
@@ -217,6 +219,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IValidators)
    
     #plugins.implements(plugins.IDatasetForm)
 
@@ -242,6 +245,23 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         tk.add_resource('fanstatic', 'cdc_theme')
         
 
+    def get_validators(self):
+        return {
+            'lower_if_exists': validators.lower_if_exists,
+            'upper_if_exists': validators.upper_if_exists,
+            'tag_string_or_tags_required': validators.tag_string_or_tags_required,
+            'create_tags': validators.create_tags,
+            'create_fluent_tags': validators.create_fluent_tags,
+            'set_private_if_not_admin': validators.set_private_if_not_admin,
+            'list_to_string': validators.list_to_string,
+            'convert_to_list': validators.convert_to_list,
+            'tag_list_output': validators.tag_list_output,
+            'repeating_text': validators.repeating_text,
+            'repeating_text_output': validators.repeating_text_output,
+            'only_default_lang_required': validators.only_default_lang_required
+    }	
+	
+	
     def get_helpers(self):
         """Register cdc_theme_* helper functions"""
 
