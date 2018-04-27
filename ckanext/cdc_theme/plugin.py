@@ -293,7 +293,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     # Add custom facets
     def dataset_facets(self, facets_dict, package_type):	
-	facets_dict['frequency'] = tk._('Frequency')	
+	#facets_dict['frequency'] = tk._('Frequency')	
 	#facets_dict['vocab_frequency'] = tk._('Frequency')
 	#if toolkit.c.userobj:
 	#	facets_dict['private'] = toolkit._('Private')
