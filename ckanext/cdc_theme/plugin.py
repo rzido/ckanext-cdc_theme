@@ -12,6 +12,9 @@ from six import text_type
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
+from ckan.logic import NotFound
+
+
 
 import ckan.model as model
 from sqlalchemy import Table, select, join, func, and_
@@ -202,7 +205,7 @@ def create_vocabulary(name):
         data = {'id': name}
         v = tk.get_action('vocabulary_show')(context, data)
         log.info( name + " vocabulary already exists, skipping.")
-    except tk.NotFound:
+    except NotFound:
         log.info("Creating vocab '" + name + "'")
         data = {'name': name}
         v = tk.get_action('vocabulary_create')(context, data)
@@ -217,7 +220,7 @@ def create_tag_to_vocabulary(tag, vocab):
         data = {'id': vocab}
         v = tk.get_action('vocabulary_show')(context, data)
 
-    except tk.NotFound:
+    except NotFound:
         log.info("Creating vocab '" + vocab + "'")
         data = {'name': vocab}
         v = tk.get_action('vocabulary_create')(context, data)
