@@ -202,7 +202,7 @@ def create_vocabulary(name):
         data = {'id': name}
         v = tk.get_action('vocabulary_show')(context, data)
         log.info( name + " vocabulary already exists, skipping.")
-    except NotFound:
+    except tk.NotFound:
         log.info("Creating vocab '" + name + "'")
         data = {'name': name}
         v = tk.get_action('vocabulary_create')(context, data)
@@ -217,7 +217,7 @@ def create_tag_to_vocabulary(tag, vocab):
         data = {'id': vocab}
         v = tk.get_action('vocabulary_show')(context, data)
 
-    except NotFound:
+    except tk.NotFound:
         log.info("Creating vocab '" + vocab + "'")
         data = {'name': vocab}
         v = tk.get_action('vocabulary_create')(context, data)
