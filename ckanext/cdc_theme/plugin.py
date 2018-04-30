@@ -193,6 +193,42 @@ def organizations():
     return tk.get_action('organization_list')({}, {'all_fields': True, 'include_extras': True })
 
 
+# create tag vocabulary and vocabulary from ckanext-sixodp-scheming
+def create_vocabulary(name):
+    user = tk.get_action('get_site_user')({'ignore_auth': True}, {})
+    context = {'user': user['name']}
+
+    try:
+        data = {'id': name}
+        v = tk.get_action('vocabulary_show')(context, data)
+        log.info( name + " vocabulary already exists, skipping.")
+    except NotFound:
+        log.info("Creating vocab '" + name + "'")
+        data = {'name': name}
+        v = tk.get_action('vocabulary_create')(context, data)
+
+    return v
+
+def create_tag_to_vocabulary(tag, vocab):
+    user = tk.get_action('get_site_user')({'ignore_auth': True}, {})
+    context = {'user': user['name']}
+
+    try:
+        data = {'id': vocab}
+        v = tk.get_action('vocabulary_show')(context, data)
+
+    except NotFound:
+        log.info("Creating vocab '" + vocab + "'")
+        data = {'name': vocab}
+        v = tk.get_action('vocabulary_create')(context, data)
+
+    data = {
+        "name": tag,
+        "vocabulary_id": v['id']}
+
+    context['defer_commit'] = True
+    tk.get_action('tag_create')(context, data)
+
 
 # monkeypatch activity streams
 activity_streams['changed group'] = (
