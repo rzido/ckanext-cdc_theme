@@ -29,7 +29,7 @@ from ckan.lib.plugins import DefaultTranslation
 
 import logging
 
-log = logging.getLogger(__name__ )
+log = logging.getLogger(__name__)
 
 
 def table(name):
