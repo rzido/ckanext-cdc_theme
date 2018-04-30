@@ -27,6 +27,11 @@ from ckan.lib.activity_streams import \
 
 from ckan.lib.plugins import DefaultTranslation
 
+import logging
+
+log = logging.getLogger(__name__ )
+
+
 def table(name):
     return Table(name, model.meta.metadata, autoload=True)
 
