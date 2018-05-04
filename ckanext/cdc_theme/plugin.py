@@ -331,6 +331,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 		'arcgis_format_query': helpers.arcgis_format_query,
 		'call_toolkit_function': helpers.call_toolkit_function,
                 'add_locale_to_source': helpers.add_locale_to_source,
+		'get_current_lang': helpers.get_current_lang,
                 'get_lang': helpers.get_current_lang,
                 'get_lang_prefix': helpers.get_lang_prefix,
                 'scheming_field_only_default_required': helpers.scheming_field_only_default_required,
