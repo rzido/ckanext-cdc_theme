@@ -437,3 +437,32 @@ color: #313833;
     transform: translate3d(0,5px,0);
   }
 }
+
+
+
+.horizontal-list {
+  display: inline-block;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin: 0 $margin-large-horizontal $margin-large-vertical 0;
+
+    * {
+      display: inline-block;
+      width: auto;
+      height: $base*4;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.badge {
+    
+  font-size:30px;
+  border:1px solid silver;
+  padding: 7px;  
+}
