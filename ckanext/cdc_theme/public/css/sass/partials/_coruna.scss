@@ -467,3 +467,44 @@ color: #313833;
   padding: 7px;
   border-radius: 5px;
 }
+
+
+.image-slider-wrapper {
+  text-align: center;
+  width: 100%;
+
+  .image-slider {
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    list-style: none;
+    background: #eee;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+
+    @media(min-width: 760) {
+      margin-bottom: 0;
+    }
+
+    li,
+    .image-slider-item {
+      display: inline-block;
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+        width: auto;
+        height: 30px;
+
+        &:hover {
+          opacity: 0.8;
+          transition: all 0.3s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
