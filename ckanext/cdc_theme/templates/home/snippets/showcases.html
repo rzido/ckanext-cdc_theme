@@ -12,7 +12,7 @@ set showcases =  h.cdc_theme_showcases(6)
       
          {% for package in showcases %}                                
          <a class="browse-showcase" href="{{ h.url_for(controller='package', action='read', id=package.name) }}">
-            <img class="browse-showcase-image" src="{{ package.image_display_url or package.image_1_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">
+            <img class="browse-showcase-image" src="{{ package.featured_image_display_url or package.image_display_url or package.image_1_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ package.name }}" class="media-image">
             <div class="browse-showcase-title">{{ h.truncate(package.title or package.name, 80) }} </div>
          </a>
          {% endfor %}                  
