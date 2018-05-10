@@ -10,7 +10,7 @@
             {% endfor %}              
          {% endif %}                        
          </p>
-         <p class="vizcarousel-desc-text"> {{ h.markdown_extract(package.notes, extract_length=200)|forceescape }}</p>
+         <p class="vizcarousel-desc-text"> {{ h.markdown_extract(h.get_translated(package,'notes'), extract_length=200)|forceescape }}</p>
          
          
          
