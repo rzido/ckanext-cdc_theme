@@ -305,7 +305,9 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'repeating_text_output': validators.repeating_text_output,
             'only_default_lang_required': validators.only_default_lang_required,
 	    'date_period': validators.date_period,
-	    'date_period_output': validators.date_period_output
+	    'date_period_output': validators.date_period_output,
+            'multiple_uri_text': validators.multiple_uri_text,
+            'multiple_uri_text_output': validators.multiple_uri_text_output				
     }	
 	
 	
