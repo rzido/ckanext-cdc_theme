@@ -784,7 +784,7 @@
       "display_snippet": "repeating_link.html",
       "form_snippet": "repeating.html",      
       "validators": "repeating_text",      
-      "is_url": true
+      "is_url": true,
       "form_placeholder": ""
   }	  
   ]
