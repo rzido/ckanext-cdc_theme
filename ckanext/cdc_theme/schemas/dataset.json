@@ -19,13 +19,24 @@
          "en": "Title"
       },
       "form_languages": ["gl","es","en"],
-      "required_language": "gl" 	    
+      "required_language": "gl",      
+      "help_text": {
+          "en": "Dataset title",
+          "es": "Título del conjunto de datos",          
+          "gl": "Título do conxunto de datos"
+      },	    
     },
     {
       "field_name": "name",
       "label": "URL",
       "preset": "dataset_slug",
-      "form_placeholder": "eg. my-dataset"
+      "form_placeholder": "eg. my-dataset",
+      "help_text": {
+         "en": "Dataset URI",
+         "es": "URI del conjunto de datos",          
+         "gl": "URI do conxunto de datos"
+      },	    
+    },	    
     },
     {
       "field_name": "notes",
@@ -65,8 +76,12 @@
 	    "gl": "Licenza"
       },
       "form_snippet": "license.html",
-      "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
-    },
+      "help_text": {
+          "en": "License definitions and additional information can be found at http://opendefinition.org/",
+          "es": "Se puede encontrar definiciones de licencias e información adicional en http://opendefinition.org/",          
+          "gl": "Pódese atopar definicións de licenzas e información adicional en http://opendefinition.org/"
+      },	    
+    },      
     {
       "field_name": "owner_org",
       "label": "Organization",
@@ -519,6 +534,11 @@
 	    "es": "mensual",
 	    "gl": "mensual"
       },
+     "help_text": {
+          "en": "Select update frequency for this dataset",
+          "es": "Selecciona una frecuencia de actualización de este conjunto de datos.",          
+          "gl": "Escolle unha frecuenza de actualización deste conxunto de datos."
+       },      
       "preset": "select",
       "choices": [
 	 { 
