@@ -22,17 +22,17 @@
       "required_language": ["gl","es"],  
       "fluent_help_text": {
           "en": {
-              "en": "Enter an English name for this dataset",
-              "es": "Introducir un título en inglés para este conjunto de datos",
-              "gl": "Introduce un título en inglés para este conxunto de datos"},
+              "en": "Enter an optional English name for this dataset",
+              "es": "Introducir un título opcional en inglés para este conjunto de datos",
+              "gl": "Introduce un título opcional en inglés para este conxunto de datos"},
           "es": {
               "en": "It's needed a Spanish name for this dataset.",
-              "es": "Requiere un título en espa\u00F1ol.",
-              "gl": "Require un título en espa\u00F1ol."},
+              "es": "Requiere un título obligatorio en espa\u00F1ol.",
+              "gl": "Require un título obrigatorio en espa\u00F1ol."},
           "gl": {
               "en": "It's needed a Galicia name for this dataset.",
-              "es": "Requiere un título en gallego.",
-              "gl": "Require un título en galego."}
+              "es": "Requiere un título obligatorio en gallego.",
+              "gl": "Require un título obrigatorio en galego."}
       }	    
     },
     {
@@ -64,11 +64,20 @@
 	 "en": "Description"
       },
      "form_languages": ["gl","es","en"],
-     "help_text": {
-	  "es": "Introducir una descripción para el conjunto de datos",   
-	  "gl": "Introducir unha descrición para o conxunto de datos",
-	  "en": "Enter a description for this dataset"   
-     }	     
+     "fluent_help_text": {
+          "en": {
+              "en": "Enter an optional English description for this dataset",
+              "es": "Introducir una descripción opcional en inglés para este conjunto de datos",
+              "gl": "Introduce unha descrición opcional en inglés para este conxunto de datos"},
+          "es": {
+              "en": "It's needed a Spanish description for this dataset.",
+              "es": "Requiere una descripción obligatoria en espa\u00F1ol.",
+              "gl": "Require unha descrición obrigatoria en espa\u00F1ol."},
+          "gl": {
+              "en": "It's needed a Galicia name for this dataset.",
+              "es": "Requiere una descrición obligatoria en gallego.",
+              "gl": "Require unha descrición obrigatoria en galego."}
+      }	    
     },
     {
       "field_name": "tag_string",
