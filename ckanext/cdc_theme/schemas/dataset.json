@@ -36,8 +36,7 @@
          "es": "URI del conjunto de datos",          
          "gl": "URI do conxunto de datos"
       },	    
-    },	    
-    },
+    },	        
     {
       "field_name": "notes",
       "label": "Description",
