@@ -57,7 +57,7 @@
      "preset": "fluent_core_translated",
      "form_snippet": "multiple_required_language_markdown.html",   
      "form_placeholder": "eg. Some useful notes about the data",
-     "required_language": "gl",
+     "required_language": ["gl","es"],
       "label": {
          "es": "Descripción",
 	 "gl": "Descrición",
