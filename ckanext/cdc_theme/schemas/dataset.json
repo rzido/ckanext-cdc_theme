@@ -24,7 +24,7 @@
           "en": "Dataset title",
           "es": "Título del conjunto de datos",          
           "gl": "Título do conxunto de datos"
-      },	    
+      }	    
     },
     {
       "field_name": "name",
@@ -35,7 +35,7 @@
          "en": "Dataset URI",
          "es": "URI del conjunto de datos",          
          "gl": "URI do conxunto de datos"
-      },	    
+      }	    
     },	        
     {
       "field_name": "notes",
