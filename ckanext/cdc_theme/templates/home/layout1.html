@@ -8,7 +8,7 @@ dropdown in the settings page and rename this file layout4.html.
 
 -->
 
-{#
+
 {%
 set showcases =  h.cdc_theme_showcases(6)
 %}
@@ -48,13 +48,13 @@ set showcases =  h.cdc_theme_showcases(6)
     </div>  
 </div>
 
-#}
+
 <!--
 <div class="hero inner">
 </div>
 -->
 
-  {#
+
 <!-- eliminado de los main- role main -->  
 <div  class="main-search">
   <div class="container">
@@ -91,7 +91,7 @@ set showcases =  h.cdc_theme_showcases(6)
       </div>
     </div>
 	  
-#}	
+
     <div class="row row2">
       <div class="span12 col1">
         {% set tags = h.get_facet_items_dict('tags', limit=20) %}
@@ -106,7 +106,7 @@ set showcases =  h.cdc_theme_showcases(6)
   </div>
 </div>
 
-{#
+
 <div class="main-browse front">
   <div class="container">
     <div class="row row2">
@@ -127,10 +127,10 @@ set showcases =  h.cdc_theme_showcases(6)
 <!-- datasets count -->                    
                   {% if topic.package_count %}
                       <span class="count"> {{ topic.package_count }} </span>
-                     <!-- <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', topic.package_count).format(num=topic.package_count) }}</span> -->
+                  {#   <!-- <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', topic.package_count).format(num=topic.package_count) }}</span> --> #}
                   {% elif topic.package_count == 0 %}
                        <span class="count"> 0 </span>
-                      <!-- <span class="count">{{ _('0 Datasets') }}</span> -->
+                  {#    <!-- <span class="count">{{ _('0 Datasets') }}</span> --> #}
                   {% endif %}
 
                   
@@ -142,8 +142,7 @@ set showcases =  h.cdc_theme_showcases(6)
   </div>
 </div>
 
-#}
-{#
+
 <div class="main-browse front">
   <div class="container">
     <div class="row row2">
@@ -162,10 +161,10 @@ set showcases =  h.cdc_theme_showcases(6)
                       <span class="count">
 		        {{ topic.package_count }}
 		    </span>
-                     <!-- <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', topic.package_count).format(num=topic.package_count) }}</span> -->
+                     {# <span class="count">{{ ungettext('{num} Dataset', '{num} Datasets', topic.package_count).format(num=topic.package_count) }}</span> #}
                   {% elif topic.package_count == 0 %}
                        <span class="count"> 0 </span>
-                      <!-- <span class="count">{{ _('0 Datasets') }}</span> -->
+                      {# <span class="count">{{ _('0 Datasets') }}</span> #}
                   {% endif %}
 
                   
@@ -216,7 +215,7 @@ set showcases =  h.cdc_theme_showcases(6)
       </div>
     </div>
   </div>
-#}
+
 
 
 <!--
@@ -236,7 +235,7 @@ set showcases =  h.cdc_theme_showcases(6)
   </div>
 -->
 
- {#
+
   {% set posts = h.get_recent_blog_posts(number=3) %}
 
   <div class="main-news front">	  
@@ -275,14 +274,14 @@ set showcases =  h.cdc_theme_showcases(6)
     </div>
 </div>
 
-#}
+
 <!--
 <div class="ocean">
   <div class="wave"></div>
   <div class="wave"></div>
 </div>
 -->
- {#
+
 <div class="main-featured front">
   
 
@@ -302,9 +301,6 @@ set showcases =  h.cdc_theme_showcases(6)
   </div>
 </div>
 
-#}
-
- {#
 
 <div role="main" class="main-updates front">
   <div class="container">
@@ -336,7 +332,7 @@ set showcases =  h.cdc_theme_showcases(6)
     </div>                                 
    </div>
 </div>
-#}
+
 	
 
 	
