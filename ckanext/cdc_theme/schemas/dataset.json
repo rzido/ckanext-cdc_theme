@@ -19,11 +19,20 @@
          "en": "Title"
       },
       "form_languages": ["gl","es","en"],
-      "required_language": "gl",      
-      "help_text": {
-          "en": "Dataset title",
-          "es": "Título del conjunto de datos",          
-          "gl": "Título do conxunto de datos"
+      "required_language": {"gl","es"},  
+      "fluent_help_text": {
+          "en": {
+              "en": "Enter an English name for this dataset",
+              "es": "Introducir un título en inglés para este conjunto de datos",
+              "gl": "Introduce un título en inglés para este conxunto de datos"},
+          "es": {
+              "en": "It's needed a Spanish name for this dataset.",
+              "es": "Requiere un título en espa\u00F1ol.",
+              "gl": "Require un título en espa\u00F1ol."},
+          "gl": {
+              "en": "It's needed a Galicia name for this dataset.",
+              "es": "Requiere un título en gallego.",
+              "gl": "Require un título en galego."}
       }	    
     },
     {
