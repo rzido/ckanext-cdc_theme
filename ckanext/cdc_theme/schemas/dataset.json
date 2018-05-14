@@ -651,7 +651,7 @@
          "gl": "Cobertura temporal"},
       "help_text": {
           "en": "Periodo de tiempo cubierto por el conjunto de datos.Se pueden establer m\u00E1s periodos pulsando en \u0022Agregar cobertura temporal\u0022.",
-          "es": "Periodo de tiempo cubierto por el conjunto de datos.Se pueden establer m\u00E1s periodos pulsando en \u0022Agregar cobertura temporal\u0022."
+          "es": "Periodo de tiempo cubierto por el conjunto de datos.Se pueden establer m\u00E1s periodos pulsando en \u0022Agregar cobertura temporal\u0022.",
           "gl": "Periodo de tiempo cubierto por el conjunto de datos.Se pueden establer m\u00E1s periodos pulsando en \u0022Agregar cobertura temporal\u0022."},
      "preset": "date_period"
     },	  
