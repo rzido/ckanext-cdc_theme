@@ -682,8 +682,7 @@
       "help_text": {
           "en": "Enlaces a recursos relacionados con el conjunto de datos.",
           "es": "Enlaces a recursos relacionados con el conjunto de datos.",          
-          "gl": "Enlaces a recursos relacionados con el conjunto de datos."},
-      "form_blanks": 1,
+          "gl": "Enlaces a recursos relacionados con el conjunto de datos."},      
       "display_snippet": "repeating_link.html",
       "form_snippet": "repeating.html",      
       "validators": "repeating_text",      
@@ -702,8 +701,7 @@
       "help_text": {
           "en": "Links to legislation related to dataset. It's a link to a legal document",
           "es": "Enlaces a la normativa relativa al conjunto de datos. Es un enlace a un documento legal.",          
-          "gl": "Ligazóns relativa ó conxunto de datos. É unha ligazón a un documento legal "},
-      "form_blanks": 1,
+          "gl": "Ligazóns relativa ó conxunto de datos. É unha ligazón a un documento legal "},      
       "display_snippet": "repeating_link.html",
       "form_snippet": "repeating.html",      
       "validators": "repeating_text",      
