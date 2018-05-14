@@ -19,7 +19,7 @@
          "en": "Title"
       },
       "form_languages": ["gl","es","en"],
-      "required_language": {"gl","es"},  
+      "required_language": ["gl","es"],  
       "fluent_help_text": {
           "en": {
               "en": "Enter an English name for this dataset",
