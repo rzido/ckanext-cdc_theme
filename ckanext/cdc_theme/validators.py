@@ -240,3 +240,162 @@ def only_default_lang_required(field, schema):
             errors[key].append(_('Required language "%s" missing') % default_lang)
 
         return validator
+    
+    
+"""
+FIELD TYPE DATE PERIOD
+"""
+@scheming_validator
+def date_period(field, schema):
+    def validator(key, data, errors, context):
+        """
+        1. a JSON with dates, eg.
+           {"1": {"to": "2016-05-28T00:00:00", "from": "2016-05-11T00:00:00"}}
+        2. separate fields per date and time (for form submissions):
+           fieldname-from-date-1 = "2012-09-11"
+           fieldname-from-time-1 = "11:00"
+           fieldname-from-date-2 = "2014-03-03"
+           fieldname-from-time-2 = "09:45"
+        """
+        # just in case there was an error before that validator
+        if errors[key]:
+            return
+
+        value = data[key]
+
+        # 1. json
+        if value is not missing:
+            if isinstance(value, basestring):
+                try:
+                    value = json.loads(value)
+                except ValueError, e:
+                    errors[key].append(_('Invalid field structure, it is not a valid JSON'))
+                    return
+            if not isinstance(value, dict):
+                 errors[key].append(_('Expecting valid JSON value'))
+                 return
+
+            out = {}
+            for element in sorted(value):
+                dates = value.get(element)
+                with_date = False
+                #if dates['from']:
+                if 'from' in dates:
+                    try:
+                        date = h.date_str_to_datetime(dates['from'])
+                        with_date = True
+                    except (TypeError, ValueError), e:
+                        errors[key].append(_('From value: Date format incorrect'))
+                        continue
+                #if dates['to']:
+                if 'to' in dates:
+                    try:
+                        date = h.date_str_to_datetime(dates['to'])
+                        with_date = True
+                    except (TypeError, ValueError), e:
+                        errors[key].append(_('To value: Date format incorrect'))
+                        continue
+
+                if not with_date:
+                    errors[key]. append(_('Date period without from and to'))
+                    continue
+                out[str(element)] = dates
+
+            if not errors[key]:
+                data[key] = json.dumps(out)
+
+            return
+
+        # 3. separate fields
+        found = {}
+        short_prefix = key[-1] + '-'
+        prefix = key[-1] + '-date-'
+        extras = data.get(key[:-1] + ('__extras',), {})
+
+        #Fase de validacion
+        datetime_errors = False
+        valid_indexes = []
+        for name, text in extras.iteritems():
+            if not name.startswith(prefix):
+                continue
+            if not text:
+                continue
+
+            datetime = text
+            #Get time if exists
+            index = name.split('-')[-1]
+            type_field = name.split('-')[-2]
+            time_value = extras.get(short_prefix+'time-'+type_field+'-'+index)
+            #Add the time
+            if time_value:
+                datetime = text + ' ' + time_value
+
+            #Create datetime and validation
+            try:
+                date = h.date_str_to_datetime(datetime)
+                valid_indexes.append(index)
+            except (TypeError, ValueError), e:
+                errors[key].append(_('Date time format incorrect'))
+                datetime_errors = True
+
+        if datetime_errors:
+            return
+
+        valid_indexes = sorted(list(set(valid_indexes)))
+        new_index = 1;
+        for index in valid_indexes:
+            period = {}
+
+            #Get from
+            date_from_value = extras.get(short_prefix+'date-from-'+index)
+            if date_from_value:
+                datetime = date_from_value
+                time_from_value = extras.get(short_prefix+'time-from-'+index)
+                if time_from_value:
+                    datetime = date_from_value + " " + time_from_value
+                try:
+                    date = h.date_str_to_datetime(datetime)
+                    period['from'] = date.strftime("%Y-%m-%dT%H:%M:%S")
+                except (TypeError, ValueError), e:
+                    continue
+
+            date_to_value = extras.get(short_prefix+'date-to-'+index)
+            if date_to_value:
+                datetime = date_to_value
+                time_to_value = extras.get(short_prefix+'time-to-'+index)
+                if time_to_value:
+                    datetime = date_to_value + " " + time_to_value
+                try:
+                    date = h.date_str_to_datetime(datetime)
+                    period['to'] = date.strftime("%Y-%m-%dT%H:%M:%S")
+                except (TypeError, ValueError), e:
+                    continue
+
+            if period:
+                found[new_index] = period
+                # only adds 1 to the new index with good periods
+                new_index = new_index+1
+
+        out = {}
+        for i in sorted(found):
+            out[i] = found[i]
+        data[key] = json.dumps(out)
+
+    return validator
+
+
+def date_period_output(value):
+    """
+    Return stored json representation as a dict, if
+    value is already a dict just pass it through.
+    """
+    if isinstance(value, dict):
+        return value
+    if value is None or isinstance(value, list):
+        return {}
+    try:
+        return json.loads(value)
+    except ValueError:
+        return {}
+
+    
