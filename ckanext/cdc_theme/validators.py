@@ -6,6 +6,7 @@ import ckan.authz as authz
 import ckan.plugins.toolkit as toolkit
 import collections
 
+import ckan.lib.helpers as h
 import ckan.model as model
 import ckan.logic.validators as validators
 import ckan.lib.navl.dictization_functions as df
