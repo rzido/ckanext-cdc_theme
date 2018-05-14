@@ -193,6 +193,14 @@
         "form_snippet": "state.html",
         "display_snippet": null
       }
-    }
+    },
+     {
+      "preset_name": "date_period",
+      "values": {
+        "form_snippet": "date_period.html",
+        "display_snippet": "date_period.html",
+        "validators": "date_period",
+        "output_validators": "date_period_output"
+      }    
   ]
 }
