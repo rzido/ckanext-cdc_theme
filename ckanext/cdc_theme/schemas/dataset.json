@@ -658,9 +658,9 @@
          "es": "Cobertura temporal",
          "gl": "Cobertura temporal"},
       "help_text": {
-          "en": "Periodo de tiempo cubierto por el conjunto de datos.Se pueden establer m\u00E1s periodos pulsando en \u0022Agregar cobertura temporal\u0022.",
+          "en": "Time coverage for this dataset. You can add several time coverages.",
           "es": "Periodo de tiempo cubierto por el conjunto de datos.Se pueden establer m\u00E1s periodos pulsando en \u0022Agregar cobertura temporal\u0022.",
-          "gl": "Periodo de tiempo cubierto por el conjunto de datos.Se pueden establer m\u00E1s periodos pulsando en \u0022Agregar cobertura temporal\u0022."},
+          "gl": "Periodo de tiempo cuberto polo conxunto de datos. Pódense establecer  m\u00E1is periodos pulsando en \u0022Engadir cobertura temporal\u0022."},
      "preset": "date_period"
     },	  
     {
@@ -670,9 +670,9 @@
           "es": "Vigencia del recurso",
           "gl": "Vixencia do recurso"},
       "help_text": {
-          "en": "Fecha l\u00EDmite de validez de un conjunto de datos.",
+          "en": "Validity date for this dataset.",
           "es": "Fecha l\u00EDmite de validez de un conjunto de datos.",
-          "gl": "Fecha l\u00EDmite de validez de un conjunto de datos."},
+          "gl": "Data l\u00EDmite de validez dun conxunto de datos."},
       "form_snippet": "datetime.html",
       "preset": "datetime"
     },	  
@@ -688,9 +688,9 @@
          "es": "Ej: http://organismo.es/recursorelacionado",         
          "gl": "Ej: http://organismo.es/recursorelacionado"},
       "help_text": {
-          "en": "Enlaces a recursos relacionados con el conjunto de datos.",
+          "en": "Links to dataset related resources.",
           "es": "Enlaces a recursos relacionados con el conjunto de datos.",          
-          "gl": "Enlaces a recursos relacionados con el conjunto de datos."},      
+          "gl": "Ligazóns a recursos relacionados co conxunto de datos."},      
       "preset": "multiple_uri_text",     
       "is_url": true
     },	  
@@ -779,9 +779,9 @@
         "es": "Informaci\u00F3n adicional sobre el formato",        
         "gl": "Informaci\u00F3n adicional"},
       "help_text": {
-          "en": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica.",
+          "en": "Link to documents related to distribution. ",
           "es": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica.",          
-          "gl": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica."},
+          "gl": "Ligazón a documentos relacionados coa distribuci\u00F3n onde se indique o formato, o esquema empregado para a súa representaci\u00F3n e outra informaci\u00F3n t\u00E9cnica."},
       "preset": "multiple_uri_text",     
       "is_url": true,
       "form_placeholder": ""
