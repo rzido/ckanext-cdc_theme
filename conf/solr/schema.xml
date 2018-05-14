@@ -157,6 +157,8 @@ schema. In this case the version should be set to the next CKAN version number.
     <dynamicField name="vocab_*" type="string" indexed="true" stored="true" multiValued="true"/>
     <dynamicField name="*" type="string" indexed="true"  stored="false"/>
  
+    <field name="temporal_coverage" type="string" indexed="true" stored="true" multiValued="true"/>
+     
     <!-- Extra CDC THEME fields -->
  
  
