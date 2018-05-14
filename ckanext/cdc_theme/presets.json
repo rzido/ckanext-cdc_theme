@@ -221,7 +221,6 @@
         "validators": "multiple_uri_text",
         "output_validators": "multiple_uri_text_output"
     }
-},
-    
+   }    
   ]
 }
