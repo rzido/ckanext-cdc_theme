@@ -601,6 +601,14 @@
                 "gl": "Anual"
          }
          },
+ 	{ 
+	 "value":"biennial",
+         "label": {
+                "en": "Biennial",
+                "es": "Bienal",
+                "gl": "Bienal"
+         }
+         },	      
 	 { 
 	 "value":"unknown",
          "label": {
