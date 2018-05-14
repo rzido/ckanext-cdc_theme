@@ -116,17 +116,17 @@
     {
       "field_name": "theme",
       "label": {
-          "en": "Categories",
-          "es": "Categor\u00EDas",
+          "en": "Categories (NTI)",
+          "es": "Categor\u00EDas (NTI)",
           "ca": "Categories",
-          "gl": "Categor\u00EDas",
+          "gl": "Categor\u00EDas (NTI)",
           "eu": "Kategoriak"},
       "help_text":  {
           "en": "Select a category",
-          "es": "Tem\u00E1tica o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
-          "ca": "Tem\u00E1tica o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
-          "gl": "Tem\u00E1tica o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
-          "eu": "Tem\u00E1tica o materia primaria del conjunto de datos. Puede ser m\u00FAltiple."},
+          "es": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
+          "ca": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
+          "gl": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
+          "eu": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple."},
       "required": true,
       "preset": "multiple_select",
       "choices": [
