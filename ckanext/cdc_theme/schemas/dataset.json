@@ -782,10 +782,7 @@
           "en": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica.",
           "es": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica.",          
           "gl": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica."},
-      "form_blanks": 1,
-      "display_snippet": "repeating_link.html",
-      "form_snippet": "repeating.html",      
-      "validators": "repeating_text",      
+      "preset": "multiple_uri_text",     
       "is_url": true,
       "form_placeholder": ""
   }	  
