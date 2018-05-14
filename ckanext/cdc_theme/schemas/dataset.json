@@ -665,7 +665,7 @@
           "en": "Fecha l\u00EDmite de validez de un conjunto de datos.",
           "es": "Fecha l\u00EDmite de validez de un conjunto de datos.",
           "gl": "Fecha l\u00EDmite de validez de un conjunto de datos."},
-      "form_snippet": "dge_datetime.html",
+      "form_snippet": "datetime.html",
       "preset": "datetime"
     },	  
     {
@@ -683,7 +683,10 @@
           "en": "Enlaces a recursos relacionados con el conjunto de datos.",
           "es": "Enlaces a recursos relacionados con el conjunto de datos.",          
           "gl": "Enlaces a recursos relacionados con el conjunto de datos."},
-      "preset": "multiple_uri_text",
+      "form_blanks": 1,
+      "display_snippet": "repeating_link.html",
+      "form_snippet": "repeating.html",      
+      "validators": "repeating_text",      
       "is_url": true
     },	  
     {
@@ -700,7 +703,10 @@
           "en": "Links to legislation related to dataset. It's a link to a legal document",
           "es": "Enlaces a la normativa relativa al conjunto de datos. Es un enlace a un documento legal.",          
           "gl": "Ligazóns relativa ó conxunto de datos. É unha ligazón a un documento legal "},
-      "preset": "multiple_uri_text",
+      "form_blanks": 1,
+      "display_snippet": "repeating_link.html",
+      "form_snippet": "repeating.html",      
+      "validators": "repeating_text",      
       "is_url": true
    },	  	  	  
    {
@@ -774,8 +780,11 @@
           "en": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica.",
           "es": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica.",          
           "gl": "Enlace a documentos relacionados con la distribuci\u00F3n donde se indique el formato, el esquema utilizado para su representaci\u00F3n y otra informaci\u00F3n t\u00E9cnica."},
-      "preset": "multiple_uri_text",
-      "is_url": true,
+      "form_blanks": 1,
+      "display_snippet": "repeating_link.html",
+      "form_snippet": "repeating.html",      
+      "validators": "repeating_text",      
+      "is_url": true
       "form_placeholder": ""
   }	  
   ]
