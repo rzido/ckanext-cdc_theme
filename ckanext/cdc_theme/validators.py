@@ -400,3 +400,123 @@ def date_period_output(value):
         return {}
 
     
+"""
+FIELD TYPE MULTIPLE URL
+"""
+@scheming_validator
+def multiple_uri_text(field, schema):
+    def validator(key, data, errors, context):
+        """
+        Accept repeating text input in the following forms
+        and convert to a json list for storage:
+        1. a list of strings, eg.
+           ["http://url1", "http://url2"]
+        2. a single string value to allow single text fields to be
+           migrated to repeating text
+           "http://url1"
+        3. separate fields per language (for form submissions):
+           fieldname-0 = "http://url1"
+           fieldname-1 = "http://url2"
+        """
+        # just in case there was an error before that validator
+        if errors[key]:
+            return
+
+        value = data[key]
+
+        is_url = False
+        if ('is_url' in field):
+            is_url = field['is_url']
+
+        # 1. list of strings or 2. single string
+        if value is not missing:
+            if isinstance(value, basestring):
+                value = [value]
+            if not isinstance(value, list):
+                errors[key].append(_('Expecting list of strings'))
+                return
+
+            out = []
+            for element in value:
+                if not isinstance(element, basestring):
+                    errors[key].append(_('Invalid type for repeating url text: %r')
+                        % element)
+                    continue
+                    type(i)
+                try:
+                    if not isinstance(element, unicode):
+                        element = element.decode('utf-8')
+                    if element:
+                        if is_url and not h.is_url(element):
+                            errors[key].append(_('The URL format is not valid'))
+                        else:
+                            if not is_url and not dh.dge_is_uri(element):
+                                errors[key].append(_('The URI format is not valid'))
+
+                except UnicodeDecodeError:
+                    errors[key]. append(_('Invalid encoding for "%s" value')
+                        % lang)
+                    continue
+                out.append(element)
+
+            if not errors[key]:
+                data[key] = json.dumps(out)
+            return
+
+        # 3. separate fields
+        found = {}
+        prefix = key[-1] + '-'
+        extras = data.get(key[:-1] + ('__extras',), {})
+
+        #Validation
+        url_errors = False
+        for name, text in extras.iteritems():
+            if not name.startswith(prefix):
+                continue
+            if not text:
+                continue
+            index = name.split('-', 1)[1]
+            if text is not missing:
+                if is_url and not h.is_url(text):
+                    url_errors = True
+                    name_error = key[:-1] + (name,)
+                    errors[name_error] = [_('The URL format for "%s" is not valid') % text]
+                else:
+                    if not is_url and not dh.dge_is_uri(text):
+                        url_errors = True
+                        name_error = key[:-1] + (name,)
+                        errors[name_error] = [_('The URI format for "%s" is not valid') % text]
+
+        if url_errors:
+            return
+
+        for name, text in extras.iteritems():
+            if not name.startswith(prefix):
+                continue
+            if not text:
+                continue
+            index = name.split('-', 1)[1]
+            try:
+                index = int(index)
+            except ValueError:
+                continue
+            found[index] = text
+
+        out = [found[i] for i in sorted(found)]
+        data[key] = json.dumps(out)
+
+    return validator
+
+def multiple_uri_text_output(value):
+    """
+    Return stored json representation as a list, if
+    value is already a list just pass it through.
+    """
+    if isinstance(value, list):
+        return value
+    if value is None:
+        return []
+    try:
+        return json.loads(value)
+    except ValueError:
+        return [value]
