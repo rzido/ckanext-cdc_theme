@@ -123,9 +123,9 @@
           "eu": "Kategoriak"},
       "help_text":  {
           "en": "Select a category",
-          "es": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
+          "es": "Dataset Theme. M\u00FAltiple selection.",
           "ca": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
-          "gl": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple.",
+          "gl": "Tem\u00E1tica NTI ou materia primaria do conxunto de datos. Pode ser m\u00FAltiple.",
           "eu": "Tem\u00E1tica NTI o materia primaria del conjunto de datos. Puede ser m\u00FAltiple."},
       "required": true,
       "preset": "multiple_select",
