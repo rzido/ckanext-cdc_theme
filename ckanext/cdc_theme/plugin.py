@@ -378,20 +378,20 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 
  # IPackageController
 
-    def before_index(self, data_dict):
+#    def before_index(self, data_dict):
 
 
-        update_frequency = data_dict.get('frequency')
-        if update_frequency:
-            update_frequency_json = json.loads(update_frequency)
-            if update_frequency_json.get('es'):
-                data_dict['frequency_es'] = [tag for tag in update_frequency_json['es']]
-            if update_frequency_json.get('gl'):
-                data_dict['frequency_gl'] = [tag for tag in update_frequency_json['gl']]
-            if update_frequency_json.get('en'):
-                data_dict['frequency_en'] = [tag for tag in update_frequency_json['en']]
-
-        return data_dict
+#        update_frequency = data_dict.get('frequency')
+#        if update_frequency:
+#            update_frequency_json = json.loads(update_frequency)
+#            if update_frequency_json.get('es'):
+#                data_dict['frequency_es'] = [tag for tag in update_frequency_json['es']]
+#            if update_frequency_json.get('gl'):
+#                data_dict['frequency_gl'] = [tag for tag in update_frequency_json['gl']]
+#            if update_frequency_json.get('en'):
+#                data_dict['frequency_en'] = [tag for tag in update_frequency_json['en']]##
+#
+#       return data_dict
 
     
 	
