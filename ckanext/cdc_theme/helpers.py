@@ -81,7 +81,9 @@ def get_package_groups_by_type(package_id, group_type):
 
 
 # This is not the most efficient way of listing package groups that include all group schema fields, however
-# at this point the only way without major CKAN core changes (6aika/sixodp)
+# at this point the only way without major CKAN core changes 
+# author: 6aika - Sixodp - https://github.com/6aika/sixodp/ckanext-sixodp_ui/)
+
 def get_package_groups(package_id):
     context = {'model': model, 'session': model.Session,
                'for_view': True, 'use_cache': False}
