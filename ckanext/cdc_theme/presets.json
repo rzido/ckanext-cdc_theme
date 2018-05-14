@@ -202,6 +202,26 @@
         "validators": "date_period",
         "output_validators": "date_period_output"
       }
-    }    
+    },
+    {
+      "preset_name": "uri_text",
+      "values": {
+        "form_snippet": "uri_text.html",
+        "display_snippet": "uri_text.html",
+        "validators": "uri_text",
+        "output_validators": "uri_text_output"
+      }
+    },
+    {
+      "preset_name": "multiple_uri_text",
+      "values": {
+        "form_snippet": "multiple_uri_text.html",
+        "display_snippet": "multiple_uri_text.html",
+        "error_snippet": "multiple_uri_text.html",
+        "validators": "multiple_uri_text",
+        "output_validators": "multiple_uri_text_output"
+    }
+},
+    
   ]
 }
