@@ -355,7 +355,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     def after_map(self, map):
 	additional_info_controller = 'ckanext.cdc_theme.controller:AdditionalInfoController'
 	cdc_showcase_controller = 'ckanext.cdc_theme.controller:CDC_ShowcaseController'
-	collection_controller = 'ckanext.collection.controller:CollectionController"
+	collection_controller = 'ckanext.collection.controller:CollectionController'
 
 	map.connect('read_carousel','/showcase/carousel_view/{id}', action='read_carousel', 
 		    controller=cdc_showcase_controller)	
