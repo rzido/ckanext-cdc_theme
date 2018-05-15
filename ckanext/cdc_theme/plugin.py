@@ -363,6 +363,7 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
 		    controller=additional_info_controller, ckan_icon='info')
 	# overwrite ckanext-collection collection route in order to force highlighting
 	map.connect('/collection', action='index', controller=collection_controller,  highlight_actions='index')		
+	map.connect('/dataset', action='index', controller=package,  highlight_actions='index search')		
 		
         return map
 
