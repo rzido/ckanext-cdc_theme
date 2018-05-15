@@ -161,8 +161,8 @@ schema. In this case the version should be set to the next CKAN version number.
      
     <!-- Extra CDC THEME fields -->
     <field name="temporal_coverage" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="category" type="string" indexed="true" stored="false" multiValued="true"/>
-    <field name="platform" type="string" indexed="true" stored="false" multiValued="true"/>
+    <field name="category" type="text" indexed="true" stored="false" multiValued="true"/>
+    <field name="platform" type="text" indexed="true" stored="false" multiValued="true"/>
 
 
  
