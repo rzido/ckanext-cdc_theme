@@ -64,17 +64,17 @@ schema. In this case the version should be set to the next CKAN version number.
         </analyzer>
     </fieldType>
  
-    <!-- Another text field to avoid split words in the plural,  on change of capital letters and language agnostic -->
+    <!-- Another text field to avoid split words change of capital letters and language agnostic -->
    <fieldType name="texts" class="solr.TextField" positionIncrementGap="100">
         <analyzer type="index">
             <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-            <filter class="solr.WordDelimiterFilterFactory" generateWordParts="0" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="1"/>
+            <filter class="solr.WordDelimiterFilterFactory" generateWordParts="0" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="0"/>
             <filter class="solr.LowerCaseFilterFactory"/>
             <filter class="solr.ASCIIFoldingFilterFactory"/>
         </analyzer>
         <analyzer type="query">
             <tokenizer class="solr.WhitespaceTokenizerFactory"/>            
-            <filter class="solr.WordDelimiterFilterFactory" generateWordParts="0" generateNumberParts="0" catenateWords="0" catenateNumbers="0" catenateAll="0" splitOnCaseChange="1"/>
+            <filter class="solr.WordDelimiterFilterFactory" generateWordParts="0" generateNumberParts="0" catenateWords="1" catenateNumbers="1" catenateAll="0" splitOnCaseChange="0"/>
             <filter class="solr.LowerCaseFilterFactory"/>
             <filter class="solr.ASCIIFoldingFilterFactory"/>
         </analyzer>
