@@ -1,6 +1,7 @@
 
 from collections import OrderedDict
 
+
 from pylons import config
 import pylons
 import helpers
@@ -354,11 +355,15 @@ class CDCThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     def after_map(self, map):
 	additional_info_controller = 'ckanext.cdc_theme.controller:AdditionalInfoController'
 	cdc_showcase_controller = 'ckanext.cdc_theme.controller:CDC_ShowcaseController'
+	collection_controller = 'ckanext.collection.controller:CollectionController"
 
 	map.connect('read_carousel','/showcase/carousel_view/{id}', action='read_carousel', 
 		    controller=cdc_showcase_controller)	
 	map.connect('dataset_additional_info','/dataset/additional_info/{id}', action='additional_info', 
 		    controller=additional_info_controller, ckan_icon='info')
+	# overwrite ckanext-collection collection route in order to force highlighting
+	map.connect('/collection', action='index', controller=collection_controller,  highlight_actions='index')		
+		
         return map
 
     # Add custom facets
