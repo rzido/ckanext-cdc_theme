@@ -10,6 +10,7 @@
     <h2>¿?</h2>
     <div class="ckanext-pages-content ckanext-pages-content-{{ c.page.name }}">
           {{ h.render_markdown(c.page.content) }}             
+          {{ c.page.content }} 
       </div>
     {% else %}
       <p class="empty">{{ _('This page currently has no content') }}</p>
