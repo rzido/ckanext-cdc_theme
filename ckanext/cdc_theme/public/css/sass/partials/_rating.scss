@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+ .star-rating-stars-right {
+    float: right;
+    font-size: 11px;
+  }
 
 
 .star-rating {
@@ -15,11 +19,7 @@
   }
   
   
-  .star-rating-stars-right {
-    float: right;
-    font-size: 11px;
-  }
-
+ 
   .rating-star {
     font-size: $font-size-base;
     display: inline;
