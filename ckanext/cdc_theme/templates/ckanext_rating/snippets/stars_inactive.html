@@ -16,7 +16,7 @@ stars  - The number of stars to be displayed.
 {% endif %}
 
 {% block main_star_rating %}
-  <span class="star-rating{% if stars == 0 %} no-stars{% endif %}">
+  
     <span class="star-rating-stars-right">
       {%- for index in range(stars|int) -%}
         <i class="fas fa-star rating-star"></i>
@@ -28,9 +28,11 @@ stars  - The number of stars to be displayed.
         <iclass="far fa-star rating-star "></i>
       {%- endfor -%}
     </span>
-  </span>
+
 {% endblock %}
 
+
+{#
 {% block star_rating_description %}
   <span class="rating-description">{{ ratings_count }} {{ _('rating') if ratings_count == 1 else _('ratings') }}</span>
-{% endblock %}
+{% endblock %}#}
