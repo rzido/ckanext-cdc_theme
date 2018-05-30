@@ -2,6 +2,8 @@
   padding: 0;
 }
 
+
+
 .star-rating {
   line-height: $line-height-base;
   display: block;
@@ -10,6 +12,11 @@
   .star-rating-stars {
     display: block;
     line-height: $line-height-base;;
+  }
+  
+  
+  .star-rating-right {
+    float: right;
   }
 
   .rating-star {
@@ -34,9 +41,3 @@
   }
 }
 
-
-.icon-star:before {
-  content: "\f005";
-}
-.icon-star-empty:before {
-content: "\f006";
