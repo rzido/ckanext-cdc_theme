@@ -17,7 +17,7 @@ stars  - The number of stars to be displayed.
 
 {% block main_star_rating %}
   <span class="star-rating{% if stars == 0 %} no-stars{% endif %}">
-    <span class="star-rating-stars">
+    <span class="star-rating-stars-right">
       {%- for index in range(stars|int) -%}
         <i class="fas fa-star rating-star"></i>
       {%- endfor -%}
