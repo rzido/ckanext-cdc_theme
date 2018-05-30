@@ -87,11 +87,10 @@ Example:
         
     #}    
 
-                <div class="dataset-meta-right">
-                  {% block rating %}
-                    {% snippet "ckanext_rating/snippets/stars_inactive.html", package=package %}
-                  {% endblock %}
-                </div>
+      {% block rating %}
+         {% snippet "ckanext_rating/snippets/stars_inactive.html", package=package %}
+     {% endblock %}
+
 
         </div>    
         
