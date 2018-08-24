@@ -5,7 +5,7 @@
 <div class="lang-nav">  
            
    <ul class="list-unstyled">
-                    {{ _('Language') }}
+    {{ _('Language') }}: &nbsp;
     {% for locale in h.get_available_locales() %}
 
       <li {% if locale==current_lang %}class="active"{% endif %}>
