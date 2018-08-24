@@ -141,8 +141,12 @@ a.tag:hover {
    list-style-type: none;
 }
 
-.ogov-nav  li {
+.ogov-nav  li, lang-nav li {
    display: inline;
+}
+
+.ogov-nav a, lang-nav a {
+   color:white;
 }
 
 .site-title {
