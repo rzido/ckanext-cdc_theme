@@ -149,6 +149,11 @@ a.tag:hover {
    color:white;
 }
 
+.ogov-nav a:active, .lang-nav a:active {
+       text-decoration: underline;
+}
+
+
 .site-title {
   font-size: 16px;
   font-weight: 300;
