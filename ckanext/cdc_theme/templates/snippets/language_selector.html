@@ -3,10 +3,8 @@
 {% set current_locale = h.get_locales_dict()[current_lang] %}
 
 <div>  
-   
-     {{ (current_locale.display_name or current_locale.english_name) | capitalize }} <span class="caret"></span>
-   
-   <ul class="dropdown-menu" role="menu">
+           
+   <ul class="list-unstyled">
     {% for locale in h.get_available_locales() %}
       <li {% if locale == current_lang %}class="active"{% endif %}>
         <a href="{{ h.url_for(current_url, locale=locale) }}">
