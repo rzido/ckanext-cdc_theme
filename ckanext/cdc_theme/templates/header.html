@@ -43,8 +43,7 @@
       {% block header_logo %} 
       {% if g.site_logo %}
       <a class="logo" href="{{ h.url_for('home') }}"><img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
-      <span class="text">
-        <a href="{{ h.url_for('home') }}">{{ g.site_title }}</a>
+      <span class="text">{{ g.site_title }} | upper
       </span>
       {% else %}
       <h1>
