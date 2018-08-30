@@ -149,7 +149,7 @@ select:focus {
 
   .tabs [class^="tab"] [type="radio"],
   .tabs [class*=" tab"] [type="radio"] {
-    border-bottom: 1px solid #0083D7;
+    border-bottom: 1px solid gray;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
