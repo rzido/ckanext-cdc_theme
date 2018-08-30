@@ -23,7 +23,7 @@
 .tool::before{
 	border-style:solid;
 	border-width:1em .75em 0 .75em;
-	border-color:#0083D7 transparent transparent transparent;
+	border-color: #0083D7 transparent transparent transparent;
 	bottom:100%;
 	margin-left:-.5em;
 	content:"";
@@ -38,6 +38,7 @@
 
 .tool::after{
 	background:white;
+	border-color: #0083D7;
 	border-radius:.25em;
 	bottom:180%;
 	color: black;
