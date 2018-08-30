@@ -120,10 +120,14 @@ set showcases =  h.cdc_theme_showcases(10)
 	           
 		    	        
                     {{ h.get_translated(topic, 'title') or topic.display_name }}                  
-			
+			 
 			  
 			  
                   </div>
+			
+			
+		<p>{{ h.markdown_extract(h.get_translated(topic, 'description')) }}</p>
+			
 <!-- datasets count -->                    
                   {% if topic.package_count %}
                       <span class="count"> {{ topic.package_count }} </span>
