@@ -114,16 +114,17 @@ set showcases =  h.cdc_theme_showcases(10)
         <div class="module-content box">
           <h1 class="browse-heading ">{{ _('Explore by topic')}}</h1>          
               {% for topic in h.cdc_theme_groups() %}		
+		<span class="tool" data-tip="{{ h.markdown_extract(h.get_translated(topic, 'description')) }}" tabindex="1">           
                 <a href="{% url_for controller='group', action='read', id=topic.name %}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
 	           
-		   <span class="tool" data-tip="{{ h.markdown_extract(h.get_translated(topic, 'description')) }}" tabindex="1">           
+		  
                      {{ h.get_translated(topic, 'title') or topic.display_name }}                  
-			  </span> 
 			
 			  
                   </div>
+			  </span> 
 						
 		
 			
