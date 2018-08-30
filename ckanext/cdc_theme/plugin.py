@@ -173,7 +173,7 @@ def dataset_count():
 
 def resource_count():
         result = tk.get_action('resource_search')({},{'query':'name:'})
-        return result('count')
+        return result['count']
 
         #ds = dataset_list()
         #count = 0
