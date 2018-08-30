@@ -6,7 +6,7 @@
             {{ _('Datasets') }}: 
             {% for package in c.showcase_pkgs %}
                {% set title = h.get_translated(package,'title') or package.name %} 
-               {{ h.link_to(title, h.url_for(controller='package', action='read', id=package.name)) }}.    
+               {{ h.link_to(title, h.url_for(controller='showcase', action='read', id=package.name)) }}.    
             {% endfor %}              
          {% endif %}                        
          </p>
