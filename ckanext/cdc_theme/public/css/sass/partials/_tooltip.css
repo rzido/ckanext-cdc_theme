@@ -1,4 +1,5 @@
 .tool{
+	cursor:help;
 	position:relative;
 }
 
@@ -52,5 +53,3 @@
 .tool:focus::after{
 	transition-delay:0s;
 }
-
-
