@@ -14,8 +14,7 @@
 .tool:hover::before,
 .tool:focus::before,
 .tool:hover::after,
-.tool:focus::after{
-	opacity:0.7;
+.tool:focus::after{	
 	z-index:100;
 	transform:scale(1) translateY(0);
 }
