@@ -154,7 +154,8 @@ set showcases =  h.cdc_theme_showcases(10)
       <div class="span12 col1">     
         <div class="module-content box">
           <h1 class="browse-heading ">{{ _('Explore by collection')}}</h1>          
-              {% for topic in h.cdc_theme_collections() %}		
+              {% for topic in h.cdc_theme_collections() %}	
+		<span class="tool" data-tip="{{ h.markdown_extract(h.get_translated(topic, 'description')) }}" tabindex="1">           
                 <a href="{% url_for controller='ckanext.collection.controller:CollectionController', action='read', id=topic.name %}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
@@ -174,6 +175,7 @@ set showcases =  h.cdc_theme_showcases(10)
 
                   
                 </a>
+		</span>	
               {% endfor %}
           </div>
       </div>
@@ -193,6 +195,7 @@ set showcases =  h.cdc_theme_showcases(10)
 <!-- <ul class="media-grid" data-module="media-grid"> -->
 <!--        <ul> -->
   {% for organization in h.cdc_theme_organizations() %}
+		<span class="tool" data-tip="{{ h.markdown_extract(h.get_translated(organization, 'description')) }}" tabindex="1">           
                <a href="{% url_for controller='organization', action='read', id=organization.name %}" class="browse-topic">
                     <img class="browse-topic-image" src="{{ organization.image_display_url }}">
                   <div class="browse-topic-title">
@@ -210,6 +213,7 @@ set showcases =  h.cdc_theme_showcases(10)
                   {% endif %}
                  
                 </a> 
+		</span>
 {% endfor %}
 
 <!-- </ul> -->
