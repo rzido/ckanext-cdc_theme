@@ -149,8 +149,9 @@ a.tag:hover {
    color:white;
 }
 
-.ogov-nav li.active, .lang-nav li.active {
+.ogov-nav a.active, .lang-nav a.active {
    text-decoration: underline;
+   font-weight: 300;
 }
 
 .ogov-nav a:active, .lang-nav a:active {
