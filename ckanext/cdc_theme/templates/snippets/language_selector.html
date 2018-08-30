@@ -8,8 +8,8 @@
     {{ _('Language') }}: &nbsp;
     {% for locale in h.get_available_locales() %}
 
-      <li {% if locale.short_name==current_lang %}class="active"{% endif %}>
-        <a href="{{ h.url_for(current_url, locale=locale) }}">
+      <li >
+        <a {% if locale.short_name==current_lang %}class="active"{% endif %} href="{{ h.url_for(current_url, locale=locale) }}">
          {{ (locale) | upper }}  
         </a>&nbsp;
       </li>
