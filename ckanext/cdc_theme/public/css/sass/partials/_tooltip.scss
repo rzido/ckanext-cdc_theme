@@ -15,7 +15,7 @@
 .tool:focus::before,
 .tool:hover::after,
 .tool:focus::after{
-	opacity:1;
+	opacity:0.7;
 	z-index:100;
 	transform:scale(1) translateY(0);
 }
@@ -37,7 +37,7 @@
 }
 
 .tool::after{
-	background:#3e474f;
+	background:#7e878f;
 	border-radius:.25em;
 	bottom:180%;
 	color:#edeff0;
