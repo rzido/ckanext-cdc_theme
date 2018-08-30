@@ -118,15 +118,14 @@ set showcases =  h.cdc_theme_showcases(10)
                     <img class="browse-topic-image" src="{{ topic.image_display_url or '/img/icons-document.svg' }}">
                   <div class="browse-topic-title">
 	           
-		    	        
-                    {{ h.get_translated(topic, 'title') or topic.display_name }}                  
-			 
-			  
+		     <span class="tool" data-tip="{{ h.markdown_extract(h.get_translated(topic, 'description')) }}" tabindex="1">tool	        
+                     {{ h.get_translated(topic, 'title') or topic.display_name }}                  
+		    </span>  	 
+			
 			  
                   </div>
-			
-			
-		<p>{{ h.markdown_extract(h.get_translated(topic, 'description')) }}</p>
+						
+		
 			
 <!-- datasets count -->                    
                   {% if topic.package_count %}
