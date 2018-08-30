@@ -1,6 +1,6 @@
 {% set package = c.pkg_dict %}           
       <div class="vizcarousel-desc">
-         <h1 class="vizcarousel-desc-text"><a target="_blank" href="{{ h.url_for(controller='showcase', action='read', id=package.name) }}">{{ h.truncate(package.title or package.name, 80) }} </a></h1>
+         <h1 class="vizcarousel-desc-text"><a target="_blank" href="{{ h.url_for(controller='ckanext.showcase.controller:ShowcaseController', action='read', id=package.name) }}">{{ h.truncate(package.title or package.name, 80) }} </a></h1>
          <p class="vizcarousel-desc-text author">{{ _('Author') }}: {{ package.author }}.
          {% if c.showcase_pkgs %}
             {{ _('Datasets') }}: 
