@@ -248,7 +248,7 @@ button {
     margin-left: 0px;
 }
 
-.container {max-width: 80%; width:1200px; }
+.container {max-width: $container-max-width; width:$container-width; }
 
 .span1 {width: 8.33%;}
 .span2 {width: 16.66%;}
