@@ -271,3 +271,10 @@ button {
 .page-header {
   background-color: none;
 }
+
+.navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container  {
+  width: $container-width;
+  max-width: $container-max-width;
+}
+
+
