@@ -17,14 +17,14 @@ set showcases =  h.cdc_theme_showcases(10)
 <div class="outer" style="background:url(../img/background-coruna-lg-gray-17.png) no-repeat left bottom">
   
     <div class="container">
-      <div class="row row1">
-        <div class="span6 col1">
+      <div class="row">
+        <div class="span6">
           <div class="module-content">
             <h1 class="hero-text-heading hero-text">{{ _('A Coruña Open Data Portal')}}</h1>
             <p class="hero-text-description hero-text">{{ _('datos.coruna.gal is the open data catalog about the City of A Coruña and its local government')}}</p>
           </div>
         </div>
-        <div class="span4 col1">
+        <div class="span6">
           <div class="carousel-controls">
             <a class="carousel-control left" href="#vizcarousel" data-slide="prev"><img src="/img/larrow.svg"></a>
             <a class="carousel-control right" href="#vizcarousel" data-slide="next"><img src="/img/rarrow.svg"></a>
@@ -58,11 +58,11 @@ set showcases =  h.cdc_theme_showcases(10)
 <!-- eliminado de los main- role main -->  
 <div  class="main-search">
   <div class="container">
-    <div class="row row1">
-      <div class="span6 col1">
+    <div class="row">
+      <div class="span6">
         {% snippet 'home/snippets/search.html' %}               
       </div>
-      <div class="span6 col2">
+      <div class="span6">
          <div class="module-content box getstarted">
           {% set stats = h.get_site_statistics() %}
           <p>
@@ -92,8 +92,8 @@ set showcases =  h.cdc_theme_showcases(10)
     </div>
 	  
 
-    <div class="row row2">
-      <div class="span12 col1">
+    <div class="row">
+      <div class="span12">
         {% set tags = h.get_facet_items_dict('tags', limit=20) %}
         <div class="module-content tags">
           <h3>{{ _('Popular tags') }}</h3>
@@ -109,8 +109,8 @@ set showcases =  h.cdc_theme_showcases(10)
 
 <div class="main-browse front">
   <div class="container">
-    <div class="row row2">
-      <div class="span12 col1">     
+    <div class="row">
+      <div class="span12">     
         <div class="module-content box">
           <h1 class="browse-heading ">{{ _('Explore by topic')}}</h1>          
               {% for topic in h.cdc_theme_groups() %}		
@@ -150,8 +150,8 @@ set showcases =  h.cdc_theme_showcases(10)
 
 <div class="main-browse front">
   <div class="container">
-    <div class="row row2">
-      <div class="span12 col1">     
+    <div class="row">
+      <div class="span12">     
         <div class="module-content box">
           <h1 class="browse-heading ">{{ _('Explore by collection')}}</h1>          
               {% for topic in h.cdc_theme_collections() %}	
@@ -187,8 +187,8 @@ set showcases =  h.cdc_theme_showcases(10)
 
 <div class="main-browse front">
   <div class="container">
-    <div class="row row2">
-      <div class="span12 col1">
+    <div class="row">
+      <div class="span12">
         <div class="module-content box">
            <h1 class="browse-heading">{{ _('Explore by organization')}}</h1>
               
@@ -249,7 +249,8 @@ set showcases =  h.cdc_theme_showcases(10)
 
   <div class="main-news front">	  
     <div class="container">
-   <div class="row row1">
+   <div class="row">
+	   <div class="span12">
    <div class="module-content">	   
     <h1 class="browse-heading">
       {{ _('Blog') }}
@@ -281,6 +282,7 @@ set showcases =  h.cdc_theme_showcases(10)
 	   </div> 
 	    </div>   
     </div>
+	  </div>
 </div>
 
 
