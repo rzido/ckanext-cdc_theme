@@ -3,7 +3,7 @@ ckanext-cdc_theme
 
 OpenData CKAN theme - TEST. This theme is heavily based on OpenDataPhilly Theme (ckanext-odp_theme)
 
-This theme is for testing purposes. It depends on several ckan extensions: ckanext-pages, ckanext-showcase, ckanext-rating,...
+This theme is for testing and learning purposes. It depends on several ckan extensions: ckanext-pages, ckanext-showcase, ckanext-rating,...
 
 Manually generating main.css
 ----------------------------
